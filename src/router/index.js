@@ -14,6 +14,14 @@ const router = new Router({
         label: '首頁'
       },
       component: views.Home
+    },
+    {
+      path: '/agenda',
+      name: 'Agenda',
+      meta: {
+        label: '議程'
+      },
+      component: views.Agenda
     }
   ].map(routeRule => {
     routeRule.path = `/2019${routeRule.path}`
