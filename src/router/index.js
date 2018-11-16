@@ -16,6 +16,14 @@ const router = new Router({
       component: views.Home
     },
     {
+      path: '/cfp',
+      name: 'CFP',
+      meta: {
+        label: 'CFP'
+      },
+      component: views.CFP
+    },
+    {
       path: '/agenda',
       name: 'Agenda',
       meta: {
