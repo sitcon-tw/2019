@@ -2,7 +2,37 @@
   <div>
     <div class="cfp-main-container landing-bg">
       <div class="cfp-paper-container">
-        <div class="cfp-header"></div>
+        <div class="cfp-header">
+          <div class="logo">
+            <img src="@/assets/images/SVG/sitcon-box.svg" alt="">
+            <div class="paper">
+              <h1>
+                Call<br />
+                for<br />
+                paper
+              </h1>
+              <h3>&amp;sponsor</h3>
+            </div>
+          </div>
+          <div class="content">
+            <h1>
+              Algorithm<br />
+              in a box
+            </h1>
+            <h1>開箱演算法</h1>
+            <div class="info-box date">
+              <img src="@/assets/images/SVG/date-box.svg" alt="">
+              <h2>3/24</h2>
+            </div>
+            <div class="info-box place">
+              <img src="@/assets/images/SVG/place-box.svg" alt="">
+              <h2>
+                中央研究院<br />
+                人文社會科學館
+              </h2>
+            </div>
+          </div>
+        </div>
         <div class="cfp-content">
           <h2>關於 SITCON</h2>
           <p>
