@@ -1,5 +1,52 @@
 .cfp {
-  &-container {
-    
+  &-main-container {
+    min-height: 200vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-paper-container {
+    background-color: $white;
+    width: calc(85% - 16rem);
+    padding: 2rem 8rem;
+    box-shadow: 0 0 10pt rgba($black, .3);
+  }
+
+  &-header {}
+
+  &-content {
+    color: $content;
+
+    h2 {
+      font-weight: 600;
+      font-size: 36px;
+      margin: 3rem 0 2rem 0;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 24px;
+      margin: 1rem 0;
+    }
+
+    ul,
+    p {
+      font-size: 16px;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-left: 1rem;
+      list-style: disc;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: transparent;
+      font-weight: 500;
+      &:hover {
+        text-decoration-color: $content;
+      }
+    }
   }
 }
