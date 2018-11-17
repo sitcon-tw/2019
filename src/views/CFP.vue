@@ -57,8 +57,8 @@
             「Algorithm in a Box」的「Box」發想自「黑箱 Black Box」，點出近年來我們的閱聽內容與生活愈發受到演算法支配，但我們卻無從得知，這些藏在黑箱中的演算法具體是什麼模樣；同時，「黑箱」也代表了只知其用法，卻對演算法的原理和細節不求甚解。另一方面，「Box」也可以解釋成「工具箱 Toolbox」，將演算法當成工具箱中的常備道具，也就是演算法的應用層面。我們希望能藉由「開箱」演算法，拆解「支配人們的演算法」的箱子，也要來拆解「不求甚解」的箱子、探究演算法的內涵與精神。
           </p>
           <p>
-            我們特別期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是探討學生相關議題等等，不過廣義來說，只要是與資訊技術、電腦相關的講題，都歡迎投稿！，<br />
-            以下的投稿範例可以提供一些靈感，或是您可以參與投稿者小聚，亦可前往 SITCON 前幾屆的網站（ <a target="_blank" href="https://sitcon.org/2013">2013</a>、 <a target="_blank" href="https://sitcon.org/2014">2014</a>、 <a target="_blank" href="https://sitcon.org/2015">2015</a>、 <a target="_blank" href="https://sitcon.org/2016">2016</a>、 <a target="_blank" href="https://sitcon.org/2017">2017</a>、 <a target="_blank" href="https://sitcon.org/2018">2018</a>）查看過去的議程。
+            我們特別期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是探討學生相關議題等等，不過廣義來說，只要是與資訊技術、電腦相關的講題，都歡迎投稿！<br />
+            以下的投稿範例可以提供一些靈感，或是您可以參與投稿者小聚，亦可前往 SITCON 前幾屆的網站（<a target="_blank" href="https://sitcon.org/2013">2013</a> 、 <a target="_blank" href="https://sitcon.org/2014">2014</a> 、 <a target="_blank" href="https://sitcon.org/2015">2015</a> 、 <a target="_blank" href="https://sitcon.org/2016">2016</a> 、 <a target="_blank" href="https://sitcon.org/2017">2017</a> 、 <a target="_blank" href="https://sitcon.org/2018">2018</a> ）查看過去的議程。
           </p>
           <h2>Code of Conduct 行為準則</h2>
           <p>

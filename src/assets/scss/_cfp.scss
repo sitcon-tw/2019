@@ -271,6 +271,11 @@
 
   &-content {
     color: $content;
+    padding: 0 8rem;
+
+    @media screen and (max-width: 1560px) {
+      padding: 0;
+    }
 
     h2 {
       font-weight: 600;
