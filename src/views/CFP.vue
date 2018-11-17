@@ -150,6 +150,32 @@
             <li>為了維護所有講者的權利，試講時間恕不接受更改，請各位講者者準時參與。</li>
           </ul>
         </div>
+        <div class="cfp-action">
+          <div class="button">
+            <h2>我要投稿</h2>
+            <img src="@/assets/images/SVG/sitcon-box-open.svg" alt="">
+          </div>
+          <div class="button" @click="sponsor = true">
+            <h2>我想贊助</h2>
+            <img src="@/assets/images/SVG/sitcon-box-open.svg" alt="">
+          </div>
+        </div>
+        <div class="cfp-message" v-show="sponsor">
+          <div class="close" @click="sponsor = false"></div>
+          <div class="cfp-message-content">
+            <h2>贊助歡迎聯繫</h2>
+            <p>SITCON 的運作，除了眾多努力的志工，也還是少不了金錢的支持。</p>
+            <p>如果認同 SITCON 的理念與作為，歡迎加入成為支持 SITCON 運作的一份子！</p>
+            <p class="split">
+              企業贊助
+              <a href="mailto:contact@sitcon.org">contact@sitcon.org</a>
+            </p>
+            <p class="split">
+              個人贊助
+              <a href="">贊助頁面</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <Footer />
@@ -159,6 +185,11 @@
 <script>
 import Footer from '@/components/Footer.vue'
 export default {
+  data () {
+    return {
+      sponsor: false
+    }
+  },
   components: {
     Footer
   }
