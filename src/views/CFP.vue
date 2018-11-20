@@ -6,7 +6,8 @@
         <div class="cfp-header">
           <div class="logo">
             <img src="@/assets/images/SVG/sitcon-box.svg" alt="">
-            <div class="paper">
+            <img src="@/assets/images/SVG/stone.svg" alt="" class="egg" :class="{ 'active': eggClickCount % 4 === 0 }">
+            <div class="paper" @click="eggClickCount++" :class="{ 'active': eggClickCount % 2 === 0 }">
               <h1>
                 Call<br />
                 for<br />
@@ -200,7 +201,8 @@ export default {
       bg: {
         x: 0,
         y: 0
-      }
+      },
+      eggClickCount: 1
     }
   },
   components: {

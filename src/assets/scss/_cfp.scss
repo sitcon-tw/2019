@@ -10,6 +10,38 @@
   }
 }
 
+@keyframes stoneAppear {
+  0% {
+    transform: none;
+  }
+
+  25% {
+    transform: translateX(4rem) rotate(30deg);
+  }
+
+  75% {
+    transform: translateX(4rem) rotate(30deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes drowAnimate {
+  0% {
+    transform: translate(2rem, 5rem);
+  }
+
+  50% {
+    transform: translate(2rem, 6rem);
+  }
+
+  100% {
+    transform: translate(2rem, 5rem);
+  }
+}
+
 .cfp {
   &-main-container {
     display: flex;
@@ -85,6 +117,22 @@
         }
       }
 
+      .egg {
+        position: absolute;
+        width: 100px;
+        margin: 12rem 0 0 8rem;
+        z-index: 0;
+        transition: all .3s;
+
+        &.active {
+          animation: stoneAppear 1s ease-in-out;
+        }
+
+        @media screen and (max-width: 1080px) {
+          display: none;
+        }
+      }
+
       .paper {
         z-index: -1;
         border: 5px solid $content;
@@ -95,6 +143,13 @@
         width: 10rem;
         transform: translate(2rem, 5rem);
         background-color: $white;
+        cursor: pointer;
+
+        @media screen and (min-width: 1280px) {
+          &.active {
+            animation: drowAnimate 1s ease-in-out;
+          }
+        }
 
         @media screen and (max-width: 1280px) {
           padding-top: 3rem;
@@ -411,6 +466,7 @@
         top: 3rem;
         z-index: 2;
         cursor: pointer;
+
         @media screen and (max-width: 475px) {
           right: 1.5rem;
           top: 1.5rem;
@@ -438,7 +494,7 @@
       @media screen and (max-width: 475px) {
         padding: 1.5rem;
       }
-      
+
       @media screen and (max-width: 414px) {
         height: auto;
       }
