@@ -169,17 +169,19 @@
             <div class="close-btn">
               <img src="@/assets/images/SVG/close.svg" @click="sponsor = false" alt="">
             </div>
-            <h2>贊助歡迎聯繫</h2>
-            <p>SITCON 的運作，除了眾多努力的志工，也還是少不了金錢的支持。</p>
-            <p>如果認同 SITCON 的理念與作為，歡迎加入成為支持 SITCON 運作的一份子！</p>
-            <p class="split">
-              <span>企業贊助</span>
-              <a href="mailto:contact@sitcon.org">contact@sitcon.org</a>
-            </p>
-            <p class="split">
-              <span>個人贊助</span>
-              <a href="">贊助頁面</a>
-            </p>
+            <div class="content">
+              <h2>贊助歡迎聯繫</h2>
+              <p>SITCON 的運作，除了眾多努力的志工，也還是少不了金錢的支持。</p>
+              <p>如果認同 SITCON 的理念與作為，歡迎加入成為支持 SITCON 運作的一份子！</p>
+              <p class="split">
+                <span>企業贊助</span>
+                <a href="mailto:contact@sitcon.org">contact@sitcon.org</a>
+              </p>
+              <p class="split">
+                <span>個人贊助</span>
+                <a href="">贊助頁面</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

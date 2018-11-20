@@ -396,18 +396,30 @@
       min-height: 400px;
       background-repeat: no-repeat;
       overflow: hidden;
-      
+
       .cover-bg {
         position: absolute;
         width: 350px;
         right: 0;
         bottom: 0;
+        z-index: 0;
       }
 
       .close-btn {
         position: absolute;
         right: 3rem;
         top: 3rem;
+        z-index: 2;
+        cursor: pointer;
+        @media screen and (max-width: 475px) {
+          right: 1.5rem;
+          top: 1.5rem;
+
+          img {
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+        }
 
         img {
           height: 2rem;
@@ -423,18 +435,25 @@
         padding: 3rem;
       }
 
+      @media screen and (max-width: 475px) {
+        padding: 1.5rem;
+      }
+      
       @media screen and (max-width: 414px) {
         height: auto;
       }
 
-      @media screen and (max-width: 375px) {
-        padding: 1.5rem;
+
+      .content {
+        z-index: 1;
+        position: relative;
       }
 
       h2 {
         font-size: 36px;
         font-weight: 600;
         margin-bottom: 2rem;
+        line-height: 1;
 
         @media screen and (max-width: 414px) {
           font-size: 30px;
