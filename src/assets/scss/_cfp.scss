@@ -306,16 +306,21 @@
 
     li {
       margin-left: 1.5rem;
-      list-style: disc;
+      list-style-type: disc;
+      @supports (-webkit-backdrop-filter: blur(1px)) {
+        &:before {
+          content: ' ';
+        }
+      }
     }
 
     a {
-      color: inherit;
+      color: $sitcon;
       text-decoration-color: transparent;
-      font-weight: 500;
+      font-weight: 700;
 
       &:hover {
-        text-decoration-color: $content;
+        text-decoration-color: $sitcon;
       }
     }
   }
