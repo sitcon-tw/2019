@@ -134,7 +134,6 @@
       }
 
       .paper {
-        z-index: -1;
         border: 5px solid $content;
         border-radius: 0 0 1rem 1rem;
         border-width: 0 5px 5px 5px;
@@ -407,6 +406,10 @@
 
       @media screen and (max-width: 414px) {
         width: calc(100% - 2rem);
+      }
+
+      img {
+        height: 7rem;
       }
 
       h2 {
