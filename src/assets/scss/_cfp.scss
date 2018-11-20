@@ -3,6 +3,10 @@
     min-height: 200vh;
     display: flex;
     justify-content: center;
+    ::selection {
+      background-color: $sitcon;
+      color: $white;
+    }
   }
 
   &-paper-container {
