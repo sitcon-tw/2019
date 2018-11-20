@@ -95,7 +95,7 @@
           <p>Espresso 與 Presentation 的投稿格式相同</p>
           <ul>
             <li><b>投稿類型</b>：請寫明所欲投稿為 Presentation 或 Espresso。</li>
-            <li><b>題目 Title</b>必填，20 全形字以下。</li>
+            <li><b>題目 Title</b>：必填，20 全形字以下。</li>
             <li><b>摘要 Abstract</b>：必填，含標點符號 150 ~ 250 全形字，使用於宣傳以及網站。</li>
             <li><b>演講大綱 Outline</b>：必填，請說明該議程的大綱以及時間長度規劃。</li>
             <li><b>目標受眾 Target Audience</b>：必填，請說明該演講的目標受眾為怎麼樣的人。</li>
