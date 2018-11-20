@@ -164,7 +164,8 @@
         </div>
         <div class="cfp-message" v-show="sponsor">
           <div class="close" @click="sponsor = false"></div>
-          <div class="cfp-message-content" :style="{ 'background-image': `url(${require('@/assets/images/SVG/stone-half.svg')})` }">
+          <div class="cfp-message-content">
+            <img src="@/assets/images/SVG/stone-half.svg" alt="" class="cover-bg">
             <div class="close-btn">
               <img src="@/assets/images/SVG/close.svg" @click="sponsor = false" alt="">
             </div>

@@ -12,7 +12,6 @@
 
 .cfp {
   &-main-container {
-    min-height: 200vh;
     display: flex;
     justify-content: center;
 
@@ -396,7 +395,14 @@
       position: relative;
       min-height: 400px;
       background-repeat: no-repeat;
-      background-position: calc(100% + 3rem + 5px) calc(100% + 6rem + 10px);
+      overflow: hidden;
+      
+      .cover-bg {
+        position: absolute;
+        width: 350px;
+        right: 0;
+        bottom: 0;
+      }
 
       .close-btn {
         position: absolute;
