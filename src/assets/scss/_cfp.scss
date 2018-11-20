@@ -342,6 +342,10 @@
       color: $content;
       cursor: pointer;
       transition: all .3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       &:hover {
         box-shadow: 0 0 10pt rgba($black, .5);
@@ -391,6 +395,8 @@
       animation: boxJumpAppear .3s ease-in-out;
       position: relative;
       min-height: 400px;
+      background-repeat: no-repeat;
+      background-position: calc(100% + 3rem + 5px) calc(100% + 6rem + 10px);
 
       .close-btn {
         position: absolute;

@@ -68,7 +68,7 @@
         <div class="cfp-action">
           <div class="button">
             <h2>我要投稿</h2>
-            <img src="@/assets/images/SVG/sitcon-box-open.svg" alt="">
+            <img src="@/assets/images/SVG/sitcon-mailbox.svg" width="70%" alt="">
           </div>
           <div class="button" @click="sponsor = true">
             <h2>我想贊助</h2>
@@ -164,7 +164,7 @@
         </div>
         <div class="cfp-message" v-show="sponsor">
           <div class="close" @click="sponsor = false"></div>
-          <div class="cfp-message-content">
+          <div class="cfp-message-content" :style="{ 'background-image': `url(${require('@/assets/images/SVG/stone-half.svg')})` }">
             <div class="close-btn">
               <img src="@/assets/images/SVG/close.svg" @click="sponsor = false" alt="">
             </div>
