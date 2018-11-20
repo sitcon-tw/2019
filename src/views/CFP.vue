@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="cfp-main-container landing-bg">
+    <div class="cfp-main-container">
+      <div class="landing-bg" :style="{ 'transform' : `translate(${bg.x}px, ${bg.y}px) rotate(-30deg)`}"></div>
       <div class="cfp-paper-container">
         <div class="cfp-header">
           <div class="logo">
@@ -195,11 +196,28 @@ import Footer from '@/components/Footer.vue'
 export default {
   data () {
     return {
-      sponsor: false
+      sponsor: false,
+      bg: {
+        x: 0,
+        y: 0
+      }
     }
   },
   components: {
     Footer
+  },
+  mounted () {
+    const deviceX = document.querySelector('html').clientWidth
+    const deviceY = document.querySelector('html').clientHeight
+    document.addEventListener('mousemove', (event) => {
+      this.bgEffect(event.clientX, event.clientY, deviceX, deviceY)
+    })
+  },
+  methods: {
+    bgEffect (x, y, deviceX, deviceY) {
+      this.bg.x = (x - (deviceX / 2)) * 0.05
+      this.bg.y = (y - (deviceY / 2)) * 0.05
+    }
   }
 }
 </script>
