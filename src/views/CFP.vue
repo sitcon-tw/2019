@@ -64,7 +64,7 @@
           </p>
           <h2>Code of Conduct 行為準則</h2>
           <p>
-            SITCON 非常歡迎女性、跨性別與多元背景的投稿者。為了讓大家都能愉快的參加 SITCON，我們鼓勵所有參與者閱讀年會的<a href="https://sitcon.org/code-of-conduct/">行為準則（Code of Conduct）</a>，共同創造一個友善的環境。
+            SITCON 非常歡迎女性、跨性別與多元背景的投稿者。為了讓大家都能愉快的參加 SITCON，我們鼓勵所有參與者閱讀年會的<a target="_blank" href="https://sitcon.org/code-of-conduct/">行為準則（Code of Conduct）</a>，共同創造一個友善的環境。
           </p>
         </div>
         <div class="cfp-action">
@@ -181,7 +181,7 @@
               </p>
               <p class="split">
                 <span>個人贊助</span>
-                <a href="">贊助頁面</a>
+                <a target="_blank" href="">贊助頁面</a>
               </p>
             </div>
           </div>
