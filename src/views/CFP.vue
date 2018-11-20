@@ -22,7 +22,7 @@
             <h1>開箱演算法</h1>
             <div class="info-box date">
               <img src="@/assets/images/SVG/date-box.svg" alt="">
-              <h2>3/24</h2>
+              <h2>3/24（日）</h2>
             </div>
             <div class="info-box place">
               <img src="@/assets/images/SVG/place-box.svg" alt="">
@@ -64,6 +64,18 @@
           <p>
             SITCON 非常歡迎女性、跨性別與多元背景的投稿者。為了讓大家都能愉快的參加 SITCON，我們鼓勵所有參與者閱讀年會的<a href="https://sitcon.org/code-of-conduct/">行為準則（Code of Conduct）</a>，共同創造一個友善的環境。
           </p>
+        </div>
+        <div class="cfp-action">
+          <div class="button">
+            <h2>我要投稿</h2>
+            <img src="@/assets/images/SVG/sitcon-box-open.svg" alt="">
+          </div>
+          <div class="button" @click="sponsor = true">
+            <h2>我想贊助</h2>
+            <img src="@/assets/images/SVG/sitcon-box-open.svg" alt="">
+          </div>
+        </div>
+        <div class="cfp-content">
           <h2>議程種類</h2>
           <h3>Presentation</h3>
           <p>
@@ -150,28 +162,21 @@
             <li>為了維護所有講者的權利，試講時間恕不接受更改，請各位講者者準時參與。</li>
           </ul>
         </div>
-        <div class="cfp-action">
-          <div class="button">
-            <h2>我要投稿</h2>
-            <img src="@/assets/images/SVG/sitcon-box-open.svg" alt="">
-          </div>
-          <div class="button" @click="sponsor = true">
-            <h2>我想贊助</h2>
-            <img src="@/assets/images/SVG/sitcon-box-open.svg" alt="">
-          </div>
-        </div>
         <div class="cfp-message" v-show="sponsor">
           <div class="close" @click="sponsor = false"></div>
           <div class="cfp-message-content">
+            <div class="close-btn">
+              <img src="@/assets/images/SVG/close.svg" @click="sponsor = false" alt="">
+            </div>
             <h2>贊助歡迎聯繫</h2>
             <p>SITCON 的運作，除了眾多努力的志工，也還是少不了金錢的支持。</p>
             <p>如果認同 SITCON 的理念與作為，歡迎加入成為支持 SITCON 運作的一份子！</p>
             <p class="split">
-              企業贊助
+              <span>企業贊助</span>
               <a href="mailto:contact@sitcon.org">contact@sitcon.org</a>
             </p>
             <p class="split">
-              個人贊助
+              <span>個人贊助</span>
               <a href="">贊助頁面</a>
             </p>
           </div>
