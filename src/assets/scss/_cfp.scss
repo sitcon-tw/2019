@@ -42,6 +42,20 @@
   }
 }
 
+@keyframes drowAnimate2K {
+  0% {
+    transform: translate(2rem, 7rem);
+  }
+
+  50% {
+    transform: translate(2rem, 8rem);
+  }
+
+  100% {
+    transform: translate(2rem, 7rem);
+  }
+}
+
 .cfp {
   &-main-container {
     display: flex;
@@ -131,6 +145,10 @@
         @media screen and (max-width: 1080px) {
           display: none;
         }
+
+        @media screen and (min-width: 2560px) {
+          margin: 18rem 0 0 8rem;
+        }
       }
 
       .paper {
@@ -148,6 +166,22 @@
           &.active {
             animation: drowAnimate 1s ease-in-out;
           }
+        }
+
+        @media screen and (min-width: 1920px) {
+          padding-top: 6rem;
+        }
+
+        @media screen and (min-width: 2560px) {
+          padding-top: 10rem;
+        }
+
+        @media screen and (min-width: 2880px) {
+          padding-top: 12rem;
+        }
+
+        @media screen and (min-width: 3200px) {
+          padding-top: 14rem;
         }
 
         @media screen and (max-width: 1280px) {
