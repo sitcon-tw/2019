@@ -42,7 +42,7 @@
           </p>
           <h3>重要資訊</h3>
           <ul>
-            <li>2018/11/19（一）開始徵稿</li>
+            <li>2018/11/26（一）開始徵稿</li>
             <li>2019/01/07（一）06:40 投稿截止</li>
             <li>2019/02/03（日）審稿結束</li>
             <li>2019/02/13（三）公告完整議程</li>
@@ -233,11 +233,21 @@ export default {
     document.addEventListener('mousemove', (event) => {
       this.bgEffect(event.clientX, event.clientY, deviceX, deviceY)
     })
+
+    this.metaSetter()
   },
   methods: {
     bgEffect (x, y, deviceX, deviceY) {
       this.bg.x = (x - (deviceX / 2)) * 0.05
       this.bg.y = (y - (deviceY / 2)) * 0.05
+    },
+
+    metaSetter () {
+      let meta = document.querySelectorAll('meta')
+      let title = document.querySelector('head>title')
+
+      title.innerHTML = meta[2].content = '學生計算機年會 2019 徵稿｜SITCON 2019 CFP'
+      meta[4].content = 'https://sitcon.org/2019/cfp/'
     }
   }
 }

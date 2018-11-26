@@ -13,6 +13,8 @@ library.add(fas)
 library.add(far)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+require('@/assets/images/favicon.ico')
+
 Vue.config.devtools = true
 
 /* eslint-disable no-new */
