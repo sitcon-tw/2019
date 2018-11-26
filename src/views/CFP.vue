@@ -233,11 +233,21 @@ export default {
     document.addEventListener('mousemove', (event) => {
       this.bgEffect(event.clientX, event.clientY, deviceX, deviceY)
     })
+
+    this.metaSetter()
   },
   methods: {
     bgEffect (x, y, deviceX, deviceY) {
       this.bg.x = (x - (deviceX / 2)) * 0.05
       this.bg.y = (y - (deviceY / 2)) * 0.05
+    },
+
+    metaSetter () {
+      let meta = document.querySelectorAll('meta')
+      let title = document.querySelector('head>title')
+
+      title.innerHTML = meta[2].content = '學生計算機年會 2019 徵稿｜SITCON 2019 CFP'
+      meta[4].content = 'https://sitcon.org/2019/cfp/'
     }
   }
 }
