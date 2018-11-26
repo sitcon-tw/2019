@@ -51,17 +51,35 @@
             有定時舉辦之投稿者小聚，<br />
             有問題或需投稿建議都歡迎寄信議程組 <a href="mailto:session@sitcon.org">session@sitcon.org</a>
           </p>
-          <h2>投稿主題範例</h2>
+          <h2>年會主題</h2>
           <p>
             「Algorithm in a Box 開箱演算法」是 2019 的主題，投稿不一定要以此為主題，但若有與主題關聯之投稿，能夠與之相呼應，我們非常歡迎！
           </p>
           <p>
             「Algorithm in a Box」的「Box」發想自「黑箱 Black Box」，點出近年來我們的閱聽內容與生活愈發受到演算法支配，但我們卻無從得知，這些藏在黑箱中的演算法具體是什麼模樣；同時，「黑箱」也代表了只知其用法，卻對演算法的原理和細節不求甚解。另一方面，「Box」也可以解釋成「工具箱 Toolbox」，將演算法當成工具箱中的常備道具，也就是演算法的應用層面。我們希望能藉由「開箱」演算法，拆解「支配人們的演算法」的箱子，也要來拆解「不求甚解」的箱子、探究演算法的內涵與精神。
           </p>
+          <h2>投稿主題範例</h2>
           <p>
             我們特別期待以學生為主體的投稿，可以是從學生角度出發的經驗分享、技術分享，或是探討學生相關議題等等，不過廣義來說，只要是與資訊技術、電腦相關的講題，都歡迎投稿！<br />
-            以下的投稿範例可以提供一些靈感，或是您可以參與投稿者小聚，亦可前往 SITCON 前幾屆的網站（<a target="_blank" href="https://sitcon.org/2013">2013</a> 、 <a target="_blank" href="https://sitcon.org/2014">2014</a> 、 <a target="_blank" href="https://sitcon.org/2015">2015</a> 、 <a target="_blank" href="https://sitcon.org/2016">2016</a> 、 <a target="_blank" href="https://sitcon.org/2017">2017</a> 、 <a target="_blank" href="https://sitcon.org/2018">2018</a> ）查看過去的議程。
+            以下的投稿範例可以提供一些靈感，或是您可以參與投稿者小聚，亦可前往 SITCON 前幾屆的網站（ <a target="_blank" href="https://sitcon.org/2013">2013</a> 、 <a target="_blank" href="https://sitcon.org/2014">2014</a> 、 <a target="_blank" href="https://sitcon.org/2015">2015</a> 、 <a target="_blank" href="https://sitcon.org/2016">2016</a> 、 <a target="_blank" href="https://sitcon.org/2017">2017</a> 、 <a target="_blank" href="https://sitcon.org/2018">2018</a> ）查看過去的議程。
           </p>
+          <p>以下是我們以往的熱門議程，可供您參考：</p>
+          <ul>Presentation：
+            <li>奔跑吧！台北：遊戲開發經驗分享（<a href="https://sitcon.org/2018/#/agenda/sub/d946b6e1-d826-4c64-86a4-bf013bcc0c06" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=85bW97XI4i0" target="_blank">Video</a>）</li>
+            <li>Club Mate 與德國駭客精神：34C3 大會實錄（<a href="https://sitcon.org/2018/#/agenda/sub/35598abf-4efe-48fc-93a4-3d539e6f6c47" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=8xrYLc4num8" target="_blank">Video</a>）</li>
+            <li>由淺入坑區塊鏈～從認識架構到應用智能合約！（<a href="https://sitcon.org/2018/#/agenda/sub/08c2816d-ea25-4169-89e6-dc0e0bc7b9a4" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=B3fXXElzc9Q" target="_blank">Video</a>）</li>
+            <li>開發學校雲端服務的奇技淫巧（<a href="https://www.youtube.com/watch?v=msrsjX8mddE" target="_blank">Video</a>）</li>
+            <li>校園資訊系統的困境與嘗試改善（<a href="https://www.youtube.com/watch?v=1N3HZsPzKrI" target="_blank">Video</a>）</li>
+            <li>cjdns: 重新發明網路（<a href="https://sitcon.org/2018/#/agenda/sub/d946b6e1-d826-4c64-86a4-bf013bcc0c06" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=l75ArFBCMlM" target="_blank">Video</a>）</li>
+          </ul>
+          <ul>Espresso：
+            <li>校園駭客-看你學號() return 你家住址; （<a href="https://sitcon.org/2018/#/agenda/sub/b8998705-c6e2-4c48-ae76-984f23b54719" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=yahEwM88q-Q" target="_blank">Video</a>）</li>
+            <li>600秒學會UI設計（<a href="https://sitcon.org/2018/#/agenda/sub/d6daa14b-39ef-410b-883c-0b1c3ae02a60" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=hqhmwt7SCJc" target="_blank">Video</a>）</li>
+            <li>深度學習如何深度學習（<a href="https://sitcon.org/2018/#/agenda/sub/f3c6853d-2b0e-464c-8837-9411455961d8" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=H5o5Oa_nbqs" target="_blank">Video</a>）</li>
+            <li>格鬥遊戲 AI 開發經驗談（<a href="https://www.youtube.com/watch?v=ryLLzSwQ54w" target="_blank">Video</a>）</li>
+            <li>第一次做光劍就上手（<a href="https://www.youtube.com/watch?v=vokwxRmT2WU" target="_blank">Video</a>）</li>
+            <li>從零開始的線上字型（<a href="https://www.youtube.com/watch?v=HiQ35KuORFM" target="_blank">Video</a>）</li>
+          </ul>
           <h2>Code of Conduct 行為準則</h2>
           <p>
             SITCON 非常歡迎女性、跨性別與多元背景的投稿者。為了讓大家都能愉快的參加 SITCON，我們鼓勵所有參與者閱讀年會的<a target="_blank" href="https://sitcon.org/code-of-conduct/">行為準則（Code of Conduct）</a>，共同創造一個友善的環境。
@@ -94,14 +112,14 @@
           <h3>格式</h3>
           <p>Espresso 與 Presentation 的投稿格式相同</p>
           <ul>
-            <li><b>投稿類型</b>：請寫明所欲投稿為 Presentation 或 Espresso。</li>
+            <li><b>投稿類型</b>：必填，請寫明所欲投稿為 Presentation 或 Espresso。</li>
             <li><b>題目 Title</b>：必填，20 全形字以下。</li>
             <li><b>摘要 Abstract</b>：必填，含標點符號 150 ~ 250 全形字，使用於宣傳以及網站。</li>
             <li><b>演講大綱 Outline</b>：必填，請說明該議程的大綱以及時間長度規劃。</li>
             <li><b>目標受眾 Target Audience</b>：必填，請說明該演講的目標受眾為怎麼樣的人。</li>
             <li><b>詳細說明 Description</b>：必填，不限字數，請說明這個議程你認爲重要的相關細節，以利審稿委員更瞭解你的作品。我們強烈建議您詳細填寫此項，以增加入選機率。</li>
             <li><b>關鍵字 Key Words</b>：選填，請提供與議程直接關係的關鍵字。</li>
-            <li><b>附件 Attachment</b>：可以附上程式碼、投影片草稿或任何你認爲有助於我們瞭解你的議程的附件。</li>
+            <li><b>附件 Attachment</b>：選填，可以附上程式碼、投影片草稿或任何你認爲有助於我們瞭解你的議程的附件。</li>
           </ul>
           <h3>個人資料</h3>
           <p>請至 Profile 中填寫，以下只列出必填項目</p>
@@ -109,6 +127,7 @@
             <li><b>電子郵件 Email</b>：能讓大會聯絡的電子信箱。</li>
             <li><b>暱稱／名字 Name</b>：公開於講者海報及網站的稱呼。</li>
             <li><b>電話號碼 Phone</b>：用於大會聯絡、確認資訊用的電話號碼。</li>
+            <li><b>其他聯絡方式 Anything else we can contact you</b>：其他任何我們能聯絡您的方式。</li>
           </ul>
           <p>一個半形字元計為 0.5 個全形字元，一切投稿相關規定事項以本文件為準。</p>
           <h2>審稿方式</h2>
