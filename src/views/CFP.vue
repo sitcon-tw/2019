@@ -198,10 +198,10 @@
                 <span>企業贊助</span>
                 <a href="mailto:contact@sitcon.org">contact@sitcon.org</a>
               </p>
-              <p class="split">
+              <!-- <p class="split">
                 <span>個人贊助</span>
                 <a target="_blank" href="">贊助頁面</a>
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
