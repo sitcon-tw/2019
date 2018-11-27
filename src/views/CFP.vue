@@ -248,6 +248,7 @@ export default {
 
       title.innerHTML = meta[2].content = '學生計算機年會 2019 徵稿｜SITCON 2019 CFP'
       meta[4].content = 'https://sitcon.org/2019/cfp/'
+      meta[5].content = '/2019/static/metaBanner.png'
     },
 
     openWindow (url) {
