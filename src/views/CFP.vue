@@ -86,7 +86,7 @@
           </p>
         </div>
         <div class="cfp-action">
-          <div class="button">
+          <div class="button" @click="openWindow('https://docs.google.com/forms/d/e/1FAIpQLSebYH6_wfpgBAyI9j6FZgW8u6MnkR686WbDXBEGDjButnxiGQ/viewform')">
             <h2>我要投稿</h2>
             <img src="@/assets/images/SVG/sitcon-mailbox.svg" width="70%" alt="">
           </div>
@@ -248,6 +248,10 @@ export default {
 
       title.innerHTML = meta[2].content = '學生計算機年會 2019 徵稿｜SITCON 2019 CFP'
       meta[4].content = 'https://sitcon.org/2019/cfp/'
+    },
+
+    openWindow (url) {
+      window.open(url, '_blank')
     }
   }
 }
