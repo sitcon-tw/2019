@@ -9,12 +9,16 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      meta: {
-        label: '首頁'
-      },
-      component: views.Home
+      redirect: '/2019/cfp'
     },
+    // {
+    //   path: '/',
+    //   name: 'Home',
+    //   meta: {
+    //     label: '首頁'
+    //   },
+    //   component: views.Home
+    // },
     {
       path: '/cfp',
       name: 'CFP',
