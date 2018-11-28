@@ -84,7 +84,7 @@ module.exports = {
         }
       },
       {
-        test: /metaBanner\.(png)(\?.*)?$/,
+        test: /metaBanner.*\.(png)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           limit: 10000,

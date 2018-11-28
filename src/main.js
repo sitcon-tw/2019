@@ -14,7 +14,7 @@ library.add(far)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 require('@/assets/images/favicon.ico')
-require('@/assets/images/metaBanner.png')
+require('@/assets/images/metaBanner-CFP.png')
 
 Vue.config.devtools = true
 
