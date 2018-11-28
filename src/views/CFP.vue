@@ -198,10 +198,11 @@
                 <span>企業贊助</span>
                 <a href="mailto:contact@sitcon.org">contact@sitcon.org</a>
               </p>
-              <!-- <p class="split">
+              <p class="split">
                 <span>個人贊助</span>
-                <a target="_blank" href="">贊助頁面</a>
-              </p> -->
+                <a target="_blank" href="https://sitcon.kktix.cc/events/sitcon2019-individual-sponsor">個人贊助方案</a>
+                <a target="_blank" href="https://sitcon.kktix.cc/events/sitcon2019-individual-sponsor1">個人贊助方案 — 純粹贊助</a>
+              </p>
             </div>
           </div>
         </div>
