@@ -40,7 +40,19 @@
           <p>
             SITCON 學生計算機年會係一學生自發組成的研討會，秉持著以學生為主軸的核心價值，藉以凝聚與傳遞學生的力量。希望藉由提供一個經驗交流與資訊技術實務分享的平台，使已有成就者能夠傳承己身經驗，嶄露頭角者在激盪中獲得靈感與啟發，並同時讓初入茅廬者得以對資訊科學有更深入的了解；進而達到「學以致用、教學相長」的目標。
           </p>
-          <h3>重要資訊</h3>
+        </div>
+        <div class="cfp-action">
+          <div class="button" @click="openWindow('https://docs.google.com/forms/d/e/1FAIpQLSebYH6_wfpgBAyI9j6FZgW8u6MnkR686WbDXBEGDjButnxiGQ/viewform')">
+            <h2>我要投稿</h2>
+            <img src="@/assets/images/SVG/sitcon-mailbox.svg" width="70%" alt="">
+          </div>
+          <div class="button" @click="sponsor = true">
+            <h2>我想贊助</h2>
+            <img src="@/assets/images/SVG/sitcon-box-open.svg" alt="">
+          </div>
+        </div>
+        <div class="cfp-content">
+          <h2>重要資訊</h2>
           <ul>
             <li>即日起開始徵稿</li>
             <li>2019/01/07（一）06:40 投稿截止</li>
@@ -84,18 +96,6 @@
           <p>
             SITCON 非常歡迎女性、跨性別與多元背景的投稿者。為了讓大家都能愉快的參加 SITCON，我們鼓勵所有參與者閱讀年會的<a target="_blank" href="https://sitcon.org/code-of-conduct/">行為準則（Code of Conduct）</a>，共同創造一個友善的環境。
           </p>
-        </div>
-        <div class="cfp-action">
-          <div class="button" @click="openWindow('https://docs.google.com/forms/d/e/1FAIpQLSebYH6_wfpgBAyI9j6FZgW8u6MnkR686WbDXBEGDjButnxiGQ/viewform')">
-            <h2>我要投稿</h2>
-            <img src="@/assets/images/SVG/sitcon-mailbox.svg" width="70%" alt="">
-          </div>
-          <div class="button" @click="sponsor = true">
-            <h2>我想贊助</h2>
-            <img src="@/assets/images/SVG/sitcon-box-open.svg" alt="">
-          </div>
-        </div>
-        <div class="cfp-content">
           <h2>議程種類</h2>
           <h3>Presentation</h3>
           <p>
