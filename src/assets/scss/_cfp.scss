@@ -496,6 +496,10 @@
         right: 0;
         bottom: 0;
         z-index: 0;
+
+        @media screen and (max-width: 475px) {
+          width: 200px;
+        }
       }
 
       .close-btn {
@@ -504,6 +508,11 @@
         top: 3rem;
         z-index: 2;
         cursor: pointer;
+
+        img {
+          height: 2rem;
+          width: 2rem;
+        }
 
         @media screen and (max-width: 475px) {
           right: 1.5rem;
@@ -515,9 +524,9 @@
           }
         }
 
-        img {
-          height: 2rem;
-          width: 2rem;
+        @media screen and (max-width: 320px) {
+          right: 1rem;
+          top: 1rem;
         }
       }
 
@@ -537,6 +546,10 @@
         height: auto;
       }
 
+      @media screen and (max-width: 320px) {
+        width: 90%;
+        padding: 1rem;
+      }
 
       .content {
         z-index: 1;
