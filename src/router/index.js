@@ -15,9 +15,9 @@ const router = new Router({
       path: '/',
       name: 'Home',
       meta: {
-        type: 'main',
+        type: 'self',
         index: 0,
-        label: '首頁'
+        label: 'SITCON 19'
       },
       component: views.Home
     },
