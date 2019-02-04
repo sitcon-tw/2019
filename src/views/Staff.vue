@@ -24,7 +24,7 @@
               class="member"
             >
               <div class="image">
-                <v-gravatar :hash="member.emailHash" default-img="https://sitcon.org/2019/static/default_avatar.png" />
+                <v-gravatar :hash="member.emailHash" default-img="https://sitcon.org/2019/static/img/default_avatar.png" />
               </div>
               <p>{{ member.nickname }}</p>
             </div>
@@ -37,7 +37,7 @@
 
 <script>
 import * as layout from '@/components'
-import teamData from '../../static/staff.json'
+import teamData from '../../static/json/staff.json'
 
 export default {
   data () {
