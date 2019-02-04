@@ -82,14 +82,6 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('[name].[ext]')
         }
-      },
-      {
-        test: /metaBanner.*\.(png|jpe?g|gif)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 0,
-          name: utils.assetsPath('[name].[ext]')
-        }
       }
     ]
   },
