@@ -152,7 +152,7 @@
       }
 
       .paper {
-        border: 5px solid $content;
+        border: 5px solid $cfp_content;
         border-radius: 0 0 1rem 1rem;
         border-width: 0 5px 5px 5px;
         padding: 10pt;
@@ -232,7 +232,7 @@
 
         h3 {
           font-size: 24px;
-          color: $content;
+          color: $cfp_content;
 
           @media screen and (max-width: 1080px) {
             font-size: 20px;
@@ -247,7 +247,7 @@
 
     .content {
       width: 50%;
-      color: $content;
+      color: $cfp_content;
 
       @media screen and (max-width: 768px) {
         margin-top: 6rem;
@@ -349,7 +349,7 @@
   }
 
   &-content {
-    color: $content;
+    color: $cfp_content;
     padding: 0 8rem;
 
     @media screen and (max-width: 1400px) {
@@ -426,7 +426,7 @@
       border-radius: 1.5rem;
       width: calc(300px - 20pt);
       padding: 10pt;
-      color: $content;
+      color: $cfp_content;
       cursor: pointer;
       transition: all .3s;
       display: flex;
@@ -482,7 +482,7 @@
       box-sizing: border-box;
       box-shadow: 0 0 3rem rgba($black, .5);
       border: 5px solid $gray;
-      color: $content;
+      color: $cfp_content;
       animation: boxJumpAppear .3s ease-in-out;
       position: relative;
       min-height: 400px;
