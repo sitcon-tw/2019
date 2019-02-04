@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import Gravatar from 'vue-gravatar'
 import App from './App'
 import router from './router'
 
@@ -12,6 +13,8 @@ library.add(fab)
 library.add(fas)
 library.add(far)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+Vue.component('v-gravatar', Gravatar)
 
 require('@/assets/images/favicon.ico')
 require('@/assets/images/metaBanner-CFP.png')
