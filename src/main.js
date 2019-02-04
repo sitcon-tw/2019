@@ -17,7 +17,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('v-gravatar', Gravatar)
 
 require('@/assets/images/favicon.ico')
-require('@/assets/images/metaBanner-CFP.png')
 
 Vue.config.devtools = true
 
