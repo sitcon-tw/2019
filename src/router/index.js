@@ -11,29 +11,84 @@ const router = new Router({
       path: '/',
       redirect: '/2019/cfp'
     },
-    // {
-    //   path: '/',
-    //   name: 'Home',
-    //   meta: {
-    //     label: '首頁'
-    //   },
-    //   component: views.Home
-    // },
     {
-      path: '/cfp',
-      name: 'CFP',
+      path: '/',
+      name: 'Home',
       meta: {
-        label: 'CFP'
+        type: 'main',
+        index: 0,
+        label: '首頁'
       },
-      component: views.CFP
+      component: views.Home
     },
     {
       path: '/agenda',
       name: 'Agenda',
       meta: {
+        type: 'main',
+        index: 1,
         label: '議程'
       },
       component: views.Agenda
+    },
+    {
+      path: '/active',
+      name: 'Active',
+      meta: {
+        type: 'main',
+        index: 2,
+        label: '活動'
+      },
+      component: views.Active
+    },
+    {
+      path: '/sponsor',
+      name: 'Sponsor',
+      meta: {
+        type: 'main',
+        index: 3,
+        label: '贊助'
+      },
+      component: views.Sponsor
+    },
+    {
+      path: '/location',
+      name: 'Location',
+      meta: {
+        type: 'main',
+        index: 4,
+        label: '地點'
+      },
+      component: views.Location
+    },
+    {
+      path: '/venue',
+      name: 'Venue',
+      meta: {
+        type: 'main',
+        index: 5,
+        label: '會場地圖'
+      },
+      component: views.Venue
+    },
+    {
+      path: '/staff',
+      name: 'Staff',
+      meta: {
+        type: 'main',
+        index: 6,
+        label: '工作人員'
+      },
+      component: views.Staff
+    },
+    {
+      path: '/cfp',
+      name: 'CFP',
+      meta: {
+        type: 'self',
+        label: 'CFP'
+      },
+      component: views.CFP
     }
   ].map(routeRule => {
     routeRule.path = `/2019${routeRule.path}`
