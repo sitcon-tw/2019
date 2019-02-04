@@ -1,0 +1,48 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 64px 140px;
+  padding: 0 32px;
+  height: 80px;
+  width: calc(100% - (140px + 32px) * 2);
+  background-color: $tone_light;
+
+  &-logo {
+    width: 240px;
+    margin-right: 600px;
+    a {
+      color: $content;
+      text-decoration: none;
+
+      p {
+        font-weight: 700;
+        font-size: 28px;
+      }
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: calc(100% - 840px);
+  }
+
+  &-item {
+    height: 32px;
+    width: auto;
+
+    a {
+      color: $content;
+      text-decoration: none;
+
+      p {
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+  }
+}
