@@ -1,0 +1,43 @@
+.spotlight {
+  &-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.stagger {
+    &:nth-child(odd) {
+      background-color: $white;
+    }
+
+    &:nth-child(even) {
+      background-color: $tone_paper;
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 140px * 2);
+  padding: 64px 140px;
+  background-color: $white;
+  color: $content;
+
+  .content {
+    padding: 0 140px;
+
+    h1 {
+      color: $title;
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+    }
+  }
+}

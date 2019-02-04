@@ -11,8 +11,12 @@ p,
 ul,
 li,
 span {
-  line-height: 1.6;
+  line-height: 1.4;
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
+}
+
+.bold {
+  font-weight: 500;
 }
