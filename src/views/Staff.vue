@@ -26,7 +26,7 @@
               <div class="image">
                 <v-gravatar :hash="member.emailHash" default-img="https://sitcon.org/2019/static/img/default_avatar.png" />
               </div>
-              <p>{{ member.nickname }}</p>
+              <p>{{ member.name }}</p>
             </div>
           </div>
         </div>
