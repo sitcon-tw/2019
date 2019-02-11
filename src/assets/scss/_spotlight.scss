@@ -5,6 +5,13 @@
     flex-direction: column;
   }
 
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 140px * 2);
+  padding: 64px 140px;
+  background-color: $white;
+  color: $content;
+
   &.stagger {
     &:nth-child(odd) {
       background-color: $white;
@@ -15,12 +22,42 @@
     }
   }
 
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 140px * 2);
-  padding: 64px 140px;
-  background-color: $white;
-  color: $content;
+  &.card {
+    margin: 87px 140px;
+    padding: 0;
+
+    .card-container {
+      box-sizing: border-box;
+      border: 1px solid $gray;
+      background-color: $white;
+      display: flex;
+      flex-direction: row;
+
+      .logo-image {
+        display: flex;
+        height: 500px;
+        width: 500px;
+        box-sizing: border-box;
+        border-right: 1px solid $gray;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .content {
+        width: calc(100% - 500px - 96px * 2);
+        padding: 48px 96px;
+
+        h1 {
+          font-size: 36px;
+        }
+
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+  }
 
   .content {
     padding: 0 140px;
