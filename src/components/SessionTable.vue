@@ -35,16 +35,19 @@
         }"
       />
     </div>
+    <session-popup v-if="popupData" :data="popupData" />
   </div>
 </template>
 
 <script>
 import SessionBox from './SessionBox'
+import SessionPopup from './SessionPopup'
 import _ from 'lodash'
 
 export default {
   components: {
-    SessionBox
+    SessionBox,
+    SessionPopup
   },
   props: {
     sessionData: {
@@ -58,7 +61,8 @@ export default {
   data () {
     return {
       rooms: ['R0', 'R1', 'R2', 'R3', 'S'],
-      timeLine: []
+      timeLine: [],
+      popupData: null
     }
   },
   computed: {
@@ -102,7 +106,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R0',
         'broadcast': null,
         'start': '2018-03-10T11:50:00+08:00',
@@ -121,7 +125,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R0',
         'broadcast': null,
         'start': '2018-03-10T15:30:00+08:00',
@@ -140,7 +144,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R0',
         'broadcast': null,
         'start': '2018-03-10T17:10:00+08:00',
@@ -160,7 +164,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R1',
         'broadcast': null,
         'start': '2018-03-10T11:50:00+08:00',
@@ -179,7 +183,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R1',
         'broadcast': null,
         'start': '2018-03-10T15:30:00+08:00',
@@ -198,7 +202,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R1',
         'broadcast': null,
         'start': '2018-03-10T17:10:00+08:00',
@@ -218,7 +222,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R2',
         'broadcast': null,
         'start': '2018-03-10T11:50:00+08:00',
@@ -237,7 +241,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R2',
         'broadcast': null,
         'start': '2018-03-10T15:30:00+08:00',
@@ -256,7 +260,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R2',
         'broadcast': null,
         'start': '2018-03-10T17:10:00+08:00',
@@ -276,7 +280,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R3',
         'broadcast': null,
         'start': '2018-03-10T11:50:00+08:00',
@@ -295,7 +299,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R3',
         'broadcast': null,
         'start': '2018-03-10T15:30:00+08:00',
@@ -314,7 +318,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'R3',
         'broadcast': null,
         'start': '2018-03-10T17:10:00+08:00',
@@ -334,7 +338,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'S',
         'broadcast': null,
         'start': '2018-03-10T12:00:00+08:00',
@@ -353,7 +357,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'S',
         'broadcast': null,
         'start': '2018-03-10T14:50:00+08:00',
@@ -372,7 +376,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'S',
         'broadcast': null,
         'start': '2018-03-10T15:50:00+08:00',
@@ -391,7 +395,7 @@ export default {
           'title': ''
         },
         'summary': '',
-        'type': 'E',
+        'type': 'BREAK',
         'room': 'S',
         'broadcast': null,
         'start': '2018-03-10T16:50:00+08:00',
@@ -406,6 +410,24 @@ export default {
       })
 
       return result
+    },
+    openPopup () {
+      if (this.$route.params.sessionId) {
+        const target = _.find(this.sessions, data => data.id === this.$route.params.sessionId)
+        if (target) {
+          this.popupData = target
+        }
+      } else {
+        this.popupData = null
+      }
+    }
+  },
+  mounted () {
+    this.openPopup()
+  },
+  watch: {
+    $route (route) {
+      this.openPopup()
     }
   }
 }

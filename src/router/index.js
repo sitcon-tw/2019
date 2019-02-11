@@ -32,6 +32,14 @@ const router = new Router({
       component: views.Agenda
     },
     {
+      path: '/agenda/:sessionId',
+      name: 'AgendaPopup',
+      meta: {
+        type: 'popup'
+      },
+      component: views.Agenda
+    },
+    {
       path: '/active',
       name: 'Active',
       meta: {

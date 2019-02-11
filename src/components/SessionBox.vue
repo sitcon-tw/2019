@@ -1,9 +1,13 @@
 <template>
-  <div class="session">
+  <div
+    class="session"
+    :class="{'clickable': data.type !== 'BREAK'}"
+    @click="data.type !== 'BREAK' ? openPop(data.id) : null"
+  >
     <p class="tag">
       <span
-        v-for="tag in data.tag"
-        :key="tag"
+        v-for="(tag, index) in data.tag"
+        :key="`tag-${index}`"
       >
         {{ tag.zh }}
       </span>
@@ -26,6 +30,11 @@ export default {
   props: {
     data: {
       type: Object
+    }
+  },
+  methods: {
+    openPop (id) {
+      this.$router.push({ name: 'AgendaPopup', params: { sessionId: id } })
     }
   }
 }
