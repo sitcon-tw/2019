@@ -8,7 +8,7 @@
         class="spotlight card"
       >
         <div class="card-container">
-          <div class="logo-image" :style="{ 'background-image': `url(../../static/img/sponsor/${sponsor.image})` }"></div>
+          <div class="logo-image" :style="{ 'background-image': `url(static/img/sponsor/${sponsor.image})` }"></div>
           <div class="content">
             <h1>{{ sponsor.name }}</h1>
             <p
