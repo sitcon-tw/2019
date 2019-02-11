@@ -1,0 +1,57 @@
+.session {
+  &-table {
+    margin: auto;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: [time] 60px [R0] 1fr [R1] 1fr [R2] 1fr [R3] 1fr [S] 1fr [END];
+  }
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid $white;
+  background-color: $tone_light;
+
+  .tag {
+    span {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: $tone_dark;
+      color: $white;
+      padding: 1px 7px;
+      margin: 3px;
+      border-radius: 1rem;
+      font-size: 14px;
+    }
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: 500;
+    white-space: pre-wrap;
+  }
+
+  &-time {
+    grid-column-start: time;
+    background-color: $white;
+    p {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &-room {
+    background-color: $white;
+    p {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
