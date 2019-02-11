@@ -1,5 +1,7 @@
 import Navbar from './Navbar.vue'
+import SitconMap from './SitconMap.vue'
 
 export {
-  Navbar
+  Navbar,
+  SitconMap
 }
