@@ -118,7 +118,7 @@ export default {
       return `${this.timeTo2Dig(date.getHours())}:${this.timeTo2Dig(date.getMinutes())}`
     },
     filterAndJoinBlankBlock (session) {
-      let result = session.filter(data => data.zh.title !== '午餐')
+      let result = session
       // R0
       // R1
       // R2
@@ -172,6 +172,25 @@ export default {
         'room': 'S',
         'broadcast': null,
         'start': '2018-03-10T11:10:00+08:00',
+        'end': '2018-03-10T11:50:00+08:00',
+        'sli.do': '',
+        'beginner': '',
+        'speaker': {
+          'name': '',
+          'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+          'bio': ''
+        }
+      })
+      result.push({
+        'id': '97f3ae3d-100e-4f78-87eb-61795a733602',
+        'zh': {
+          'title': ''
+        },
+        'summary': '',
+        'type': 'BREAK',
+        'room': 'S',
+        'broadcast': null,
+        'start': '2018-03-10T12:40:00+08:00',
         'end': '2018-03-10T14:10:00+08:00',
         'sli.do': '',
         'beginner': '',
