@@ -8,7 +8,7 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js && mv dist/2019/* dist/ && rm -rf dist/2019",
+    "build": "node util/session/index.js > static/json/agenda.json && node build/build.js && mv dist/2019/* dist/ && rm -rf dist/2019",
     "test": "echo 'No test'"
   },
   "dependencies": {
