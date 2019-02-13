@@ -4,6 +4,10 @@
     width: 1200px;
     display: grid;
     grid-template-columns: [time] 60px [R0] 1fr [R1] 1fr [R2] 1fr [R3] 1fr [S] 1fr [END];
+
+    @media screen and (max-width: 1500px) {
+      width: 100%;
+    }
   }
 
   position: relative;
