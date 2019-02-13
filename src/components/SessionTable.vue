@@ -5,6 +5,7 @@
         v-for="room in rooms"
         :key="room"
         class="session session-room"
+        :class="{ 'hide': isMobile }"
         :style="{
           'grid-column-start': `${room}`,
           'grid-row-start': 1
@@ -27,11 +28,12 @@
         v-for="(session, index) in sessions"
         :key="`session-${index}`"
         :data="session"
+        :isMobile="isMobile"
         :style="{
           'grid-column-start': `${session.broadcast ? 'R2' : session.room}`,
           'grid-column-end': `${session.broadcast ? 'END' : `${rooms[rooms.indexOf(session.room) + 1]}`}`,
           'grid-row-start': `${times.indexOf(formatTime(session.start)) + 2}`,
-          'grid-row-end': `${times.indexOf(formatTime(session.end)) + 2}`
+          'grid-row-end': `${isMobile ? times.indexOf(formatTime(session.start)) + 3 :  times.indexOf(formatTime(session.end)) + 2}`
         }"
       />
     </div>
@@ -52,17 +54,14 @@ export default {
   props: {
     sessionData: {
       type: Array
-    },
-    isMobile: {
-      type: Boolean,
-      default: false
     }
   },
   data () {
     return {
       rooms: ['R2', 'R0', 'R1', 'R3', 'S'],
       timeLine: [],
-      popupData: null
+      popupData: null,
+      isMobile: false
     }
   },
   computed: {
@@ -230,10 +229,21 @@ export default {
       } else {
         this.popupData = null
       }
+    },
+    resize () {
+      if (document.documentElement.clientWidth <= 1200) this.isMobile = true
+      else this.isMobile = false
     }
   },
   mounted () {
     this.openPopup()
+
+    let self = this
+
+    self.resize()
+    window.addEventListener('resize', () => {
+      self.resize()
+    })
   },
   watch: {
     $route (route) {
