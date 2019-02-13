@@ -10,7 +10,8 @@
     }
 
     @media screen and (max-width: 1200px) {
-      grid-template-columns: [MOBILE_START] 1fr [MOBILE_END];
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -35,7 +36,6 @@
 
   &:not(&-time) {
     @media screen and (max-width: 1200px) {
-      margin-top: 2.5rem;
       border-bottom: 1px solid $tone_dark;
     }
   }

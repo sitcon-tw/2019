@@ -1,11 +1,10 @@
 <template>
   <div>
-    <div class="session-table">
+    <div v-if="!isMobile" class="session-table">
       <div
         v-for="room in rooms"
         :key="room"
         class="session session-room"
-        :class="{ 'hide': isMobile }"
         :style="{
           'grid-column-start': `${room}`,
           'grid-row-start': 1
@@ -33,8 +32,16 @@
           'grid-column-start': `${session.broadcast ? 'R2' : session.room}`,
           'grid-column-end': `${session.broadcast ? 'END' : `${rooms[rooms.indexOf(session.room) + 1]}`}`,
           'grid-row-start': `${times.indexOf(formatTime(session.start)) + 2}`,
-          'grid-row-end': `${isMobile ? times.indexOf(formatTime(session.start)) + 3 :  times.indexOf(formatTime(session.end)) + 2}`
+          'grid-row-end': `${times.indexOf(formatTime(session.end)) + 2}`
         }"
+      />
+    </div>
+    <div v-else class="session-table">
+      <session-box-mobile
+        v-for="(session, index) in mobileSession"
+        :key="`session-${index}`"
+        :data="session"
+        :isMobile="isMobile"
       />
     </div>
     <session-popup v-if="popupData" :data="popupData" />
@@ -43,12 +50,14 @@
 
 <script>
 import SessionBox from './SessionBox'
+import SessionBoxMobile from './SessionBoxMobile'
 import SessionPopup from './SessionPopup'
 import _ from 'lodash'
 
 export default {
   components: {
     SessionBox,
+    SessionBoxMobile,
     SessionPopup
   },
   props: {
@@ -67,6 +76,17 @@ export default {
   computed: {
     sessions: function () {
       return this.parseSession()
+    },
+    mobileSession: function () {
+      let result = _.groupBy(this.sessions, data => data.start)
+      let keys = Object.keys(result)
+      let value = Object.values(result)
+      return keys.map((key, index) => ({
+        time: this.formatTime(new Date(key)),
+        sessions: value[index]
+      })).sort((a, b) => {
+        return a.time > b.time ? 1 : -1
+      })
     },
     times: function () {
       let result = []
