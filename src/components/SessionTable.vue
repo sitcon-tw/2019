@@ -28,7 +28,7 @@
         :key="`session-${index}`"
         :data="session"
         :style="{
-          'grid-column-start': `${session.room}`,
+          'grid-column-start': `${session.broadcast ? 'R2' : session.room}`,
           'grid-column-end': `${session.broadcast ? 'END' : `${rooms[rooms.indexOf(session.room) + 1]}`}`,
           'grid-row-start': `${times.indexOf(formatTime(session.start)) + 2}`,
           'grid-row-end': `${times.indexOf(formatTime(session.end)) + 2}`
@@ -60,7 +60,7 @@ export default {
   },
   data () {
     return {
-      rooms: ['R0', 'R1', 'R2', 'R3', 'S'],
+      rooms: ['R2', 'R0', 'R1', 'R3', 'S'],
       timeLine: [],
       popupData: null
     }
