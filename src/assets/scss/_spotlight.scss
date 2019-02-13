@@ -12,6 +12,11 @@
   background-color: $white;
   color: $content;
 
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    padding: 0;
+  }
+
   &.stagger {
     &:nth-child(odd) {
       background-color: $white;

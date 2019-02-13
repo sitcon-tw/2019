@@ -22,6 +22,9 @@
         {{ data.speakers.length - 1 !== index ? ' / ' : '' }}
       </span>
     </p>
+    <p v-if="isMobile" class="room">
+      {{ data.room }}
+    </p>
   </div>
 </template>
 
@@ -30,6 +33,10 @@ export default {
   props: {
     data: {
       type: Object
+    },
+    isMobile: {
+      default: false,
+      type: Boolean
     }
   },
   methods: {
