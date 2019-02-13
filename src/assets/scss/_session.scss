@@ -8,6 +8,10 @@
     @media screen and (max-width: 1500px) {
       width: 100%;
     }
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: [MOBILE_START] 1fr [MOBILE_END];
+    }
   }
 
   position: relative;
