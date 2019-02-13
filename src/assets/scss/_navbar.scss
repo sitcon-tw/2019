@@ -12,7 +12,20 @@
 
   &-logo {
     width: 240px;
-    margin-right: 600px;
+    margin-right: auto;
+
+    @media screen and (max-width: 1500px) {
+      margin-right: 400px;
+    }
+
+    @media screen and (max-width: 1366px) {
+      margin-right: 200px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      margin-right: 0;
+    }
+
     a {
       color: $content;
       text-decoration: none;
@@ -30,6 +43,18 @@
     align-items: center;
     justify-content: space-around;
     width: calc(100% - 840px);
+
+    @media screen and (max-width: 1500px) {
+      width: calc(100% - 640px);
+    }
+
+    @media screen and (max-width: 1366px) {
+      width: calc(100% - 440px);
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: calc(100% - 240px);
+    }
   }
 
   &-item {
