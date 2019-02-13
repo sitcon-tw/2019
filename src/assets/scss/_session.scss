@@ -115,13 +115,33 @@
     justify-content: center;
     align-items: center;
 
+    &-placeholder {
+      height: calc(100vh - 10rem);
+      width: 100%;
+      padding-top: 10rem;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      color: $white;
+      z-index: 10000;
+
+      @media screen and (max-width: 1200px) {
+        padding-top: 5rem;
+        height: calc(100vh - 5rem);
+      }
+    }
+
     &-close {
       position: absolute;
       height: 32px;
       width: 32px;
-      top: calc(5rem + 32px);
-      right: calc(10rem + 32px);
+      top: calc(10rem - 32px);
+      right: calc(20rem - 32px);
       cursor: pointer;
+      z-index: 1;
 
       @media screen and (max-width: 1200px) {
         top: 32px;
@@ -135,6 +155,7 @@
         height: 100vh;
         top: 0;
         left: 0;
+        z-index: 0;
 
         @media screen and (max-width: 1200px) {
           display: none;
@@ -143,18 +164,15 @@
     }
 
     &-container {
-      height: calc(100vh - 10rem);
       width: calc(100% - 40rem);
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
       display: flex;
       flex-direction: column;
       position: relative;
       color: $white;
-      z-index: 10000;
+      z-index: 1;
+      padding-bottom: 5rem;
 
       @media screen and (max-width: 1200px) {
-        height: calc(100vh - 2rem);
         width: calc(100% - 2rem);
       }
 
@@ -165,7 +183,7 @@
 
       h1 {
         font-size: 36px;
-        margin: 4rem 0 2rem 0;
+        margin: 0 0 2rem 0;
       }
 
       p {
