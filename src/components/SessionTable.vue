@@ -27,6 +27,7 @@
         v-for="(session, index) in sessions"
         :key="`session-${index}`"
         :data="session"
+        :class="{ 'blank-cover': session.type === 'BREAK' }"
         :isMobile="isMobile"
         :style="{
           'grid-column-start': `${session.broadcast ? 'R2' : session.room}`,
@@ -121,6 +122,25 @@ export default {
       // R0
       // R1
       // R2
+      result.push({
+        'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
+        'zh': {
+          'title': ''
+        },
+        'summary': '',
+        'type': 'BREAK',
+        'room': 'R2',
+        'broadcast': null,
+        'start': '2018-03-10T13:30:00+08:00',
+        'end': '2018-03-10T14:10:00+08:00',
+        'sli.do': '',
+        'beginner': '',
+        'speaker': {
+          'name': '',
+          'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+          'bio': ''
+        }
+      })
       // R3
       result.push({
         'id': '97f3ae3d-100e-4f78-87eb-61795a733601',

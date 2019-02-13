@@ -25,6 +25,7 @@
   box-sizing: border-box;
   border: 2px solid $white;
   background-color: $tone_light;
+  z-index: 1;
 
   @media screen and (max-width: 1200px) {
     text-align: left;
@@ -46,6 +47,10 @@
 
   &.hide {
     display: none;
+  }
+
+  &.blank-cover {
+    z-index: 0;
   }
 
   .tag {
