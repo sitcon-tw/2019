@@ -269,9 +269,11 @@ export default {
         const target = _.find(this.sessions, data => data.id === this.$route.params.sessionId)
         if (target) {
           this.popupData = target
+          document.querySelector('body').classList.add('popup-scrolling-lock')
         }
       } else {
         this.popupData = null
+        document.querySelector('body').classList.remove('popup-scrolling-lock')
       }
     },
     resize () {
@@ -288,6 +290,9 @@ export default {
     window.addEventListener('resize', () => {
       self.resize()
     })
+  },
+  destroyed () {
+    window.removeEventListener('resize')
   },
   watch: {
     $route (route) {

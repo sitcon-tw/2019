@@ -136,6 +136,7 @@
     animation-fill-mode: forwards;
     background-color: rgba($black, 0.8);
     -webkit-backdrop-filter: blur(5px);
+    user-select: text;
 
     &-placeholder {
       height: calc(100vh - 10rem);
@@ -149,6 +150,10 @@
       position: relative;
       color: $white;
       z-index: 10000;
+
+      &::-webkit-scrollbar {
+        display: none
+      }
 
       @media screen and (max-width: 900px) {
         padding-top: 5rem;
