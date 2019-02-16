@@ -32,6 +32,12 @@ export default {
     data: {
       type: Object
     }
+  },
+  mounted () {
+    let self = this
+    window.addEventListener('keydown', (event) => {
+      if (event.keyCode === 27) self.$router.push({ name: 'Agenda' })
+    })
   }
 }
 </script>
