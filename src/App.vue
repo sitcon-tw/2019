@@ -2,6 +2,7 @@
   <div id="app">
     <Navbar v-if="!hideNavbar" />
     <router-view />
+    <Footer />
   </div>
 </template>
 
