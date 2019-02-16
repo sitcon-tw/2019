@@ -8,6 +8,10 @@
   }
 }
 
+.clickable:hover {
+  background-color: $tone_hover;
+}
+
 .session {
   &-table {
     margin: auto;
