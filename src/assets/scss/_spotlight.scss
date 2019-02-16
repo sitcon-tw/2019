@@ -71,14 +71,26 @@
   .content {
     padding: 0 140px;
 
+    @media screen and (max-width: 900px) {
+      padding: 0 1rem;
+    }
+
     h1 {
       color: $title;
       font-size: 48px;
       margin-bottom: 24px;
+
+      @media screen and (max-width: 1920px) {
+        font-size: 36px
+      }
     }
 
     p {
       font-size: 30px;
+
+      @media screen and (max-width: 1920px) {
+        font-size: 24px
+      }
     }
 
     a {
