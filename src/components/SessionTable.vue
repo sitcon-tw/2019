@@ -17,11 +17,11 @@
         :key="`time-${time}`"
         class="session session-time"
         :style="{
-          'grid-row-start': `${times.indexOf(formatTime(time)) + 2}`,
-          'grid-row-end': `${times.indexOf(formatTime(timeLine[index])) + 2}`
+          'grid-row-start': `${times.indexOf(time) + 2}`,
+          'grid-row-end': `${times.indexOf(timeLine[index]) + 2}`
         }"
       >
-        <p>{{ formatTime(time) }}</p>
+        <p>{{ time }}</p>
       </div>
       <session-box
         v-for="(session, index) in sessions"
@@ -69,7 +69,6 @@ export default {
   data () {
     return {
       rooms: ['R2', 'R0', 'R1', 'R3', 'S'],
-      timeLine: [],
       popupData: null,
       isMobile: false
     }
@@ -96,7 +95,12 @@ export default {
       let end = _.map(data, 'end')
       result = _.concat(result, start, end)
       result = _.uniqBy(result, this.formatTime)
-      this.timeLine = _.uniqBy(start.sort(), this.formatTime)
+      return result.slice().sort().map(data => this.formatTime(data))
+    },
+    timeLine: function () {
+      let result = this.parseSession()
+      let start = _.map(result, 'start')
+      result = _.uniqBy(start.sort(), this.formatTime)
       return result.slice().sort().map(data => this.formatTime(data))
     }
   },
@@ -106,8 +110,8 @@ export default {
       if (!this.isMobile) result = this.filterAndJoinBlankBlock(result)
       return _.map(result, data => ({
         ...data,
-        start: new Date(data.start),
-        end: new Date(data.end)
+        start: new Date(data.start).toLocaleString('en-US', { timeZone: 'Asia/Taipei', hour12: false }),
+        end: new Date(data.end).toLocaleString('en-US', { timeZone: 'Asia/Taipei', hour12: false })
       }))
     },
     timeTo2Dig (time) {
@@ -115,7 +119,7 @@ export default {
       else return `${time}`
     },
     formatTime (date) {
-      return `${this.timeTo2Dig(date.getHours())}:${this.timeTo2Dig(date.getMinutes())}`
+      return `${this.timeTo2Dig(new Date(date).getHours())}:${this.timeTo2Dig(new Date(date).getMinutes())}`
     },
     filterAndJoinBlankBlock (session) {
       let result = session
