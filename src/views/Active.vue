@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <div class="spotlight-container">
+    <div class="spotlight-container card">
       <div
         v-for="(sponsor, index) in sponsors"
         :key="index"

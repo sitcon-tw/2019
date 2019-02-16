@@ -19,7 +19,11 @@
       width: 100%;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1440px) {
+      width: 900px;
+    }
+
+    @media screen and (max-width: 900px) {
       display: flex;
       flex-direction: column;
     }
@@ -37,7 +41,7 @@
   background-color: $tone_light;
   z-index: 1;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 900px) {
     text-align: left;
     align-items: flex-start;
     border: 0;
@@ -46,7 +50,7 @@
   }
 
   &:not(&-time) {
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 900px) {
       border-bottom: 1px solid $tone_dark;
     }
   }
@@ -97,7 +101,7 @@
       top: 0;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 900px) {
       height: 2.5rem;
       background-color: $tone_dark;
       color: $white;
@@ -145,7 +149,7 @@
       color: $white;
       z-index: 10000;
 
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 900px) {
         padding-top: 5rem;
         height: calc(100vh - 5rem);
       }
@@ -160,7 +164,7 @@
       cursor: pointer;
       z-index: 1;
 
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 900px) {
         top: 32px;
         right: 32px;
       }
@@ -174,7 +178,7 @@
         left: 0;
         z-index: 0;
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 900px) {
           display: none;
         }
       }
@@ -189,7 +193,7 @@
       z-index: 1;
       padding-bottom: 5rem;
 
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 900px) {
         width: calc(100% - 2rem);
       }
 
@@ -212,7 +216,7 @@
         float: right;
         margin: 0 0 1rem 1rem;
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 900px) {
           width: calc(100% - 2rem);
           float: none;
           margin: 1rem;

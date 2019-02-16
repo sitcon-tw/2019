@@ -7,6 +7,17 @@
     @media screen and (max-width: 900px) {
       margin-top: 4rem;
     }
+
+    &.card {
+      margin-top: 50px;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+
+      @media screen and (max-width: 900px) {
+        margin-top: calc(4rem + 50px);
+      }
+    }
   }
 
   display: flex;
@@ -16,7 +27,7 @@
   background-color: $white;
   color: $content;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1000px) {
     width: 100%;
     padding: 0;
   }
@@ -32,8 +43,19 @@
   }
 
   &.card {
-    margin: 87px 140px;
+    margin: 50px 140px;
     padding: 0;
+    box-shadow: 0 10px 10px 0 rgba($black, 0.15);
+
+    @media screen and (max-width: 1200px) {
+      margin: 16px;
+      width: calc((100% - 16px * 2) / 2 - 16px * 3 / 2);
+    }
+
+    @media screen and (max-width: 690px) {
+      margin: 16px;
+      width: calc(100% - 16px * 2);
+    }
 
     .card-container {
       box-sizing: border-box;
@@ -42,27 +64,53 @@
       display: flex;
       flex-direction: row;
 
+      @media screen and (max-width: 1200px) {
+        flex-direction: column;
+      }
+
       .logo-image {
         display: flex;
-        height: 500px;
-        width: 500px;
+        height: 350px;
+        width: 350px;
         box-sizing: border-box;
         border-right: 1px solid $gray;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+
+        @media screen and (max-width: 1200px) {
+          border: 0;
+          border-bottom: 1px solid $gray;
+          height: 200px;
+          width: auto;
+        }
       }
 
       .content {
-        width: calc(100% - 500px - 96px * 2);
-        padding: 48px 96px;
+        width: calc(100% - 350px - 54px * 2);
+        padding: 28px 54px;
 
         h1 {
-          font-size: 36px;
+          font-size: 28px;
+          white-space: pre-wrap;
+
+          @media screen and (max-width: 1200px) {
+            font-size: 24px;
+          }
         }
 
         p {
-          font-size: 24px;
+          font-size: 20px;
+          margin-bottom: 1rem;
+
+          @media screen and (max-width: 1200px) {
+            font-size: 16px;
+          }
+        }
+
+        @media screen and (max-width: 1200px) {
+          width: auto;
+          padding: 1rem;
         }
       }
     }

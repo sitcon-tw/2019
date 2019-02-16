@@ -275,7 +275,7 @@ export default {
       }
     },
     resize () {
-      if (document.documentElement.clientWidth <= 1200) this.isMobile = true
+      if (document.documentElement.clientWidth <= 900) this.isMobile = true
       else this.isMobile = false
     }
   },

@@ -10,6 +10,9 @@
         </router-link>
       </div>
       <div class="nav-container" :class="{ 'toggle': toggleNavbar }">
+        <div class="nav-toggle-btn" @click="toggleNavbar = false">
+          <img src="@/assets/images/SVG/XX.svg" alt="">
+        </div>
         <div class="nav-container-logo">
           <img src="@/assets/images/SVG/sitcon-logo.svg" alt="">
         </div>
@@ -20,6 +23,7 @@
         </div>
         <div
           class="nav-item"
+          :class="{ 'active': $route.name === page.name }"
           v-for="page in pages"
           :key="page.meta.index"
         >
