@@ -86,6 +86,14 @@ export default {
 <style lang="scss" scoped>
 #sitcon-map {
   position: relative;
+  width: calc(100% - 140px * 2);
+  padding: 64px 140px;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    padding: 0;
+    padding-top: 4rem;
+  }
 
   .sitetext {
     text-align: center;
