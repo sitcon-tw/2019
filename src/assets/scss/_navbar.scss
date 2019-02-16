@@ -39,6 +39,14 @@
       height: 100%;
     }
 
+    &:before {
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 220px;
+    }
+
     @media screen and (max-width: 900px) {
       display: block;
     }
@@ -146,6 +154,10 @@
 
       &.toggle {
         transform: translateX(0px);
+
+        .nav-toggle-btn:before {
+          content: '';
+        }
       }
     }
   }
