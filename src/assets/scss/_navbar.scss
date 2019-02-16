@@ -100,6 +100,17 @@
       }
     }
 
+    .nav-toggle-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
     @media screen and (max-width: 1500px) {
       width: calc(100% - 640px);
     }
@@ -123,6 +134,10 @@
       z-index: 1;
       transform: translateX(-220px);
       transition: all ease-in-out .3s;
+      background-image: url('/static/img/Barcode.png');
+      background-size: 150px auto;
+      background-repeat: no-repeat;
+      background-position: bottom left;
 
       &.toggle {
         transform: translateX(0px);
@@ -133,6 +148,7 @@
   &-item {
     height: 32px;
     width: auto;
+    position: relative;
 
     &.home {
       display: none;
@@ -160,6 +176,21 @@
       &,
       a {
         color: $black;
+      }
+
+      &.active {
+        &:before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 200px;
+          left: -36px;
+          top: 0;
+          background-image: url('/static/img/tape.png');
+          background-size: cover;
+          background-position: right;
+          z-index: -1;
+        }
       }
     }
   }
