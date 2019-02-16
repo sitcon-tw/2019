@@ -84,6 +84,10 @@
         }
       }
 
+      @media screen and (max-width: 1200px) {
+        flex-direction: column;
+      }
+
       .logo-image {
         display: flex;
         height: 100%;
