@@ -11,6 +11,11 @@
   background-color: $tone_light;
   z-index: 1000;
 
+  @media screen and (max-width: 1200px) {
+    margin: 64px 0;
+    width: calc(100% - 32px * 2);
+  }
+
   @media screen and (max-width: 900px) {
     position: fixed;
     flex-direction: column;
