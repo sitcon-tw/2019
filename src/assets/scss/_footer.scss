@@ -1,34 +1,53 @@
 #footer {
-  height: 4rem;
-  background-color: $cfp_content;
-  color: $white;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  @media screen and (max-width: 900px) {
-    flex-direction: column;
-    height: auto;
+  &.main {
+    background-color: $tone_dark;
+    color: $content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
   }
-  .info {
-    margin: .5rem 1rem;
+
+  &.cfp {
+    height: 4rem;
+    background-color: $cfp_content;
+    color: $white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
     @media screen and (max-width: 900px) {
-      text-align: center;
+      flex-direction: column;
+      height: auto;
     }
-    p {
-      font-size: 14px;
-    }
-    a {
-      color: inherit;
-      text-decoration-color: transparent;
-      &:hover {
-        text-decoration-color: $white;
+
+    .info {
+      margin: .5rem 1rem;
+
+      @media screen and (max-width: 900px) {
+        text-align: center;
       }
-    }
-    .icon {
-      font-size: 1.4rem;
-      margin: .5rem;
+
+      p {
+        font-size: 14px;
+      }
+
+      a {
+        color: inherit;
+        text-decoration-color: transparent;
+
+        &:hover {
+          text-decoration-color: $white;
+        }
+      }
+
+      .icon {
+        font-size: 1.4rem;
+        margin: .5rem;
+      }
     }
   }
 }

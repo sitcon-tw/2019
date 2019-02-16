@@ -213,7 +213,7 @@
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue'
+import Footer from '@/components/CFPFooter.vue'
 export default {
   data () {
     return {

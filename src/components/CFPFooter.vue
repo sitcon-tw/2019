@@ -1,6 +1,6 @@
 <template>
   <div>
-    <footer id="footer" class="main">
+    <footer id="footer" class="cfp">
       <div class="info">
         <p>SITCON 學生計算機年會</p>
         <p>Students’ Information Technology Conference</p>
