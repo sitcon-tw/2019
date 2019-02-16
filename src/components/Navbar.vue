@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="nav">
+    <div class="nav" :class="{ 'toggle': toggleNavbar }">
       <div class="nav-logo">
         <div class="nav-toggle-btn" @click="toggleNavbar = true">
           <font-awesome-icon icon="bars" />

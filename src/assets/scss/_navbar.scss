@@ -22,7 +22,6 @@
     align-items: flex-start;
     justify-content: flex-start;
     background: none;
-    height: 100vh;
     width: 220px;
     margin: 0;
     padding: 0;
@@ -145,11 +144,12 @@
     }
 
     @media screen and (max-width: 900px) {
+      position: absolute;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
       width: calc(100% - 36px * 2);
-      height: 100vh;
+      height: calc(100vh - 36px * 2);
       background-color: $tone_paper_dark;
       padding: 36px;
       z-index: 1;
