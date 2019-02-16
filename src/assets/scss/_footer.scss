@@ -1,12 +1,67 @@
 #footer {
   &.main {
+    margin-top: 3rem;
     background-color: $tone_dark;
     color: $content;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      width: calc(800px - 1rem * 2);
+
+      @media screen and (max-width: 900px) {
+        width: calc(100% - 1rem * 2);
+        align-items: flex-start;
+        flex-direction: column;
+        height: auto;
+      }
+
+      .info {
+        margin: .5rem;
+
+        @media screen and (max-width: 900px) {
+          text-align: left;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        a {
+          color: inherit;
+          text-decoration-color: transparent;
+
+          &:hover {
+            text-decoration-color: $content;
+          }
+        }
+
+        .icon {
+          font-size: 2rem;
+          margin: .5rem;
+        }
+      }
+
+      &.year {
+        .info {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+    }
   }
 
   &.cfp {
