@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <div class="spotlight-container card">
       <div
         v-for="(sponsor, index) in sponsors"
@@ -28,7 +27,6 @@
 </template>
 
 <script>
-import * as layout from '@/components'
 import sponsorData from '../../static/json/sponsor.json'
 
 export default {
@@ -36,9 +34,6 @@ export default {
     return {
       sponsors: sponsorData
     }
-  },
-  components: {
-    ...layout
   }
 }
 </script>

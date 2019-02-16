@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <div class="spotlight-container">
       <div class="spotlight stagger">
         <div class="content">
@@ -36,7 +35,6 @@
 </template>
 
 <script>
-import * as layout from '@/components'
 import teamData from '../../static/json/staff.json'
 
 export default {
@@ -44,9 +42,6 @@ export default {
     return {
       teams: teamData
     }
-  },
-  components: {
-    ...layout
   }
 }
 </script>

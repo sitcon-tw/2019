@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <div class="spotlight-container">
       <div class="spotlight">
         <session-table :sessionData="agendas" />

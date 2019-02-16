@@ -47,6 +47,11 @@ export default {
     pages () {
       return this.$router.options.routes.filter(item => item.meta && item.meta.type === 'main')
     }
+  },
+  watch: {
+    $route () {
+      this.toggleNavbar = false
+    }
   }
 }
 </script>
