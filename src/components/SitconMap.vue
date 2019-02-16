@@ -58,7 +58,7 @@ export default {
       })
     },
     makeMap () {
-      const iconMain = this.mapMarkerLayer('main', 'static/img/sitcon-logo.png', [121.6116, 25.0410])
+      const iconMain = this.mapMarkerLayer('main', '/2019/static/img/sitcon-logo.png', [121.6116, 25.0410])
       const osmMap = new Map({
         target: this.$el.firstChild,
         interactions: Interaction.defaults({mouseWheelZoom: false}),
