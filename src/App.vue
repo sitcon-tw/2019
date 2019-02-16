@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Navbar v-if="!hideNavbar" />
+    <Navbar v-if="!isCFP" />
     <router-view />
-    <Footer />
+    <Footer v-if="!isCFP" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   },
   data () {
     return {
-      hideNavbar: false
+      isCFP: false
     }
   },
   mounted () {
@@ -22,8 +22,8 @@ export default {
   },
   methods: {
     toggleNavbar () {
-      if (this.$route.name === 'CFP') this.hideNavbar = true
-      else this.hideNavbar = false
+      if (this.$route.name === 'CFP') this.isCFP = true
+      else this.isCFP = false
     }
   },
   watch: {
