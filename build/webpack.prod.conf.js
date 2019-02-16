@@ -121,14 +121,14 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
 
-    new PrerenderPlugin(
-      path.resolve(__dirname, '../dist'),
-      staticPages,
-      {
-        renderAfterTime: 5000,
-        phantomPageSettings: {
-          loadImages: true
-        }
+    new PrerenderPlugin({
+        staticDir: path.resolve(__dirname, '../dist'),
+        routes: staticPages.concat(sessionData.map(ele => `/2019/agenda/${ele.id}`)),
+        renderer: new PrerenderPlugin.PuppeteerRenderer({
+          timeout: 5000,
+          renderAfterTime: 10000,
+          maxConcurrentRoutes: 1
+        })
       }
     )
   ]
