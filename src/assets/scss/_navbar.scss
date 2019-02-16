@@ -34,21 +34,17 @@
     display: none;
     height: 1rem;
     padding: 1rem;
+    color: $content;
+    font-size: 1.4rem;
+    justify-content: center;
+    align-items: center;
 
     img {
       height: 100%;
     }
 
-    &:before {
-      position: absolute;
-      height: 100vh;
-      width: 100vw;
-      top: 0;
-      left: 220px;
-    }
-
     @media screen and (max-width: 900px) {
-      display: block;
+      display: flex;
     }
   }
 
@@ -114,9 +110,18 @@
     }
 
     .nav-toggle-btn {
+      display: block;
       position: absolute;
       top: 0;
       left: 0;
+
+      &:before {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 220px;
+      }
 
       img {
         width: 32px;
