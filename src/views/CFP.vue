@@ -82,7 +82,7 @@
             <li>由淺入坑區塊鏈～從認識架構到應用智能合約！（<a href="https://sitcon.org/2018/#/agenda/sub/08c2816d-ea25-4169-89e6-dc0e0bc7b9a4" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=B3fXXElzc9Q" target="_blank">Video</a>）</li>
             <li>開發學校雲端服務的奇技淫巧（<a href="https://www.youtube.com/watch?v=msrsjX8mddE" target="_blank">Video</a>）</li>
             <li>校園資訊系統的困境與嘗試改善（<a href="https://www.youtube.com/watch?v=1N3HZsPzKrI" target="_blank">Video</a>）</li>
-            <li>cjdns: 重新發明網路（<a href="https://sitcon.org/2018/#/agenda/sub/d946b6e1-d826-4c64-86a4-bf013bcc0c06" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=l75ArFBCMlM" target="_blank">Video</a>）</li>
+            <li>cjdns: 重新發明網路（<a href="https://sitcon.org/2017/#schedule-page" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=l75ArFBCMlM" target="_blank">Video</a>）</li>
           </ul>
           <ul>Espresso：
             <li>校園駭客-看你學號() return 你家住址; （<a href="https://sitcon.org/2018/#/agenda/sub/b8998705-c6e2-4c48-ae76-984f23b54719" target="_blank">Link</a>、<a href="https://www.youtube.com/watch?v=yahEwM88q-Q" target="_blank">Video</a>）</li>

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <div class="spotlight-container card">
       <div
         v-for="(active, index) in actives"
@@ -25,7 +24,6 @@
 </template>
 
 <script>
-import * as layout from '@/components'
 import activeData from '../../static/json/active.json'
 
 export default {
@@ -33,9 +31,6 @@ export default {
     return {
       actives: activeData
     }
-  },
-  components: {
-    ...layout
   }
 }
 </script>
