@@ -63,14 +63,30 @@
       background-color: $white;
       display: flex;
       flex-direction: row;
+      position: relative;
 
       @media screen and (max-width: 1200px) {
         flex-direction: column;
       }
 
+      .card-tag {
+        position: absolute;
+        height: 50px;
+        right: -8px;
+        top: 25px;
+
+        @media screen and (max-width: 1200px) {
+          top: 175px;
+        }
+
+        img {
+          height: 100%;
+        }
+      }
+
       .logo-image {
         display: flex;
-        height: 350px;
+        height: 100%;
         width: 350px;
         box-sizing: border-box;
         border-right: 1px solid $gray;
