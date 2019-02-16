@@ -123,7 +123,7 @@ const webpackConfig = merge(baseWebpackConfig, {
 
     new PrerenderPlugin(
       path.resolve(__dirname, '../dist'),
-      staticPages.concat(sessionData.map(ele => `/2019/agenda/${ele.id}`)),
+      staticPages,
       {
         renderAfterTime: 5000,
         phantomPageSettings: {

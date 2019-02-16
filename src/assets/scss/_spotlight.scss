@@ -17,6 +17,10 @@
     padding: 0;
   }
 
+  @media screen and (max-width: 900px) {
+    margin-top: 4rem;
+  }
+
   &.stagger {
     &:nth-child(odd) {
       background-color: $white;

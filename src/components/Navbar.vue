@@ -2,11 +2,17 @@
   <div>
     <div class="nav">
       <div class="nav-logo">
+        <div class="nav-toggle-btn" @click="toggleNavbar = true">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAREAAAC3CAYAAAA1pmrJAAAACXBIWXMAAAsSAAALEgHS3X78AAACdElEQVR4nO3XwWkEQRAEwV6xhuk8kyxv+aB8DAMRFtQroZ7d3QH4p6/TA4C7iQiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQiAiQvDPze3oEcK9nd09vAC7mzgCJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiADJOzPfp0cA93p2d0+PAO7lzgCJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiACJiADJOzOf0yOAez27e3oDcDF3BkhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEjemfk5PQK417O7e3oEcC93BkhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEhEBEjemfmcHgHc6w/FsRUlmnEiQgAAAABJRU5ErkJggg==" alt="">
+        </div>
         <router-link to="/">
           <p>SITCON 19</p>
         </router-link>
       </div>
-      <div class="nav-container">
+      <div class="nav-container" :class="{ 'toggle': toggleNavbar }">
+        <div class="nav-container-logo">
+          <img src="@/assets/images/SVG/sitcon-logo.svg" alt="">
+        </div>
         <div
           class="nav-item"
           v-for="page in pages"
@@ -23,6 +29,11 @@
 
 <script>
 export default {
+  data () {
+    return {
+      toggleNavbar: false
+    }
+  },
   computed: {
     pages () {
       return this.$router.options.routes.filter(item => item.meta && item.meta.type === 'main')
