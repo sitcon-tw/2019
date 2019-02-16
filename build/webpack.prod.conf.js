@@ -123,9 +123,9 @@ const webpackConfig = merge(baseWebpackConfig, {
 
     new PrerenderPlugin(
       path.resolve(__dirname, '../dist'),
-      staticPages,
+      staticPages.concat(sessionData.map(ele => `/2019/agenda/${ele.id}`)),
       {
-        renderAfterTime: 5000,
+        renderAfterTime: 1000,
         phantomPageSettings: {
           loadImages: true
         }
