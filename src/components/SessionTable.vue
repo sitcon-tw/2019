@@ -276,23 +276,19 @@ export default {
         document.querySelector('body').classList.remove('popup-scrolling-lock')
       }
     },
-    resize () {
+    resize (event) {
       if (document.documentElement.clientWidth <= 900) this.isMobile = true
       else this.isMobile = false
     }
   },
   mounted () {
     this.openPopup()
+    this.resize()
 
-    let self = this
-
-    self.resize()
-    window.addEventListener('resize', () => {
-      self.resize()
-    })
+    window.addEventListener('resize', this.resize)
   },
   destroyed () {
-    window.removeEventListener('resize')
+    window.removeEventListener('resize', this.resize)
   },
   watch: {
     $route (route) {

@@ -34,10 +34,15 @@ export default {
     }
   },
   mounted () {
-    let self = this
-    window.addEventListener('keydown', (event) => {
-      if (event.keyCode === 27) self.$router.push({ name: 'Agenda' })
-    })
+    window.addEventListener('keydown', this.closePopupByEsc)
+  },
+  methods: {
+    closePopupByEsc (event) {
+      if (event.keyCode === 27) this.$router.push({ name: 'Agenda' })
+    }
+  },
+  destroyed () {
+    window.removeEventListener('keydown', this.closePopupByEsc)
   }
 }
 </script>
