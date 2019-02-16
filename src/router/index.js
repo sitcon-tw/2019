@@ -107,7 +107,7 @@ const router = new Router({
       return {
         selector: to.hash
       }
-    } else {
+    } else if (to.name !== 'Agenda' && to.name !== 'AgendaPopup') {
       return {
         x: 0,
         y: 0
