@@ -8,9 +8,9 @@
       >
         <div class="card-container">
           <div class="card-tag">
-            <img :src="`/static/img/${sponsor.level}.svg`" alt="">
+            <img :src="`/2019/static/img/${sponsor.level}.svg`" alt="">
           </div>
-          <div class="logo-image" :style="{ 'background-image': `url(static/img/sponsor/${sponsor.image})` }"></div>
+          <div class="logo-image" :style="{ 'background-image': `url(/2019/static/img/sponsor/${sponsor.image})` }"></div>
           <div class="content">
             <h1>{{ sponsor.name }}</h1>
             <p
