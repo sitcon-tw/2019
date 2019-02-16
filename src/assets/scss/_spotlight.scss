@@ -3,6 +3,10 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 900px) {
+      margin-top: 4rem;
+    }
   }
 
   display: flex;
@@ -15,10 +19,6 @@
   @media screen and (max-width: 1200px) {
     width: 100%;
     padding: 0;
-  }
-
-  @media screen and (max-width: 900px) {
-    margin-top: 4rem;
   }
 
   &.stagger {
@@ -72,7 +72,7 @@
     padding: 0 140px;
 
     @media screen and (max-width: 900px) {
-      padding: 0 1rem;
+      padding: 2rem;
     }
 
     h1 {
@@ -83,6 +83,10 @@
       @media screen and (max-width: 1920px) {
         font-size: 36px
       }
+
+      @media screen and (max-width: 1440px) {
+        font-size: 28px
+      }
     }
 
     p {
@@ -90,6 +94,14 @@
 
       @media screen and (max-width: 1920px) {
         font-size: 24px
+      }
+
+      @media screen and (max-width: 1440px) {
+        font-size: 20px
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
       }
     }
 
