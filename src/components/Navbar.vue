@@ -13,6 +13,11 @@
         <div class="nav-container-logo">
           <img src="@/assets/images/SVG/sitcon-logo.svg" alt="">
         </div>
+        <div class="nav-item home">
+          <router-link to="/2019">
+            <p>首頁</p>
+          </router-link>
+        </div>
         <div
           class="nav-item"
           v-for="page in pages"

@@ -134,6 +134,14 @@
     height: 32px;
     width: auto;
 
+    &.home {
+      display: none;
+
+      @media screen and (max-width: 900px) {
+        display: inherit;
+      }
+    }
+
     a {
       color: $content;
       text-decoration: none;
