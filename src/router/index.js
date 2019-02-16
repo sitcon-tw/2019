@@ -101,7 +101,19 @@ const router = new Router({
   ].map(routeRule => {
     routeRule.path = `/2019${routeRule.path}`
     return routeRule
-  })
+  }),
+  scrollBehavior (to) {
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    } else {
+      return {
+        x: 0,
+        y: 0
+      }
+    }
+  }
 })
 
 export default router
