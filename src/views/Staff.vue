@@ -69,6 +69,11 @@ export default {
     padding: 10px 30px;
     padding-left: 0;
 
+    @media screen and (max-width: 1440px) {
+      width: 100px;
+      padding: 10px 0;
+    }
+
     .image {
       text-align: center;
       height: 100px;
@@ -79,8 +84,17 @@ export default {
       overflow: hidden;
       background-color: $white;
 
+      @media screen and (max-width: 1440px) {
+        height: 80px;
+        width: 80px;
+      }
+
       img {
         height: 100px;
+
+        @media screen and (max-width: 1440px) {
+          height: 80px;
+        }
       }
     }
 
@@ -89,6 +103,11 @@ export default {
       min-height: 60px;
       margin-top: 16px;
       font-size: 20px;
+
+      @media screen and (max-width: 1440px) {
+        font-size: 16px;
+        min-height: 48px;
+      }
     }
   }
 }

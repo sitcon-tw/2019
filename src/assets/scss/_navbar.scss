@@ -9,10 +9,49 @@
   height: 80px;
   width: calc(100% - (140px + 32px) * 2);
   background-color: $tone_light;
+  z-index: 1000;
+
+  @media screen and (max-width: 900px) {
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: none;
+    height: 100vh;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+  }
+
+  &-toggle-btn {
+    display: none;
+    height: 1rem;
+    padding: 1rem;
+
+    img {
+      height: 100%;
+    }
+
+    @media screen and (max-width: 900px) {
+      display: block;
+    }
+  }
 
   &-logo {
     width: 240px;
     margin-right: auto;
+
+    a {
+      color: $content;
+      text-decoration: none;
+
+      p {
+        font-weight: 700;
+        font-size: 28px;
+      }
+    }
 
     @media screen and (max-width: 1500px) {
       margin-right: 400px;
@@ -26,13 +65,19 @@
       margin-right: 0;
     }
 
-    a {
-      color: $content;
-      text-decoration: none;
+    @media screen and (max-width: 900px) {
+      position: fixed;
+      height: 4rem;
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      background-color: $tone_paper_light;
+      z-index: 0;
 
-      p {
-        font-weight: 700;
-        font-size: 28px;
+      a p {
+        font-size: 20px;
       }
     }
   }
@@ -43,6 +88,17 @@
     align-items: center;
     justify-content: space-around;
     width: calc(100% - 840px);
+
+    &-logo {
+      display: none;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      @media screen and (max-width: 900px) {
+        display: block;
+      }
+    }
 
     @media screen and (max-width: 1500px) {
       width: calc(100% - 640px);
@@ -55,11 +111,36 @@
     @media screen and (max-width: 1200px) {
       width: calc(100% - 240px);
     }
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: calc(100% - 36px * 2);
+      height: 100vh;
+      background-color: $tone_paper_dark;
+      padding: 36px;
+      z-index: 1;
+      transform: translateX(-220px);
+      transition: all ease-in-out .3s;
+
+      &.toggle {
+        transform: translateX(0px);
+      }
+    }
   }
 
   &-item {
     height: 32px;
     width: auto;
+
+    &.home {
+      display: none;
+
+      @media screen and (max-width: 900px) {
+        display: inherit;
+      }
+    }
 
     a {
       color: $content;
@@ -68,6 +149,17 @@
       p {
         font-weight: 500;
         font-size: 20px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      opacity: .75;
+      width: 100%;
+      padding: 10px 0;
+
+      &,
+      a {
+        color: $black;
       }
     }
   }

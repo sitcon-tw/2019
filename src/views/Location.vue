@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <sitcon-map width="100%" height="600px" />
+    <sitcon-map width="100%" height="400px" />
     <div class="spotlight-container">
       <div class="spotlight">
         <div class="content">
@@ -64,8 +64,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#sitcon-map {
-  width: calc(100% - 140px * 2);
-  padding: 64px 140px;
+.spotlight-container {
+  margin-top: 0;
 }
 </style>

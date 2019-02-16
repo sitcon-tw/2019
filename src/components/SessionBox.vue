@@ -1,8 +1,8 @@
 <template>
   <div
     class="session"
-    :class="{'clickable': data.type !== 'BREAK'}"
-    @click="data.type !== 'BREAK' ? openPop(data.id) : null"
+    :class="{'clickable': data.type !== 'BREAK' && data.type !== 'E' }"
+    @click="data.type !== 'BREAK' && data.type !== 'E' ? openPop(data.id) : null"
   >
     <p class="tag">
       <span

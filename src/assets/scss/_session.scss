@@ -53,6 +53,10 @@
 
   &.clickable {
     cursor: pointer;
+
+    &:hover {
+      background-color: $tone_hover;
+    }
   }
 
   &.hide {
