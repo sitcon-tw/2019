@@ -8,10 +8,6 @@
   }
 }
 
-.clickable:hover {
-  background-color: $tone_hover;
-}
-
 .session {
   &-table {
     margin: auto;
@@ -57,6 +53,10 @@
 
   &.clickable {
     cursor: pointer;
+
+    &:hover {
+      background-color: $tone_hover;
+    }
   }
 
   &.hide {
