@@ -258,10 +258,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@import '../assets/scss/_color.scss';
-body {
-  background-color: $white !important;
-}
-</style>
