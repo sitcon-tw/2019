@@ -26,11 +26,10 @@
       <div class="box">
         <h2>
           <span>關於 SITCON</span><br />
-          <span class="sub">About us</span>
+          <span class="sub">Students’ Information Technology Conference</span>
         </h2>
         <p>
-          SITCON 學生計算機年會係一學生自發組成的研討會，秉持著以學生為主軸的核心價值，藉以凝聚與傳遞學生的力量。<br />
-          希望藉由提供一個經驗交流與資訊技術實務分享的平台，使已有成就者能夠傳承己身經驗，嶄露頭角者在激盪中獲得靈感與啟發，並同時讓初入茅廬者得以對資訊科學有更深入的了解；進而達到「學以致用、教學相長」的目標。
+          SITCON 學生計算機年會是一個由各校同學於網路串聯發起，鼓勵自發學習、切磋成長的學生社群。從 2013 年以來，籌備團隊便致力於連結對資訊相關領域有興趣的學生，在每年三月的年會分享彼此所學；各地參與者也透過定期聚、夏令營等不同面向的活動，推廣創新、教學相長、以及開源貢獻的社群理念與精神。
         </p>
       </div>
       <div class="box side">
@@ -167,12 +166,15 @@ header {
     padding: 2rem 3.5rem;
     width: 300px;
     position: relative;
+    box-shadow: 0 0 10px rgba($black, .5);
 
     .tape {
       position: absolute;
       height: 150px;
       right: -50px;
       top: -50px;
+      filter: drop-shadow(0 0 5px rgba($black, .5));
+      -webkit-filter: drop-shadow(0 0 5px rgba($black, .5));
 
       @media screen and (max-width: 1200px) {
         height: 100px;
@@ -336,6 +338,8 @@ header {
   padding: 2rem 4rem;
   color: $tone_content;
   width: calc(50% - 4rem * 2);
+  filter: drop-shadow(0 0 10px rgba($black, .5));
+  -webkit-filter: drop-shadow(0 0 10px rgba($black, .5));
 
   @media screen and (max-width: 900px) {
     width: calc(100% - 4rem * 2);
@@ -405,6 +409,7 @@ header {
     margin: 4rem 140px;
     width: calc(100% - 140px * 2);
     background-color: $tone_box_dark;
+    box-shadow: 0 0 10px rgba($black, .5);
 
     @media screen and (max-width: 1200px) {
       margin: 2rem 0;
