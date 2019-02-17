@@ -84,6 +84,10 @@
       margin: 3px;
       border-radius: 1rem;
       font-size: 14px;
+
+      @media screen and (max-width: 900px) {
+        margin-left: 0;
+      }
     }
   }
 
