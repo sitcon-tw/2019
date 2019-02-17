@@ -12,7 +12,10 @@
   z-index: 1000;
   transition: all ease-in-out .3s;
   position: fixed;
-  box-shadow: 0 0 10px rgba($black, .5);
+
+  @media screen and (min-width: 900px) {
+    box-shadow: 0 0 10px rgba($black, .5);
+  }
 
   &.toggle {
     @media screen and (min-width: 900px) {
