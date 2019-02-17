@@ -7,7 +7,7 @@
       <div class="action-box-container">
         <div class="action-box">
           <img class="tape" src="@/assets/images/tape-slash.png" alt="">
-          <h2><a class="big very-bold" href="" target="_blank" rel="noopener noreferrer">前往報名</a></h2>
+          <h2><a class="big very-bold" href="https://sitcon.kktix.cc/events/sitcon2019" target="_blank" rel="noopener noreferrer">前往報名</a></h2>
         </div>
         <div class="action-box info">
           <img class="tape" src="@/assets/images/tape-slash.png" alt="">
