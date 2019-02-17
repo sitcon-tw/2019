@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     toggleNavbar () {
-      if (this.$route.name === 'CFP' || this.$route.name === 'Agenda' || this.$route.name === 'AgendaPopup') this.isCFP = true
+      if (this.$route.name === 'CFP') this.isCFP = true
       else this.isCFP = false
     }
   },
