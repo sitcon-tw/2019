@@ -29,6 +29,12 @@
     "image": ""
   },
   {
+    "name": "Skymizer",
+    "description": "Skymizer 是頂尖的編譯與虛擬化技術團隊，幫助深度學習與數位貨幣應用的客戶建立各式的虛擬機器與編譯器，縮短 time-to-market 時間；產品為 C/C++ Intelligent Compiler，藉由獨到的編譯器與機器學習技術，幫助軟體團隊自動化的強化軟體品質、增加軟體效能。",
+    "level": "level-2",
+    "image": "Skymizer.png"
+  },
+  {
     "name": "香港開放創意科技協會",
     "description": "香港開放創意科技協會成立於2014年, 推廣開放標準, 自由及開放軟體, 開放硬體, 開放資料及共享創意。多年協辦香港開源年會，PyCon HK及支援SITCon x HK等。",
     "level": "level-2",
