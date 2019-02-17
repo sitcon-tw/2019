@@ -116,6 +116,7 @@
         h1 {
           font-size: 28px;
           white-space: pre-wrap;
+          font-weight: 700;
 
           @media screen and (max-width: 1200px) {
             font-size: 24px;
@@ -135,6 +136,67 @@
         @media screen and (max-width: 1200px) {
           width: auto;
           padding: 1rem;
+        }
+      }
+    }
+  }
+
+  &.box {
+    &-container {
+      position: relative;
+      padding: 2rem;
+      margin-bottom: 2rem;
+
+      &:before {
+        z-index: 0;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(-140px + 2rem);
+        height: 100%;
+        width: 100vw;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('/static/img/sponsor-box-open.png');
+
+        @media screen and (max-width: 1000px) {
+          left: 0;
+          background-image: none;
+          background-color: $tone_box_dark;
+        }
+      }
+
+      .content {
+        z-index: 1;
+
+        h1 {
+          font-size: 30px;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 20px;
+          margin-bottom: 1rem;
+
+          img {
+            float: right;
+            max-width: 475px;
+            border-radius: 1rem;
+
+            @media screen and (max-width: 1440px) {
+              max-width: 375px;
+            }
+
+            @media screen and (max-width: 690px) {
+              max-width: 100%;
+              width: 100%;
+              float: none;
+            }
+          }
+        }
+
+        @media screen and (max-width: 1200px) {
+          padding: 0;
         }
       }
     }

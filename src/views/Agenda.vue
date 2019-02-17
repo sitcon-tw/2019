@@ -5,6 +5,7 @@
         <session-table :sessionData="agendas" />
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 

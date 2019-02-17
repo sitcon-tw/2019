@@ -9,10 +9,6 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/2019/cfp'
-    },
-    {
-      path: '/',
       name: 'Home',
       meta: {
         type: 'self',
