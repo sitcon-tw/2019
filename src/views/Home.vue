@@ -309,6 +309,16 @@ header {
           display: flex;
           justify-content: flex-end;
 
+          .icon {
+            @supports (backdrop-filter: blur(0)) {
+              transform: translateX(calc(-50%));
+
+              @media screen and (max-width: 900px) {
+                transform: translateX(calc(-30%));
+              }
+            }
+          }
+
           @media screen and (max-width: 1200px) {
             width: 50%;
           }
