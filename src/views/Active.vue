@@ -34,8 +34,12 @@ export default {
 .card-container {
   .logo-image {
     background-size: auto 200px !important;
+    min-height: 350px;
     opacity: .5;
+
+    @media screen and (max-width: 690px) {
+      min-height: 200px;
+    }
   }
 }
 </style>
-
