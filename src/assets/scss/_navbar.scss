@@ -83,6 +83,7 @@
       align-items: center;
       background-color: $tone_paper;
       z-index: 0;
+      box-shadow: 0 0 10px rgba($black, 0.5);
 
       a p {
         font-size: 20px;
@@ -165,6 +166,7 @@
 
       &.toggle {
         transform: translateX(0px);
+        box-shadow: 0 0 10px rgba($black, 0.5);
 
         .nav-toggle-btn:before {
           content: '';
