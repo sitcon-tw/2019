@@ -16,7 +16,11 @@
         <div class="nav-container-logo">
           <img src="@/assets/images/SVG/sitcon-logo.svg" alt="">
         </div>
-        <div class="nav-item home" :class="{ 'active': $route.name === 'Home' }">
+        <div
+          class="nav-item home"
+          :class="{ 'active': $route.name === 'Home' }"
+          @click="toggleNavbar = false"
+        >
           <router-link to="/2019">
             <p>首頁</p>
           </router-link>
@@ -26,6 +30,7 @@
           :class="{ 'active': $route.name === page.name }"
           v-for="page in pages"
           :key="page.meta.index"
+          @click="toggleNavbar = false"
         >
           <router-link :to="page.path">
             <p>{{ page.meta.label }}</p>
