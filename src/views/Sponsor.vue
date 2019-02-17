@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import * as Layout from '@/components';
+import * as Layout from '@/components'
 import sponsorData from '../../static/json/sponsor.json'
 
 export default {
