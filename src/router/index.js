@@ -99,7 +99,6 @@ const router = new Router({
     return routeRule
   }),
   scrollBehavior (to, from) {
-    console.log(from.name, to.name)
     if (to.hash) {
       return {
         selector: to.hash
