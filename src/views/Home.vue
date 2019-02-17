@@ -101,6 +101,7 @@ export default {
 
 #home {
   position: relative;
+  margin-top: 12rem;
 
   &:before {
     z-index: -1;

@@ -10,6 +10,25 @@
   width: calc(100% - (140px + 32px) * 2);
   background-color: $tone_paper;
   z-index: 1000;
+  transition: all ease-in-out .3s;
+  position: fixed;
+  box-shadow: 0 0 10px rgba($black, .5);
+
+  &.toggle {
+    @media screen and (min-width: 900px) {
+      margin: 0;
+      padding: 0 32px;
+      margin-bottom: 64px;
+      width: calc(100% - 32px * 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin: 0;
+      padding: 0 172px;
+      margin-bottom: 64px;
+      width: calc(100% - (140px + 32px) * 2);
+    }
+  }
 
   @media screen and (max-width: 1200px) {
     margin: 64px 0;
