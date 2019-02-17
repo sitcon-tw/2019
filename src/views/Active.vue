@@ -33,7 +33,6 @@ export default {
 <style lang="scss" scoped>
 .card-container {
   .logo-image {
-    min-height: 350px;
     background-size: auto 200px !important;
     opacity: .5;
   }
