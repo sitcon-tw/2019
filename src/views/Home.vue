@@ -33,12 +33,13 @@
       </div>
       <div class="box side">
         <img src="@/assets/images/box-open-1.png" alt="">
+        <img src="@/assets/images/SVG/sitcon-mark.svg" alt="" class="icon">
       </div>
     </div>
     <div class="box-container reverse">
       <div class="box">
         <h2>
-          <span>開箱演算法</span><br />
+          <span>年會主題 - 開箱演算法</span><br />
           <span class="sub">Algorithm in a Box</span>
         </h2>
         <p>
@@ -48,11 +49,48 @@
       </div>
       <div class="box side">
         <img src="@/assets/images/box-open-2.png" alt="">
+        <img src="@/assets/images/SVG/binary-tree.svg" alt="" class="icon">
+      </div>
+    </div>
+    <div class="paper-container">
+      <div class="paper">
+        <h2>
+          <span>行為準則</span><br />
+          <span class="sub">Code of contuct</span>
+        </h2>
+        <p>
+          SITCON 冀望打造屬於學生自己的舞台，而我們也致力於為社群中的每位成員提供更友善、開放的環境。我們相信每位參與社群活動的夥伴都值得被尊重，而我們會盡力提供最安全的環境，讓參與 SITCON 盛會的每位朋友能夠認識個體間的差異、在社群中相互扶助、並鼓勵每個人揮灑屬於自己生命的色彩。 因此，若有幸能在 SITCON 社群與您見面，無論您是以會眾、贊助商、工作人員、或是講者的身份參加活動，我們都希望您遵守以下的行為準則：
+        </p>
+        <p>
+          尊重每一位參與者，將對方的感受放在心上。<br />
+          避免使用帶有侮辱、歧視、或具有潛在騷擾意涵的言語及手勢。<br />
+          多關心周遭的社群夥伴，適度詢問對方是否需要協助。<br />
+          當遭遇危險、或發現事情不對勁時，適時尋求工作人員的支援與協助。<br />
+          在年會裡多交朋友，珍惜彼此相聚的時光！ 以下的行為是不被社群所容忍的： 針對性別、性向、種族、外貌、宗教、年齡、身體狀況或個人身份的挑釁或冒犯。<br />
+          任何形式的性騷擾、言語及肢體霸凌。<br />
+          公開發表、展示或放映含有侮辱、歧視、仇恨、暴力、或是性暗示的言論、影像、或錄影。<br />
+          無故干擾議程或活動的正常進行，無視工作人員或會眾的制止。<br />
+          干擾、攻擊會場網路，未經同意側錄封包或散佈隱私資訊。<br />
+          違反法律的行為。<br />
+        </p>
+        <p>
+          為了確保每位參與者的安全，我們將恪守以上規則。違反行為準則的參與者，我們將採取必要且合理的手段予以介入，包含但不限於將參與者請離現場、自相關名冊除名或列為不受歡迎對象，或在必要時移送警察機關法辦。若您或他人遇到了以上情況、或是有任何其他顧慮，都請立即尋求 SITCON 工作人員的協助。 我們誠摯的邀請來到 SITCON 的朋友一同履行以上承諾，將 SITCON 打造為更友善、更溫暖的所在；讓每一位參與者，都能在社群的交流中共同成長、在人與人的互動中找到自信——而這正是我們所珍惜的、屬於學生社群的真正精神。
+        </p>
       </div>
     </div>
     <Footer />
   </div>
 </template>
+
+<script>
+import * as Layout from '@/components'
+
+export default {
+  components: {
+    ...Layout
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @import '../assets/scss/_color.scss';
@@ -183,20 +221,53 @@ header {
     margin-right: 0;
     width: calc(100% - 140px);
 
+    @media screen and (max-width: 1200px) {
+      margin: 2rem 0;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      margin: 1rem 0;
+    }
+
     &.reverse {
       margin: 4rem 140px;
       margin-left: 0;
       flex-direction: row-reverse;
 
+      @media screen and (max-width: 900px) {
+        flex-direction: column;
+        margin: 1rem 0;
+      }
+
       .box {
         padding: 2rem 46px;
         width: calc(50% - 46px * 2);
+
+        @media screen and (max-width: 900px) {
+          padding: 2rem 4rem;
+          width: calc(100% - 4rem * 2);
+        }
+
+        @media screen and (max-width: 900px) {
+          padding: 2rem;
+          width: calc(100% - 2rem * 2);
+        }
 
         &.side {
           padding: 0;
           width: calc(50% + 70px);
           display: flex;
           justify-content: flex-end;
+
+          @media screen and (max-width: 1200px) {
+            width: 50%;
+          }
+
+          @media screen and (max-width: 900px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -208,14 +279,43 @@ header {
   color: $tone_content;
   width: calc(50% - 4rem * 2);
 
+  @media screen and (max-width: 900px) {
+    width: calc(100% - 4rem * 2);
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding: 2rem;
+    width: calc(100% - 2rem * 2);
+  }
+
   &.side {
     padding: 0;
     width: calc(50% + 70px);
     background: none;
     display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 1200px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+    }
 
     img {
       height: 100%;
+
+      &.icon {
+        position: absolute;
+        height: 60%;
+        margin: 2rem 8rem;
+
+        @media screen and (max-width: 900px) {
+          margin: 2rem 6rem;
+        }
+      }
     }
   }
 
@@ -235,6 +335,53 @@ header {
 
   p {
     font-size: 20px;
+
+    @media screen and (max-width: 900px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.paper {
+  &-container {
+    margin: 4rem 140px;
+    width: calc(100% - 140px * 2);
+    background-color: $tone_box_dark;
+
+    @media screen and (max-width: 1200px) {
+      margin: 2rem 0;
+      width: 100%;
+    }
+  }
+
+  color: $tone_content;
+  padding: 4rem;
+
+  @media screen and (max-width: 900px) {
+   padding: 2rem;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 1rem;
+
+    span {
+      font-weight: 700;
+
+      &.sub {
+        font-size: 18px;
+      }
+    }
+  }
+
+  p {
+    font-size: 20px;
+    margin-bottom: 1.4rem;
+
+    @media screen and (max-width: 900px) {
+      font-size: 16px;
+    }
   }
 }
 
