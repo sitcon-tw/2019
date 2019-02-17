@@ -6,7 +6,7 @@
           <p>
             SITCON 年會每年皆是許多志工奉獻時間精神所舉辦<br />
             若你對參與 SITCON 年會的籌備有興趣，歡迎填寫表單，我們將在明年活動開始籌備時通知您<br />
-            <a href="http://" target="_blank" rel="noopener noreferrer">表單連結</a>
+            <a href="https://goo.gl/forms/C8sUsjTI98YENroQ2" target="_blank" rel="noopener noreferrer">表單連結</a>
           </p>
         </div>
       </div>
