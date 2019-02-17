@@ -36,9 +36,13 @@
 </template>
 
 <script>
+import * as Layout from '@/components'
 import teamData from '../../static/json/staff.json'
 
 export default {
+  components: {
+    ...Layout
+  },
   data () {
     return {
       teams: teamData
