@@ -59,13 +59,12 @@ export default {
   },
   methods: {
     scrollHandler () {
-      if (document.documentElement.clientWidth >= 900 && (document.body.scrollTop || document.documentElement.scrollTop > 32)) this.toggleNavbar = true
+      if (document.documentElement.clientWidth >= 900 && (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)) this.toggleNavbar = true
       else this.toggleNavbar = false
     }
   },
   watch: {
     $route () {
-      this.scrollHandler()
       this.toggleNavbar = false
     }
   },

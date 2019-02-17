@@ -270,10 +270,12 @@ export default {
         if (target) {
           this.popupData = target
           document.querySelector('body').classList.add('popup-scrolling-lock')
+          if (document.documentElement.clientWidth >= 900 && (document.body.scrollTop || document.documentElement.scrollTop > 0)) document.querySelector('.nav').classList.add('toggle')
         }
       } else {
         this.popupData = null
         document.querySelector('body').classList.remove('popup-scrolling-lock')
+        if (document.documentElement.clientWidth >= 900 && (document.body.scrollTop || document.documentElement.scrollTop > 0)) document.querySelector('.nav').classList.add('toggle')
       }
     },
     resize (event) {
@@ -291,8 +293,9 @@ export default {
     window.removeEventListener('resize', this.resize)
   },
   watch: {
-    $route (route) {
+    $route (to) {
       this.openPopup()
+      if (to.name !== 'AgendaPopup' && to.name !== 'Agenda') document.querySelector('.nav').classList.remove('toggle')
     }
   }
 }
