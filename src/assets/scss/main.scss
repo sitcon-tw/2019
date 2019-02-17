@@ -15,6 +15,22 @@
   min-height: 100vh;
 }
 
-body.popup-scrolling-lock {
-  overflow: hidden;
+.slide-left-enter,
+.slide-right-leave-active {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(50%);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+body {
+  &.popup-scrolling-lock {
+    overflow: hidden;
+  }
 }

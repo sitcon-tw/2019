@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <Navbar v-if="!isCFP" />
-    <router-view />
+    <transition :name="transitionName">
+      <keep-alive>
+        <router-view class="main" />
+      </keep-alive>
+    </transition>
     <Footer v-if="!isCFP" />
   </div>
 </template>
@@ -14,7 +18,8 @@ export default {
   },
   data () {
     return {
-      isCFP: false
+      isCFP: false,
+      transitionName: 'slide-left'
     }
   },
   mounted () {
@@ -27,8 +32,11 @@ export default {
     }
   },
   watch: {
-    $route (route) {
+    $route (to, from) {
       this.toggleNavbar()
+      const toDepth = to.meta.index
+      const fromDepth = from.meta.index
+      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
     }
   }
 }
@@ -36,4 +44,10 @@ export default {
 
 <style lang="scss">
 @import './assets/scss/main.scss';
+
+.main {
+  transition-property: transform,opacity;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(.55, 0, .1, 1);
+}
 </style>
