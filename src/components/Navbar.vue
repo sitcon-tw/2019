@@ -16,7 +16,7 @@
         <div class="nav-container-logo">
           <img src="@/assets/images/SVG/sitcon-logo.svg" alt="">
         </div>
-        <div class="nav-item home">
+        <div class="nav-item home" :class="{ 'active': $route.name === 'Home' }">
           <router-link to="/2019">
             <p>首頁</p>
           </router-link>
