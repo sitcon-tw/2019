@@ -293,9 +293,9 @@ export default {
     window.removeEventListener('resize', this.resize)
   },
   watch: {
-    $route (to) {
+    $route (to, from) {
       this.openPopup()
-      if (to.name !== 'AgendaPopup' && to.name !== 'Agenda') document.querySelector('.nav').classList.remove('toggle')
+      if (!((from.name === 'Agenda' && to.name === 'AgendaPopup') || (from.name === 'AgendaPopup' && to.name === 'Agenda'))) document.querySelector('.nav').classList.remove('toggle')
     }
   }
 }
