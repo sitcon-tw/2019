@@ -106,6 +106,9 @@ export default {
     padding: 12px;
     font-size: 16px;
     background-color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+
+    font-family: 'Noto Sans CTK TC', sans-serif;
   }
 }
 </style>
