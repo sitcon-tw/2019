@@ -355,10 +355,10 @@ header {
       &.icon {
         position: absolute;
         height: 60%;
-        margin: 2rem 8rem;
+        margin: 0 8rem;
 
         @media screen and (max-width: 900px) {
-          margin: 2rem 6rem;
+          margin: 0 6rem;
         }
       }
     }
