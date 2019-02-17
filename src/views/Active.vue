@@ -10,12 +10,7 @@
           <div class="logo-image" :style="{ 'background-image': `url(/2019/static/img/active/${active.image})` }"></div>
           <div class="content">
             <h1>{{ active.name }}</h1>
-            <p
-              v-for="(content, index) in active.description"
-              :key="index"
-            >
-              {{ content }}
-            </p>
+            <p>{{ active.description }}</p>
           </div>
         </div>
       </div>
@@ -34,3 +29,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.card-container {
+  .logo-image {
+    background-size: auto 200px !important;
+    min-height: 350px;
+    opacity: .5;
+
+    @media screen and (max-width: 690px) {
+      min-height: 200px;
+    }
+  }
+}
+</style>
