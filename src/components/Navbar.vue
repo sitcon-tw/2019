@@ -53,10 +53,23 @@ export default {
       return this.$router.options.routes.filter(item => item.meta && item.meta.type === 'main')
     }
   },
+  mounted () {
+    this.scrollHandler()
+    window.addEventListener('scroll', this.scrollHandler)
+  },
+  methods: {
+    scrollHandler () {
+      if (document.documentElement.clientWidth >= 900 && (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)) this.toggleNavbar = true
+      else this.toggleNavbar = false
+    }
+  },
   watch: {
     $route () {
       this.toggleNavbar = false
     }
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.scrollHandler)
   }
 }
 </script>

@@ -103,7 +103,7 @@ const router = new Router({
       return {
         selector: to.hash
       }
-    } else if ((from.name === 'Agenda' && to.name !== 'AgendaPopup') || (to.name === 'Agenda' && from.name !== 'AgendaPopup')) {
+    } else if (!((from.name === 'Agenda' && to.name === 'AgendaPopup') || (from.name === 'AgendaPopup' && to.name === 'Agenda'))) {
       return {
         x: 0,
         y: 0

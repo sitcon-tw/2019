@@ -64,6 +64,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#sitcon-map {
+  @media screen and (min-width: 900px) {
+    margin-top: 8rem;
+  }
+}
+
 .spotlight-container {
   margin-top: 0;
 }

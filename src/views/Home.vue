@@ -101,6 +101,7 @@ export default {
 
 #home {
   position: relative;
+  margin-top: 12rem;
 
   &:before {
     z-index: -1;
@@ -118,6 +119,8 @@ header {
   flex-direction: row;
   margin: 64px 140px;
   width: calc(100% - 140px * 2);
+  filter: drop-shadow(0 0 10px rgba($black, .5));
+  -webkit-filter: drop-shadow(0 0 10px rgba($black, .5));
 
   @media screen and (max-width: 1200px) {
     margin: 64px 2rem;
@@ -166,15 +169,12 @@ header {
     padding: 2rem 3.5rem;
     width: 300px;
     position: relative;
-    box-shadow: 0 0 10px rgba($black, .5);
 
     .tape {
       position: absolute;
       height: 150px;
       right: -50px;
       top: -50px;
-      filter: drop-shadow(0 0 5px rgba($black, .5));
-      -webkit-filter: drop-shadow(0 0 5px rgba($black, .5));
 
       @media screen and (max-width: 1200px) {
         height: 100px;
