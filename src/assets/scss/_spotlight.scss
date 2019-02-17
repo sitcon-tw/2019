@@ -120,6 +120,15 @@
 
           @media screen and (max-width: 1200px) {
             font-size: 24px;
+
+            &:before { /* additional wrapping rectangle */
+              content: '\200b';
+              display: inline-block;
+              width: calc(166px - 1rem - 8px); /* taking offset into account */
+              height: calc(25px - 1rem);
+              float: right;
+              margin: 0 0 1rem 1rem;
+            }
           }
         }
 
