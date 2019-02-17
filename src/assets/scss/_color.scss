@@ -4,15 +4,21 @@ $black: #282828;
 $gray: #707070;
 $dark: #54656e;
 $sitcon: #92BB7F;
+$tone_back: #efe9dc;
 $tone_light: #fcf7ea;
-$tone_dark: #9f9082;
-$tone_paper: #f4f1ea;
+$tone_paper: #d6c2a5;
+$tone_dark: #c7ac86;
+$tone_session_dark: #9F9082;
+$tone_box_dark: #c9a474;
+$tone_box_light: #debf96;
+$tone_spotlight: #f4f1ea;
 $tone_hover: #f5dea6;
-$tone_paper_dark: #b98b4f;
+$tone_paper_dark: #c4a377;
 $tone_paper_light: #e4c37e;
+$tone_content: #604726;
 
 
-$title: $dark;
-$content: $gray;
+$title: $tone_content;
+$content: $tone_content;
 
 $cfp_content: $gray;

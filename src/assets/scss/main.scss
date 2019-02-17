@@ -30,6 +30,8 @@
 }
 
 body {
+  background-color: $tone_back;
+
   &.popup-scrolling-lock {
     overflow: hidden;
   }

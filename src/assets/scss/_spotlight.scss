@@ -24,7 +24,7 @@
   flex-direction: column;
   width: calc(100% - 140px * 2);
   padding: 64px 140px;
-  background-color: $white;
+  background-color: $tone_back;
   color: $content;
 
   @media screen and (max-width: 1000px) {
@@ -34,11 +34,11 @@
 
   &.stagger {
     &:nth-child(odd) {
-      background-color: $white;
+      background-color: $tone_back;
     }
 
     &:nth-child(even) {
-      background-color: $tone_paper;
+      background-color: $tone_spotlight;
     }
   }
 
@@ -60,7 +60,7 @@
     .card-container {
       box-sizing: border-box;
       border: 1px solid $gray;
-      background-color: $white;
+      background-color: $tone_box_dark;
       display: flex;
       flex-direction: row;
       position: relative;
@@ -94,6 +94,7 @@
         width: 350px;
         box-sizing: border-box;
         border-right: 1px solid $gray;
+        background-color: $tone_box_light;
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
