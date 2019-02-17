@@ -24,3 +24,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.spotlight {
+  @media screen and (max-width: 1024px) {
+    padding: 1rem;
+    width: calc(100% - 1rem * 2);
+  }
+}
+</style>
+
