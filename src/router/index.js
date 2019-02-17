@@ -98,12 +98,12 @@ const router = new Router({
     routeRule.path = `/2019${routeRule.path}`
     return routeRule
   }),
-  scrollBehavior (to) {
+  scrollBehavior (to, from) {
     if (to.hash) {
       return {
         selector: to.hash
       }
-    } else if (to.name !== 'Agenda' && to.name !== 'AgendaPopup') {
+    } else if ((from.name === 'Agenda' && to.name !== 'AgendaPopup') || (to.name === 'Agenda' && from.name !== 'AgendaPopup')) {
       return {
         x: 0,
         y: 0
