@@ -38,7 +38,7 @@
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
-  border: 2px solid $white;
+  border: 2px solid $tone_back;
   background-color: $tone_light;
   z-index: 1;
 
@@ -52,7 +52,7 @@
 
   &:not(&-time) {
     @media screen and (max-width: 900px) {
-      border-bottom: 1px solid $tone_dark;
+      border-bottom: 1px solid $tone_session_dark;
     }
   }
 
@@ -78,8 +78,8 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background-color: $tone_dark;
-      color: $white;
+      background-color: $tone_session_dark;
+      color: $tone_back;
       padding: 1px 7px;
       margin: 3px;
       border-radius: 1rem;
@@ -95,7 +95,7 @@
 
   &-time {
     grid-column-start: time;
-    background-color: $white;
+    background-color: $tone_back;
 
     p {
       position: absolute;
@@ -104,8 +104,8 @@
 
     @media screen and (max-width: 900px) {
       height: 2.5rem;
-      background-color: $tone_dark;
-      color: $white;
+      background-color: $tone_session_dark;
+      color: $tone_back;
 
       p {
         position: relative;
@@ -114,7 +114,7 @@
   }
 
   &-room {
-    background-color: $white;
+    background-color: $tone_back;
 
     p {
       position: absolute;
