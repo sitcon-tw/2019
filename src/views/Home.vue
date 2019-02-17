@@ -1,14 +1,16 @@
 <template>
-  <div>
+  <div id="home">
     <header>
       <div class="main-logo">
         <img src="@/assets/images/main-logo.png" alt="">
       </div>
       <div class="action-box-container">
         <div class="action-box">
+          <img class="tape" src="@/assets/images/tape-slash.png" alt="">
           <h2><a class="big very-bold" href="" target="_blank" rel="noopener noreferrer">前往報名</a></h2>
         </div>
-        <div class="action-box">
+        <div class="action-box info">
+          <img class="tape" src="@/assets/images/tape-slash.png" alt="">
           <h2>
             <span class="big">3/24</span>
             <br />
@@ -95,6 +97,20 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/scss/_color.scss';
 
+#home {
+  position: relative;
+
+  &:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    height: calc(100% + 12rem);
+    width: 100%;
+    top: -13rem;
+    background-image: url('../../static/img/home-background.png');
+  }
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -147,6 +163,35 @@ header {
     background-color: $tone_box_dark;
     padding: 2rem 3.5rem;
     width: 300px;
+    position: relative;
+
+    .tape {
+      position: absolute;
+      height: 150px;
+      right: -50px;
+      top: -50px;
+
+      @media screen and (max-width: 1200px) {
+        height: 100px;
+        right: -25px;
+        top: -25px;
+      }
+
+      @media screen and (max-width: 900px) {
+        height: 80px;
+        right: -35px;
+        top: -35px;
+      }
+    }
+
+    &.info .tape {
+      @media screen and (max-width: 900px) {
+        height: 80px;
+        left: -35px;
+        top: -35px;
+        transform: scale(-1, 1);
+      }
+    }
 
     @media screen and (max-width: 1500px) {
       width: 250px;
