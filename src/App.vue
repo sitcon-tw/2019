@@ -3,10 +3,9 @@
     <Navbar v-if="!isCFP" />
     <transition :name="transitionName">
       <keep-alive>
-        <router-view class="main" />
+        <router-view class="main-view" />
       </keep-alive>
     </transition>
-    <Footer v-if="!isCFP" />
   </div>
 </template>
 
@@ -45,7 +44,8 @@ export default {
 <style lang="scss">
 @import './assets/scss/main.scss';
 
-.main {
+.main-view {
+  min-height: 100vh;
   transition-property: transform,opacity;
   transition-duration: .5s;
   transition-timing-function: cubic-bezier(.55, 0, .1, 1);

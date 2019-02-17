@@ -20,6 +20,7 @@
         </div>
       </div>
     </header>
+    <Footer />
   </div>
 </template>
 

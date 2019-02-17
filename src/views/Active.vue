@@ -15,13 +15,18 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
+import * as Layout from '@/components';
 import activeData from '../../static/json/active.json'
 
 export default {
+  components: {
+    ...Layout
+  },
   data () {
     return {
       actives: activeData

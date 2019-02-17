@@ -18,13 +18,18 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
+import * as Layout from '@/components';
 import sponsorData from '../../static/json/sponsor.json'
 
 export default {
+  components: {
+    ...Layout
+  },
   data () {
     return {
       sponsors: sponsorData
