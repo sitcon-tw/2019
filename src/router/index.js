@@ -99,11 +99,12 @@ const router = new Router({
     return routeRule
   }),
   scrollBehavior (to, from) {
+    console.log(from.name, to.name)
     if (to.hash) {
       return {
         selector: to.hash
       }
-    } else if ((from.name === 'Agenda' && to.name !== 'AgendaPopup') || (to.name === 'Agenda' && from.name !== 'AgendaPopup')) {
+    } else if (!((from.name === 'Agenda' && to.name === 'AgendaPopup') || (from.name === 'AgendaPopup' && to.name === 'Agenda'))) {
       return {
         x: 0,
         y: 0
