@@ -120,6 +120,10 @@
     justify-content: space-around;
     width: calc(100% - 840px);
 
+    @media screen and (max-width: 1920px) {
+      width: calc(100% - 640px);
+    }
+
     &-logo {
       display: none;
       width: 100%;
