@@ -15,8 +15,8 @@
             希望能藉由您的一份力量，來促成活動的舉行，讓更多學生能在舞台上展現自我成長。<br />
             歡迎您參與贊助，支持 SITCON、讓我們將每年的活動辦得盡善盡美！<br />
           </p>
-          <p><a href="https://sitcon.kktix.cc/events/sitcon2019-individual-sponsor" target="_blank" rel="noopener noreferrer">個人贊助辦法</a></p>
-          <p>企業贊助亦歡迎來信 <a href="mailto:contact@sitcon.org" target="_blank" rel="noopener noreferrer">contact@sitcon.org</a></p>
+          <p><a href="https://sitcon.kktix.cc/events/sitcon2019-individual-sponsor" target="_blank" rel="noopener">個人贊助辦法</a></p>
+          <p>企業贊助亦歡迎來信 <a href="mailto:contact@sitcon.org" target="_blank" rel="noopener">contact@sitcon.org</a></p>
         </div>
       </div>
       <div
@@ -24,11 +24,13 @@
         :key="index"
         class="spotlight card"
       >
-        <div class="card-container">
+        <div class="card-container" id="${sponsor.slug}">
           <div class="card-tag">
             <img :src="`/2019/static/img/${sponsor.level}.svg`" alt="">
           </div>
-          <div class="logo-image" :style="{ 'background-image': `url(/2019/static/img/sponsor/${sponsor.image})` }"></div>
+          <div class="logo-image" :style="{ 'background-image': `url(/2019/static/img/sponsor/${sponsor.image})` }">
+            <a href="${sponsor.url}" target="_blank" rel="external noopener nofollow"></a>
+          </div>
           <div class="content">
             <h1>{{ sponsor.name }}</h1>
             <p>{{ sponsor.description }}</p>
