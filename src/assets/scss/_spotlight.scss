@@ -94,6 +94,7 @@
         display: flex;
         height: auto;
         width: 350px;
+        min-height: 300px;
         box-sizing: border-box;
         border-right: 1px solid $gray;
         background-color: $tone_box_light;
@@ -104,6 +105,7 @@
         @media screen and (max-width: 1200px) {
           border: 0;
           border-bottom: 1px solid $gray;
+          min-height: auto;
           height: 250px;
           width: auto;
         }
