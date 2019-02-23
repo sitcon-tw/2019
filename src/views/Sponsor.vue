@@ -24,7 +24,10 @@
         :key="index"
         class="spotlight card"
       >
-        <div class="card-container" id="${sponsor.slug}">
+        <div
+          :id="sponsor.slug"
+          class="card-container"
+        >
           <div class="card-tag">
             <img :src="`/2019/static/img/${sponsor.level}.svg`" alt="">
           </div>
