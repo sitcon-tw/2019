@@ -34,7 +34,6 @@
       </div>
       <div class="box side">
         <img src="@/assets/images/box-open-1.png" alt="">
-        <img src="@/assets/images/SVG/sitcon-mark.svg" alt="" class="icon">
       </div>
     </div>
     <div class="box-container reverse">
@@ -50,7 +49,6 @@
       </div>
       <div class="box side">
         <img src="@/assets/images/box-open-2.png" alt="">
-        <img src="@/assets/images/SVG/binary-tree.svg" alt="" class="icon">
       </div>
     </div>
     <div class="paper-container">

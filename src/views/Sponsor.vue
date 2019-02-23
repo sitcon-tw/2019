@@ -29,7 +29,7 @@
             <img :src="`/2019/static/img/${sponsor.level}.svg`" alt="">
           </div>
           <div class="logo-image" :style="{ 'background-image': `url(/2019/static/img/sponsor/${sponsor.image})` }">
-            <a href="${sponsor.url}" target="_blank" rel="external noopener nofollow"></a>
+            <a :href="sponsor.url" target="_blank" rel="external noopener nofollow"></a>
           </div>
           <div class="content">
             <h1>{{ sponsor.name }}</h1>
