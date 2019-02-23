@@ -19,7 +19,7 @@
         <div
           class="nav-item home"
           :class="{ 'active': $route.name === 'Home' }"
-          @click="toggleNavbar = false"
+          @click="isMobile ? toggleNavbar = false : null"
         >
           <router-link to="/2019">
             <p>首頁</p>
@@ -30,7 +30,7 @@
           :class="{ 'active': $route.name === page.name }"
           v-for="page in pages"
           :key="page.meta.index"
-          @click="toggleNavbar = false"
+          @click="isMobile ? toggleNavbar = false : null"
         >
           <router-link :to="page.path">
             <p>{{ page.meta.label }}</p>
@@ -45,7 +45,8 @@
 export default {
   data () {
     return {
-      toggleNavbar: false
+      toggleNavbar: false,
+      isMobile: false
     }
   },
   computed: {
@@ -55,12 +56,18 @@ export default {
   },
   mounted () {
     this.scrollHandler()
+    this.resize()
     window.addEventListener('scroll', this.scrollHandler)
+    window.addEventListener('resize', this.resize)
   },
   methods: {
     scrollHandler () {
       if (document.documentElement.clientWidth >= 900 && (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)) this.toggleNavbar = true
       else this.toggleNavbar = false
+    },
+    resize (event) {
+      if (document.documentElement.clientWidth <= 900) this.isMobile = true
+      else this.isMobile = false
     }
   },
   watch: {
@@ -70,6 +77,7 @@ export default {
   },
   destroyed () {
     window.removeEventListener('scroll', this.scrollHandler)
+    window.removeEventListener('resize', this.resize)
   }
 }
 </script>
