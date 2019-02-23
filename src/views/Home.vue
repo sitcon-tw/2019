@@ -367,6 +367,10 @@ header {
     img {
       height: 100%;
 
+      @media screen and (max-width: 900px) {
+        width: 100%;
+      }
+
       &.icon {
         position: absolute;
         height: 60%;
