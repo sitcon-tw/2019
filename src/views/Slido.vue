@@ -1,9 +1,12 @@
 <template>
   <div>
-    <div class="slido-container">
+    <div class="slido-container" :class="{ 'toggle': toggleSide }">
       <div class="side">
         <div class="title">
           <p>議程線上討論區</p>
+          <p class="icon" @click="toggleSide = true">
+            <font-awesome-icon icon="arrow-left" />
+          </p>
         </div>
         <div class="session-table mobile">
           <session-box-mobile
@@ -15,6 +18,7 @@
       </div>
       <div class="slido">
         <h1 v-show="loading" class="bold">載入中...</h1>
+        <div class="toggle-btn" @click="toggleSide = false"></div>
         <iframe
           v-show="!loading"
           :src="qaLink"
@@ -41,7 +45,8 @@ export default {
       popupData: null,
       isMobile: false,
       qaLink: '',
-      loading: false
+      loading: false,
+      toggleSide: false
     }
   },
   computed: {
@@ -105,6 +110,7 @@ export default {
     $route () {
       this.openSlido()
       this.loading = true
+      if (document.documentElement.clientWidth <= 900) this.toggleSide = true
     }
   }
 }
@@ -118,6 +124,11 @@ export default {
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  transition: all ease-in-out .3s;
+
+  @media screen and (max-width: 900px) {
+    width: 200vw;
+  }
 
   .side {
     width: 320px;
@@ -127,17 +138,30 @@ export default {
     box-shadow: 0 0 10px rgba($black, 0.5);
     z-index: 1;
 
+    @media screen and (max-width: 900px) {
+      width: 100vw;
+    }
+
     &::-webkit-scrollbar {
       display: none
     }
 
     .title {
+      padding: 10px;
       background-color: $tone_paper;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
 
       p {
-        padding: 10px;
         font-size: 20px;
         font-weight: 500;
+
+        &.icon {
+          padding-left: 2rem;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -148,9 +172,32 @@ export default {
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 900px) {
+      width: 100vw;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 56px;
+      width: 4rem;
+      cursor: pointer;
+    }
+
     iframe {
       height: 100%;
       width: 100%;
+    }
+  }
+
+  &.toggle {
+    width: calc(100% + 320px);
+    transform: translateX(-320px);
+
+    @media screen and (max-width: 900px) {
+      width: 200vw;
+      transform: translateX(-100vw);
     }
   }
 }
