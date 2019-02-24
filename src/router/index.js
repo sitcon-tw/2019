@@ -93,6 +93,32 @@ const router = new Router({
         label: 'CFP'
       },
       component: views.CFP
+    },
+    {
+      path: '/slido',
+      name: 'Slido',
+      meta: {
+        type: 'self',
+        label: 'Slido'
+      },
+      component: views.Slido
+    },
+    {
+      path: '/noslido',
+      name: 'NoSlido',
+      meta: {
+        type: 'self',
+        label: 'NoSlido'
+      },
+      component: views.NoSlido
+    },
+    {
+      path: '/slido/:slide',
+      name: 'SlidoOpen',
+      meta: {
+        type: 'self'
+      },
+      component: views.Slido
     }
   ].map(routeRule => {
     routeRule.path = `/2019${routeRule.path}`

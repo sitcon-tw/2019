@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar v-if="!isCFP" />
+    <Navbar v-if="!isHideNavbar" />
     <transition :name="transitionName">
       <keep-alive>
         <router-view class="main-view" />
@@ -17,7 +17,7 @@ export default {
   },
   data () {
     return {
-      isCFP: false,
+      isHideNavbar: false,
       transitionName: 'slide-left'
     }
   },
@@ -26,8 +26,8 @@ export default {
   },
   methods: {
     toggleNavbar () {
-      if (this.$route.name === 'CFP') this.isCFP = true
-      else this.isCFP = false
+      if (this.$route.name === 'CFP' || this.$route.name === 'Slido' || this.$route.name === 'NoSlido' || this.$route.name === 'SlidoOpen' || this.$route.query.mode === 'app') this.isHideNavbar = true
+      else this.isHideNavbar = false
     }
   },
   watch: {
