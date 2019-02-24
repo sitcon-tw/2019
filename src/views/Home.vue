@@ -101,6 +101,10 @@ export default {
   position: relative;
   margin-top: 12rem;
 
+  @media screen and (max-width: 900px) {
+    margin-top: 0;
+  }
+
   &:before {
     z-index: -1;
     content: '';
@@ -126,7 +130,7 @@ header {
   }
 
   @media screen and (max-width: 900px) {
-    margin-top: calc(4rem + 64px);
+    margin-top: 6rem;
     flex-direction: column;
   }
 

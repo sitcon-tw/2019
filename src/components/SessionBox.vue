@@ -2,7 +2,7 @@
   <div
     class="session"
     :class="{'clickable': data.type !== 'BREAK' && data.type !== 'E' }"
-    @click="data.type !== 'BREAK' && data.type !== 'E' ? openPop(data.id) : null"
+    @click="data.type !== 'BREAK' && data.type !== 'E' ? openPop(data) : null"
   >
     <p class="tag">
       <span
@@ -40,8 +40,9 @@ export default {
     }
   },
   methods: {
-    openPop (id) {
-      this.$router.push({ name: 'AgendaPopup', params: { sessionId: id } })
+    openPop (data) {
+      if (this.$route.name === 'Slido' || this.$route.name === 'SlidoOpen') this.$router.push({ name: 'SlidoOpen', params: { slide: data.qa ? data.qa : '/2019/noslido' } })
+      else this.$router.push({ name: 'AgendaPopup', params: { sessionId: data.id } })
     }
   }
 }
