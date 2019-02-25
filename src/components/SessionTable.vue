@@ -75,10 +75,14 @@ export default {
     this.openPopup()
   },
   methods: {
-    ...mapActions(['formatTime', 'toggleNavbar', 'togglePopUpLock']),
-    openPopup () {
+    ...mapActions(['formatTime', 'initSessionData', 'toggleNavbar', 'togglePopUpLock']),
+    async openPopup () {
+      let target = _.find(this.sessions.desktop, data => data.id === this.$route.params.sessionId)
+      if (!target) {
+        await this.initSessionData()
+        target = _.find(this.sessions.desktop, data => data.id === this.$route.params.sessionId)
+      }
       if (this.$route.params.sessionId) {
-        const target = _.find(this.sessions.desktop, data => data.id === this.$route.params.sessionId)
         if (target) {
           this.popupData = target
           this.togglePopUpLock(true)
