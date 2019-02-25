@@ -4,6 +4,7 @@
     :class="{'clickable': data.type !== 'BREAK' && data.type !== 'E', 'active': $route.name === 'Slido' && slido.link === data.qa }"
     @click="data.type !== 'BREAK' && data.type !== 'E' ? openPop(data) : null"
   >
+    <a class="seo-only" v-show="false" :href="`/2019/agenda/${data.id}`"></a>
     <p class="tag">
       <span
         v-for="(tag, index) in data.tag"

@@ -13,7 +13,8 @@ const router = new Router({
       meta: {
         type: 'self',
         index: 0,
-        label: 'SITCON 19'
+        label: 'SITCON 19',
+        title: '首頁'
       },
       component: views.Home
     },
@@ -99,7 +100,7 @@ const router = new Router({
       name: 'Slido',
       meta: {
         type: 'self',
-        label: 'Slido'
+        label: '線上議程討論區'
       },
       component: views.Slido
     },

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <session-popup v-if="popupData" :data="popupData" />
     <div v-if="!device.isMobile" class="session-table">
       <div
         v-for="room in rooms"
@@ -45,7 +46,6 @@
         :isMobile="device.isMobile"
       />
     </div>
-    <session-popup v-if="popupData" :data="popupData" />
   </div>
 </template>
 

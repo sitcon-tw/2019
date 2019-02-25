@@ -11,6 +11,7 @@
 
 <script>
 import * as Layout from '@/components'
+import head from '../util/head'
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
@@ -28,6 +29,7 @@ export default {
   mounted () {
     this.toggle()
     this.deviceHandler()
+    this.headSeoDetect()
     this.initSessionData()
     this.initSessionTimeTable()
     window.addEventListener('resize', this.deviceHandler)
@@ -41,10 +43,20 @@ export default {
     deviceHandler () {
       if (document.documentElement.clientWidth <= 900) this.toggleDevice('mobile')
       else this.toggleDevice('desktop')
+    },
+    headSeoDetect () {
+      if (this.$route.meta.type === 'main') {
+        head.title(this.$route.meta.title || this.$route.meta.label)
+        head.ogTitle(this.$route.meta.title || this.$route.meta.label)
+        head.ogDescription('以學生為本、由學生自發舉辦，SITCON 學生計算機年會不只是學生「學以致用、教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發。')
+        head.ogImage('https://sitcon.org/2019/static/img/og.jpg')
+        head.ogType('website')
+      }
     }
   },
   watch: {
     $route (to, from) {
+      this.headSeoDetect()
       this.toggle()
       const toDepth = to.meta.index
       const fromDepth = from.meta.index

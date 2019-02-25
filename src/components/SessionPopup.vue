@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import head from '../../util/head'
+
 export default {
   props: {
     data: {
@@ -34,11 +36,19 @@ export default {
     }
   },
   mounted () {
+    this.headSeoDetect()
     window.addEventListener('keydown', this.closePopupByEsc)
   },
   methods: {
     closePopupByEsc (event) {
       if (event.keyCode === 27) this.$router.push({ name: 'Agenda' })
+    },
+    headSeoDetect () {
+      head.title(`${this.data.zh.title} by ${this.data.speakers.map(ele => ele.zh.name).join()} | 議程`)
+      head.ogTitle(`${this.data.zh.title} | 議程`)
+      head.ogDescription(this.data.zh.description)
+      head.ogImage(this.data.speakers[0].avatar)
+      head.ogType('article')
     }
   },
   destroyed () {
