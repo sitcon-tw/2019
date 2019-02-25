@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="slido-container" :class="{ 'toggle': toggleSide }">
+    <div class="slido-container" :class="{ 'toggle': slido.opened }">
       <div class="side">
         <div class="title">
           <p>議程線上討論區</p>
-          <p class="icon" @click="toggleSide = true">
+          <p class="icon" @click="toggleSlido(true)">
             <font-awesome-icon icon="arrow-left" />
           </p>
         </div>
@@ -18,7 +18,7 @@
       </div>
       <div class="slido">
         <h1 v-show="loading" class="bold">載入中...</h1>
-        <div class="toggle-btn" @click="toggleSide = false"></div>
+        <div class="toggle-btn" @click="closeSlido()"></div>
         <iframe
           v-show="!loading"
           :src="qaLink"
@@ -44,29 +44,32 @@ export default {
       popupData: null,
       isMobile: false,
       qaLink: '',
-      loading: false,
-      toggleSide: false
+      loading: false
     }
   },
   computed: {
-    ...mapGetters(['device', 'sessions'])
+    ...mapGetters(['device', 'sessions', 'slido'])
   },
   mounted () {
     this.openSlido()
   },
   methods: {
+    ...mapActions(['toggleSlido', 'changeSlidoLink']),
     openSlido () {
-      this.qaLink = this.$route.params.slide
+      this.qaLink = this.slido.link
+    },
+    closeSlido () {
+      this.toggleSlido(false)
     },
     finishLoad () {
       this.loading = false
     }
   },
   watch: {
-    $route () {
+    'slido.link' () {
       this.openSlido()
       this.loading = true
-      if (this.device.isMobile) this.toggleSide = true
+      if (this.device.isMobile) this.toggleSlido(true)
     }
   }
 }

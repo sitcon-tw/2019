@@ -35,7 +35,7 @@ export default {
   methods: {
     ...mapActions(['initSessionData', 'initSessionTimeTable', 'toggleNavbar', 'toggleDevice']),
     toggle () {
-      if (this.$route.name === 'CFP' || this.$route.name === 'Slido' || this.$route.name === 'NoSlido' || this.$route.name === 'SlidoOpen' || this.$route.query.mode === 'app') this.toggleNavbar({ hidden: true })
+      if (this.$route.name === 'CFP' || this.$route.name === 'Slido' || this.$route.name === 'NoSlido' || this.$route.query.mode === 'app') this.toggleNavbar({ hidden: true })
       else this.toggleNavbar({ hidden: false })
     },
     deviceHandler () {

@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   props: {
     data: {
@@ -39,10 +41,16 @@ export default {
       type: Boolean
     }
   },
+  computed: {
+    ...mapGetters(['device'])
+  },
   methods: {
+    ...mapActions(['changeSlidoLink', 'toggleSlido']),
     openPop (data) {
-      if (this.$route.name === 'Slido' || this.$route.name === 'SlidoOpen') this.$router.push({ name: 'SlidoOpen', params: { slide: data.qa ? data.qa : '/2019/noslido' } })
-      else this.$router.push({ name: 'AgendaPopup', params: { sessionId: data.id } })
+      if (this.$route.name === 'Slido') {
+        this.changeSlidoLink(data.qa)
+        if (this.device.isMobile) this.toggleSlido(true)
+      } else this.$router.push({ name: 'AgendaPopup', params: { sessionId: data.id } })
     }
   }
 }
