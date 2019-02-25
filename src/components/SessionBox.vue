@@ -1,7 +1,7 @@
 <template>
   <div
     class="session"
-    :class="{'clickable': data.type !== 'BREAK' && data.type !== 'E' }"
+    :class="{'clickable': data.type !== 'BREAK' && data.type !== 'E', 'active': $route.name === 'Slido' && slido.link === data.qa }"
     @click="data.type !== 'BREAK' && data.type !== 'E' ? openPop(data) : null"
   >
     <p class="tag">
@@ -42,7 +42,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['device'])
+    ...mapGetters(['device', 'slido'])
   },
   methods: {
     ...mapActions(['changeSlidoLink', 'toggleSlido']),

@@ -92,7 +92,8 @@
   &.clickable {
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &.active {
       background-color: $tone_hover;
     }
   }
