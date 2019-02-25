@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="!isMobile" class="session-table">
+    <div v-if="!device.isMobile" class="session-table">
       <div
         v-for="room in rooms"
         :key="room"
@@ -28,7 +28,7 @@
         :key="`session-${index}`"
         :data="session"
         :class="{ 'blank-cover': session.type === 'BREAK' }"
-        :isMobile="isMobile"
+        :isMobile="device.isMobile"
         :style="{
           'grid-column-start': `${session.broadcast ? 'R2' : session.room}`,
           'grid-column-end': `${session.broadcast ? 'END' : `${rooms[rooms.indexOf(session.room) + 1]}`}`,
@@ -42,7 +42,7 @@
         v-for="(session, index) in mobileSession"
         :key="`session-${index}`"
         :data="session"
-        :isMobile="isMobile"
+        :isMobile="device.isMobile"
       />
     </div>
     <session-popup v-if="popupData" :data="popupData" />
@@ -50,6 +50,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import SessionBox from './SessionBox'
 import SessionBoxMobile from './SessionBoxMobile'
 import SessionPopup from './SessionPopup'
@@ -69,11 +70,11 @@ export default {
   data () {
     return {
       rooms: ['R2', 'R0', 'R1', 'R3', 'S'],
-      popupData: null,
-      isMobile: false
+      popupData: null
     }
   },
   computed: {
+    ...mapGetters(['device', 'navbar', 'popUpLock']),
     sessions: function () {
       return this.parseSession()
     },
@@ -105,9 +106,10 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['toggleNavbar', 'togglePopUpLock']),
     parseSession () {
       let result = this.sessionData.slice()
-      if (!this.isMobile) result = this.filterAndJoinBlankBlock(result)
+      if (!this.device.isMobile) result = this.filterAndJoinBlankBlock(result)
       return _.map(result, data => ({
         ...data,
         start: new Date(data.start).toLocaleString('en-US', { timeZone: 'Asia/Taipei', hour12: false }),
@@ -269,33 +271,23 @@ export default {
         const target = _.find(this.sessions, data => data.id === this.$route.params.sessionId)
         if (target) {
           this.popupData = target
-          document.querySelector('body').classList.add('popup-scrolling-lock')
-          if (document.documentElement.clientWidth >= 900 && (document.body.scrollTop || document.documentElement.scrollTop > 0)) document.querySelector('.nav').classList.add('toggle')
+          this.togglePopUpLock(true)
+          if (!this.device.isMobile && (document.body.scrollTop || document.documentElement.scrollTop > 0)) this.toggleNavbar({ opened: true })
         }
       } else {
         this.popupData = null
-        document.querySelector('body').classList.remove('popup-scrolling-lock')
-        if (document.documentElement.clientWidth >= 900 && (document.body.scrollTop || document.documentElement.scrollTop > 0)) document.querySelector('.nav').classList.add('toggle')
+        this.togglePopUpLock(false)
+        if (!this.device.isMobile && (document.body.scrollTop || document.documentElement.scrollTop > 0)) this.toggleNavbar({ opened: true })
       }
-    },
-    resize (event) {
-      if (document.documentElement.clientWidth <= 900) this.isMobile = true
-      else this.isMobile = false
     }
   },
   mounted () {
     this.openPopup()
-    this.resize()
-
-    window.addEventListener('resize', this.resize)
-  },
-  destroyed () {
-    window.removeEventListener('resize', this.resize)
   },
   watch: {
     $route (to, from) {
       this.openPopup()
-      if (!((from.name === 'Agenda' && to.name === 'AgendaPopup') || (from.name === 'AgendaPopup' && to.name === 'Agenda'))) document.querySelector('.nav').classList.remove('toggle')
+      if (!((from.name === 'Agenda' && to.name === 'AgendaPopup') || (from.name === 'AgendaPopup' && to.name === 'Agenda'))) this.toggleNavbar({ opened: false })
     }
   }
 }

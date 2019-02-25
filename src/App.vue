@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Navbar v-if="!isHideNavbar" />
+    <Navbar v-if="!navbar.hidden" />
     <transition :name="transitionName">
       <keep-alive>
         <router-view class="main-view" />
@@ -11,32 +11,50 @@
 
 <script>
 import * as Layout from '@/components'
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   components: {
     ...Layout
   },
   data () {
     return {
-      isHideNavbar: false,
       transitionName: 'slide-left'
     }
   },
+  computed: {
+    ...mapGetters(['device', 'navbar', 'popUpLock'])
+  },
   mounted () {
-    this.toggleNavbar()
+    this.toggle()
+    this.deviceHandler()
+    window.addEventListener('resize', this.deviceHandler)
   },
   methods: {
-    toggleNavbar () {
-      if (this.$route.name === 'CFP' || this.$route.name === 'Slido' || this.$route.name === 'NoSlido' || this.$route.name === 'SlidoOpen' || this.$route.query.mode === 'app') this.isHideNavbar = true
-      else this.isHideNavbar = false
+    ...mapActions(['toggleNavbar', 'toggleDevice']),
+    toggle () {
+      if (this.$route.name === 'CFP' || this.$route.name === 'Slido' || this.$route.name === 'NoSlido' || this.$route.name === 'SlidoOpen' || this.$route.query.mode === 'app') this.toggleNavbar({ hidden: true })
+      else this.toggleNavbar({ hidden: false })
+    },
+    deviceHandler () {
+      if (document.documentElement.clientWidth <= 900) this.toggleDevice('mobile')
+      else this.toggleDevice('desktop')
     }
   },
   watch: {
     $route (to, from) {
-      this.toggleNavbar()
+      this.toggle()
       const toDepth = to.meta.index
       const fromDepth = from.meta.index
       this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    },
+    popUpLock (status) {
+      if (status) document.querySelector('body').classList.add('popup-scrolling-lock')
+      else document.querySelector('body').classList.remove('popup-scrolling-lock')
     }
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.deviceHandler)
   }
 }
 </script>
