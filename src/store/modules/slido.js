@@ -29,7 +29,7 @@ const mutations = {
   },
 
   [types.SLIDO_LINK] (state, link) {
-    state.slido.link = link || '/2019/noslido'
+    state.slido.link = link || '/2019/noslido/'
   }
 }
 
