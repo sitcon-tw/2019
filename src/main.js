@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Gravatar from 'vue-gravatar'
 import App from './App'
 import router from './router'
+import store from './store'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -23,6 +24,7 @@ Vue.config.devtools = true
 /* eslint-disable no-new */
 const app = new Vue({
   router,
+  store,
   ...App
 }).$mount('#app')
 
