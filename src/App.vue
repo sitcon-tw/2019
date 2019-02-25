@@ -52,6 +52,8 @@ export default {
         head.ogImage('https://sitcon.org/2019/static/img/og.jpg')
         head.ogType('website')
       }
+
+      head.ogUrl(`https://sitcon.org${document.location.pathname}`)
     }
   },
   watch: {

@@ -5,6 +5,7 @@ const headPayload = {
   title: titleDOM,
   'og:title': metaDOM[2],
   'og:description': metaDOM[3],
+  'og:url': metaDOM[4],
   'og:image': metaDOM[5],
   'og:type': metaDOM[6]
 }
@@ -24,6 +25,9 @@ const head = {
   },
   ogType (text) {
     headPayload['og:type'].content = text
+  },
+  ogUrl (link) {
+    headPayload['og:url'].content = link
   }
 }
 
