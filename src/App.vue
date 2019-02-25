@@ -28,10 +28,12 @@ export default {
   mounted () {
     this.toggle()
     this.deviceHandler()
+    this.initSessionData()
+    this.initSessionTimeTable()
     window.addEventListener('resize', this.deviceHandler)
   },
   methods: {
-    ...mapActions(['toggleNavbar', 'toggleDevice']),
+    ...mapActions(['initSessionData', 'initSessionTimeTable', 'toggleNavbar', 'toggleDevice']),
     toggle () {
       if (this.$route.name === 'CFP' || this.$route.name === 'Slido' || this.$route.name === 'NoSlido' || this.$route.name === 'SlidoOpen' || this.$route.query.mode === 'app') this.toggleNavbar({ hidden: true })
       else this.toggleNavbar({ hidden: false })

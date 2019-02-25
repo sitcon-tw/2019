@@ -10,7 +10,7 @@
         </div>
         <div class="session-table mobile">
           <session-box-mobile
-            v-for="(session, index) in mobileSession"
+            v-for="(session, index) in sessions.mobile"
             :key="`session-${index}`"
             :data="session"
           />
@@ -31,9 +31,8 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import SessionBoxMobile from '@/components/SessionBoxMobile.vue'
-import sessionData from '../../static/json/agenda.json'
-import _ from 'lodash'
 
 export default {
   components: {
@@ -50,55 +49,12 @@ export default {
     }
   },
   computed: {
-    sessions: function () {
-      return this.parseSession()
-    },
-    mobileSession: function () {
-      let result = _.groupBy(this.sessions, data => data.start)
-      let keys = Object.keys(result)
-      let value = Object.values(result)
-      return keys.map((key, index) => ({
-        time: this.formatTime(new Date(key)),
-        sessions: value[index]
-      })).sort((a, b) => {
-        return a.time > b.time ? 1 : -1
-      })
-    },
-    times: function () {
-      let result = []
-      let data = this.parseSession()
-      let start = _.map(data, 'start')
-      let end = _.map(data, 'end')
-      result = _.concat(result, start, end)
-      result = _.uniqBy(result, this.formatTime)
-      return result.slice().sort().map(data => this.formatTime(data))
-    },
-    timeLine: function () {
-      let result = this.parseSession()
-      let start = _.map(result, 'start')
-      result = _.uniqBy(start.sort(), this.formatTime)
-      return result.slice().sort().map(data => this.formatTime(data))
-    }
+    ...mapGetters(['device', 'sessions'])
   },
   mounted () {
     this.openSlido()
   },
   methods: {
-    parseSession () {
-      let result = sessionData.slice()
-      return _.map(result, data => ({
-        ...data,
-        start: new Date(data.start).toLocaleString('en-US', { timeZone: 'Asia/Taipei', hour12: false }),
-        end: new Date(data.end).toLocaleString('en-US', { timeZone: 'Asia/Taipei', hour12: false })
-      }))
-    },
-    timeTo2Dig (time) {
-      if (time / 10 < 1) return `0${time}`
-      else return `${time}`
-    },
-    formatTime (date) {
-      return `${this.timeTo2Dig(new Date(date).getHours())}:${this.timeTo2Dig(new Date(date).getMinutes())}`
-    },
     openSlido () {
       this.qaLink = this.$route.params.slide
     },
@@ -110,7 +66,7 @@ export default {
     $route () {
       this.openSlido()
       this.loading = true
-      if (document.documentElement.clientWidth <= 900) this.toggleSide = true
+      if (this.device.isMobile) this.toggleSide = true
     }
   }
 }
