@@ -111,14 +111,6 @@ const router = new Router({
         label: 'NoSlido'
       },
       component: views.NoSlido
-    },
-    {
-      path: '/slido/:slide',
-      name: 'SlidoOpen',
-      meta: {
-        type: 'self'
-      },
-      component: views.Slido
     }
   ].map(routeRule => {
     routeRule.path = `/2019${routeRule.path}`
