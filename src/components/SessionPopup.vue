@@ -45,7 +45,7 @@ export default {
     },
     headSeoDetect () {
       head.title(`${this.data.zh.title} by ${this.data.speakers.map(ele => ele.zh.name).join()} | 議程`)
-      head.ogTitle(`${this.data.zh.title} | 議程`)
+      head.ogTitle(`${this.data.zh.title} by ${this.data.speakers.map(ele => ele.zh.name).join()} | 議程`)
       head.ogDescription(this.data.zh.description)
       head.ogImage(this.data.speakers[0].avatar)
       head.ogType('article')
