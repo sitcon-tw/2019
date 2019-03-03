@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="{ 'app-mode': mode === 'app' }">
     <Navbar v-if="!navbar.hidden" />
     <transition :name="transitionName">
       <keep-alive>
@@ -24,7 +24,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['device', 'navbar', 'popUpLock'])
+    ...mapGetters(['device', 'navbar', 'popUpLock', 'mode'])
   },
   mounted () {
     this.toggle()
@@ -35,10 +35,13 @@ export default {
     window.addEventListener('resize', this.deviceHandler)
   },
   methods: {
-    ...mapActions(['initSessionData', 'initSessionTimeTable', 'toggleNavbar', 'toggleDevice']),
+    ...mapActions(['initSessionData', 'initSessionTimeTable', 'toggleNavbar', 'toggleDevice', 'toggleMode']),
     toggle () {
-      if (this.$route.name === 'CFP' || this.$route.name === 'Slido' || this.$route.name === 'NoSlido' || this.$route.query.mode === 'app') this.toggleNavbar({ hidden: true })
+      if (this.$route.name === 'CFP' || this.$route.name === 'Slido' || this.$route.name === 'NoSlido') this.toggleNavbar({ hidden: true })
       else this.toggleNavbar({ hidden: false })
+
+      if (this.$route.query.mode === 'app') this.toggleMode('app')
+      else this.toggleMode('default')
     },
     deviceHandler () {
       if (document.documentElement.clientWidth <= 900) this.toggleDevice('mobile')

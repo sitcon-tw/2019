@@ -14,6 +14,21 @@
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+
+  &.app-mode {
+    .nav,
+    #footer {
+      display: none;
+    }
+
+    .spotlight-container {
+      margin-top: 0;
+    }
+
+    #home > header {
+      margin-top: 2rem;
+    }
+  }
 }
 
 .slide-left-enter,

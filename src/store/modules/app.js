@@ -6,7 +6,8 @@ const state = {
       opened: false,
       hidden: false
     },
-    popUpLocked: false
+    popUpLocked: false,
+    appMode: false
   },
   device: {
     isMobile: false
@@ -16,7 +17,8 @@ const state = {
 const getters = {
   navbar: state => state.toggle.navbar,
   popUpLock: state => state.toggle.popUpLocked,
-  device: state => state.device
+  device: state => state.device,
+  mode: state => state.toggle.appMode ? 'app' : 'default'
 }
 
 const actions = {
@@ -33,6 +35,11 @@ const actions = {
   async togglePopUpLock ({ commit },
     status) {
     commit(types.TOGGLE_POPUP_LOCK, status)
+  },
+
+  async toggleMode ({ commit },
+    status) {
+    commit(types.TOGGLE_MODE, status)
   }
 }
 
@@ -48,6 +55,10 @@ const mutations = {
 
   [types.TOGGLE_POPUP_LOCK] (state, status) {
     state.toggle.popUpLocked = status
+  },
+
+  [types.TOGGLE_MODE] (state, status) {
+    state.toggle.appMode = status === 'app'
   }
 }
 
