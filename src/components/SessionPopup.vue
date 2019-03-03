@@ -10,6 +10,7 @@
       <div class="session-popup-container">
         <div class="session-popup-content">
           <h1>{{ data.zh.title }}</h1>
+          <h3 v-if="data.slide"><a :href="data.slide" target="_blank" rel="noopener noreferrer">#簡報連結</a></h3>
           <p>{{ data.zh.description }}</p>
         </div>
         <div
