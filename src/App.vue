@@ -48,9 +48,14 @@ export default {
       else this.toggleDevice('desktop')
     },
     headSeoDetect () {
-      if (this.$route.meta.type === 'main' || this.$route.name === 'Home') {
+      if (this.$route.meta.type === 'main') {
         head.title(this.$route.meta.title || this.$route.meta.label)
         head.ogTitle(this.$route.meta.title || this.$route.meta.label)
+        head.ogDescription('以學生為本、由學生自發舉辦，SITCON 學生計算機年會不只是學生「學以致用、教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發。')
+        head.ogImage('https://sitcon.org/2019/static/img/og.jpg')
+        head.ogType('website')
+      } else if (this.$route.name === 'Home') {
+        head.reset()
         head.ogDescription('以學生為本、由學生自發舉辦，SITCON 學生計算機年會不只是學生「學以致用、教學相長」的實際展現，更冀望所有對資訊有興趣的學生，能夠在年會裏齊聚一堂，彼此激盪、傳承、啟發。')
         head.ogImage('https://sitcon.org/2019/static/img/og.jpg')
         head.ogType('website')

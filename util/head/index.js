@@ -10,12 +10,18 @@ const headPayload = {
   'og:type': metaDOM[6]
 }
 
+const defaultTitle = `SITCON 2019 學生計算機年會 | Students' Information Technology Conference`
+
 const head = {
+  reset () {
+    headPayload.title.innerText = defaultTitle
+    headPayload['og:title'].content = defaultTitle
+  },
   title (text) {
-    headPayload.title.innerText = `${text} - SITCON 學生計算機年會 | Students' Information Technology Conference`
+    headPayload.title.innerText = `${text} | ${defaultTitle}`
   },
   ogTitle (text) {
-    headPayload['og:title'].content = `${text} - SITCON 學生計算機年會 | Students' Information Technology Conference`
+    headPayload['og:title'].content = `${text} | ${defaultTitle}`
   },
   ogDescription (text) {
     headPayload['og:description'].content = text
