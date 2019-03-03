@@ -1,7 +1,7 @@
 <template>
   <div
     class="session"
-    :class="{'clickable': data.type !== 'BREAK' && data.type !== 'E', 'active': $route.name === 'Slido' && slido.link === data.qa }"
+    :class="{'clickable': data.type !== 'BREAK' && data.type !== 'E' && data.type !== null, 'active': $route.name === 'Slido' && slido.link === data.qa }"
     @click="data.type !== 'BREAK' && data.type !== 'E' ? openPop(data) : null"
   >
     <a class="seo-only" v-show="false" :href="`/2019/agenda/${data.id}`"></a>
