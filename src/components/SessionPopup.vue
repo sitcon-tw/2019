@@ -11,7 +11,7 @@
         <div class="session-popup-content">
           <h1>{{ data.zh.title }}</h1>
           <h3 v-if="data.slide"><a :href="data.slide" target="_blank" rel="noopener noreferrer">#簡報連結</a></h3>
-          <p>{{ data.zh.description }}</p>
+          <p v-html="data.zh.description.replace(/(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+/gm, `<a href='$&' target='_blank' rel='noopener noreferrer'>$&</a>`)"></p>
         </div>
         <div
           v-for="speaker in data.speakers"
@@ -20,7 +20,7 @@
         >
           <h1>About {{ speaker.zh.name }}</h1>
           <p><img :src="speaker.avatar" alt=""></p>
-          <p>{{ speaker.zh.bio }}</p>
+          <p v-html="speaker.zh.bio.replace(/(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+/gm, `<a href='$&' target='_blank' rel='noopener noreferrer'>$&</a>`)"></p>
         </div>
       </div>
     </div>
