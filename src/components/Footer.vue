@@ -1,5 +1,14 @@
 <template>
   <div>
+    <footer id="sponsor">
+      <img
+        v-for="sponsor in sponsors"
+        :key="sponsor.name"
+        :src="`/2019/static/img/sponsor/${sponsor.image}`"
+        alt=""
+        class="sponsor-img"
+      >
+    </footer>
     <footer id="footer" class="main">
       <div class="container">
         <div class="info">
@@ -28,3 +37,15 @@
     </footer>
   </div>
 </template>
+
+<script>
+import sponsorData from '../../static/json/sponsor.json'
+
+export default {
+  data () {
+    return {
+      sponsors: sponsorData
+    }
+  }
+}
+</script>
