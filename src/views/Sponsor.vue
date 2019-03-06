@@ -36,7 +36,7 @@
           </div>
           <div class="content">
             <h1>{{ sponsor.name }}</h1>
-            <p>{{ sponsor.description }}</p>
+            <p v-html="sponsor.description.replace(/(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+/gm, `<a href='$&' target='_blank' rel='noopener noreferrer'>$&</a>`)"></p>
           </div>
         </div>
       </div>
