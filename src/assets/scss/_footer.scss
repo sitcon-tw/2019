@@ -115,19 +115,42 @@ footer {
     margin-top: 3rem;
     padding: 1rem 5rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1080px) {
       padding: 1rem;
     }
 
     .sponsor-img {
-      width: auto;
-      height: 80px;
+      width: calc((100% - 1rem * 16 - 4rem * 2) / 8);
+      height: auto;
       margin: 1rem;
+
+      @media screen and (max-width: 1080px) {
+        width: calc((100% - 1rem * 16 - 0.5rem * 2) / 8);
+      }
 
       @media screen and (max-width: 768px) {
         width: 120px;
         height: auto;
         margin: .5rem;
+      }
+
+      &.holder,
+      &.co-holder,
+      &.co-organizer,
+      &.level-1 {
+        width: calc((100% - 1.2rem * 12 - 4em * 2) / 6);
+        height: auto;
+        margin: 1.2rem;
+
+        @media screen and (max-width: 1080px) {
+          width: calc((100% - 1.2rem * 12 - 0.5rem * 2) / 6);
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 120px;
+          height: auto;
+          margin: .5rem;
+        }
       }
     }
   }

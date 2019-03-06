@@ -7,6 +7,7 @@
         :src="`/2019/static/img/sponsor/${sponsor.image}`"
         alt=""
         class="sponsor-img"
+        :class="sponsor.level"
       >
     </footer>
     <footer id="footer" class="main">
