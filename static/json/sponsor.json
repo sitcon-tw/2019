@@ -69,6 +69,14 @@
     "image": "tezos.png"
   },
   {
+    "name": "財團法人台灣網路資訊中心",
+    "slug": "twnic",
+    "url": "https://twnic.tw",
+    "description": "TWNIC 是一家中立與非營利性的財團法人機構，負責頂級國碼網域名稱.tw及.台灣註冊管理、IP 位址發放、TWCERT/CC 之維運及管理。",
+    "level": "level-2",
+    "image": "twnic.png"
+  },
+  {
     "name": "COSCUP",
     "slug": "coscup",
     "url": "https://coscup.org/",
