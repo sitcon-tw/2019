@@ -85,6 +85,14 @@
     "image": "coscup.png"
   },
   {
+    "name": "資策會數位轉型研究所",
+    "slug": "iii",
+    "url": "",
+    "description": "資策會數位轉型研究所長年投入開源技術並研發相關產品，為促進國內開源軟體技術發展，邀請程式武林高手共同加入研發行列，歡迎至攤位上與我們進行交流。",
+    "level": "level-2",
+    "image": "iii.png"
+  },
+  {
     "name": "社團法人臺灣校園資訊安全推廣暨駭客培育協會",
     "slug": "twchacker",
     "url": "https://blog.tdohacker.org/",
