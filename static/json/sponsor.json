@@ -45,6 +45,14 @@
     "image": "KlickKlack.png"
   },
   {
+    "name": "祐生研究基金會",
+    "slug": "archilife",
+    "url": "https://www.archilife.org/",
+    "description": "祐生研究基金會由推動建築與環境永續發展之研究開始，推動長期的知識累積與人才培養。除了過去建築、環境、生態、健康與資訊社會與文化等面向之碩士論文獎助主題外，本會目前定期舉辦的聯誼會及讀書會，強化祐生成員的知識密度。其後，於 2011 年起，本會持續針對國內開源活動進行贊助，也針對國內獨立遊戲開發者，推動知識與資訊分享聚會，並贊助台灣開發者前往特定國際遊戲競賽，期能幫助國內相關社群之發展。",
+    "level": "level-2",
+    "image": "archilife.png"
+  },
+  {
     "name": "Skymizer",
     "slug": "skymizer",
     "url": "https://skymizer.com/",
@@ -87,10 +95,18 @@
   {
     "name": "資策會數位轉型研究所",
     "slug": "iii",
-    "url": "",
+    "url": "https://www.iii.org.tw/",
     "description": "資策會數位轉型研究所長年投入開源技術並研發相關產品，為促進國內開源軟體技術發展，邀請程式武林高手共同加入研發行列，歡迎至攤位上與我們進行交流。",
     "level": "level-2",
     "image": "iii.png"
+  },
+  {
+    "name": "創代科技股份有限公司",
+    "slug": "datarget",
+    "url": "https://datarget.com.tw/",
+    "description": "創代科技是台灣專業的數據科學服務廠商，目前是台灣電子票證交易資料、4G 手機通訊、GPS 與 eTag 資料專職分析團隊，並回饋學術界，培養數據科學的人才。",
+    "level": "level-2",
+    "image": "datarget.png"
   },
   {
     "name": "社團法人臺灣校園資訊安全推廣暨駭客培育協會",
