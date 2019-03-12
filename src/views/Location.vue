@@ -13,15 +13,6 @@
       </div>
       <div class="spotlight">
         <div class="content">
-          <h1 class="bold">交通車</h1>
-          <p>
-            可搭乘捷運板南線至南港展覽館站（2 號出口）換乘交通車，<br />
-            可乘車時段：08:00-10:00
-          </p>
-        </div>
-      </div>
-      <div class="spotlight">
-        <div class="content">
           <h1 class="bold">大眾運輸</h1>
           <p>
             捷運板南線至南港站（2 號出口）換乘公車 212、270 或藍 25 至中研院站<br />
