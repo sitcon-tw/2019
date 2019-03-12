@@ -10,7 +10,7 @@
           <div class="logo-image" :style="{ 'background-image': `url(/2019/static/img/active/${active.image})` }"></div>
           <div class="content">
             <h1>{{ active.name }}</h1>
-            <p>{{ active.description }}</p>
+            <p v-html="active.description.replace(/\|\|((?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+)\|+\|(.*)\|\|/gm, `<a href='$1' target='_blank' rel='noopener noreferrer'>$3</a>`)"></p>
           </div>
         </div>
       </div>
