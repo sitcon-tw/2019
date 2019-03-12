@@ -131,5 +131,13 @@
     "description": "",
     "level": "thank",
     "image": "its.png"
+  },
+  {
+    "name": "奧義智慧科技",
+    "slug": "cycarrier",
+    "url": "https://www.cycarrier.com/",
+    "description": "",
+    "level": "thank",
+    "image": "cycarrier.png"
   }
 ]
