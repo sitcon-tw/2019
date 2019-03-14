@@ -8,6 +8,7 @@
         alt=""
         class="sponsor-img"
         :class="sponsor.level"
+        @click="window.open(sponsor.url, '_blank')"
       >
     </footer>
     <footer id="footer" class="main">
