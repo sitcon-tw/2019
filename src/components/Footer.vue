@@ -27,12 +27,12 @@
       </div>
       <div class="container year">
         <div class="info">
-          <p><a class="bold" href="/2013">2013</a></p>
-          <p><a class="bold" href="/2014">2014</a></p>
-          <p><a class="bold" href="/2015">2015</a></p>
-          <p><a class="bold" href="/2016">2016</a></p>
-          <p><a class="bold" href="/2017">2017</a></p>
-          <p><a class="bold" href="/2018">2018</a></p>
+          <p><a target="_blank" class="bold" href="/2013">2013</a></p>
+          <p><a target="_blank" class="bold" href="/2014">2014</a></p>
+          <p><a target="_blank" class="bold" href="/2015">2015</a></p>
+          <p><a target="_blank" class="bold" href="/2016">2016</a></p>
+          <p><a target="_blank" class="bold" href="/2017">2017</a></p>
+          <p><a target="_blank" class="bold" href="/2018">2018</a></p>
         </div>
       </div>
     </footer>
