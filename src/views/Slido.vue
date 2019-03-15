@@ -3,7 +3,7 @@
     <div class="slido-container" :class="{ 'toggle': slido.opened }">
       <div class="side">
         <div class="title">
-          <p>議程線上討論區</p>
+          <p>議程線上提問區</p>
           <p class="icon" @click="toggleSlido(true)">
             <font-awesome-icon icon="arrow-left" />
           </p>

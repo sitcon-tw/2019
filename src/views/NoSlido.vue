@@ -2,7 +2,7 @@
   <div>
     <div class="spotlight-container">
       <div class="spotlight">
-        <h1 class="bold">抱歉，此議程不提供議程線上討論區！</h1>
+        <h1 class="bold">抱歉，此議程不提供議程線上提問區！</h1>
       </div>
     </div>
   </div>
