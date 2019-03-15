@@ -124,6 +124,11 @@ footer {
       height: auto;
       margin: 1rem;
 
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
       @media screen and (max-width: 1080px) {
         width: calc((100% - 1rem * 16 - 0.5rem * 2) / 8);
       }

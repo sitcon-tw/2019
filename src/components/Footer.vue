@@ -1,15 +1,16 @@
 <template>
   <div>
     <footer id="sponsor">
-      <img
+      <a
+        :href="sponsor.url"
         v-for="sponsor in sponsors"
         :key="sponsor.name"
-        :src="`/2019/static/img/sponsor/${sponsor.image}`"
-        alt=""
         class="sponsor-img"
         :class="sponsor.level"
-        @click="window.open(sponsor.url, '_blank')"
-      >
+        target="_blank"
+        rel="noopener noreferrer">
+        <img :src="`/2019/static/img/sponsor/${sponsor.image}`" alt="">
+      </a>
     </footer>
     <footer id="footer" class="main">
       <div class="container">
