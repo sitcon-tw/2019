@@ -109,6 +109,14 @@
     "image": "datarget.png"
   },
   {
+    "name": "Microsoft Taiwan",
+    "slug": "microsoft",
+    "url": "https://docs.microsoft.com/zh-tw/learn/",
+    "description": "微軟一直專注於技術創新與變革，透過卓越的軟體、設備和服務，能夠幫助用戶提昇生活和工作生產力，讓數億的使用者真正受益於科技。最耳熟的就是，Satya Nadella 在上任後提出了新願景：「在這個行動優先、雲端至上的世界裡，微軟的核心競爭力，就是成為一個提供生產力與平台的公司，幫助在這個地球上的每一個人到每一個組織，都能貢獻更多、成就更大。」",
+    "level": "level-2",
+    "image": "microsoft.png"
+  },
+  {
     "name": "社團法人臺灣校園資訊安全推廣暨駭客培育協會",
     "slug": "twchacker",
     "url": "https://blog.tdohacker.org/",
