@@ -2,15 +2,15 @@
   <div>
     <div class="spotlight-container card">
       <div
-        v-for="(active, index) in actives"
+        v-for="(activity, index) in activities"
         :key="index"
         class="spotlight card"
       >
         <div class="card-container">
-          <div class="logo-image" :style="{ 'background-image': `url(/2019/static/img/active/${active.image})` }"></div>
+          <div class="logo-image" :style="{ 'background-image': `url(/2019/static/img/activity/${activity.image})` }"></div>
           <div class="content">
-            <h1>{{ active.name }}</h1>
-            <p v-html="active.description.replace(/\|\|((?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+)\|+\|(.*)\|\|/gm, `<a href='$1' target='_blank' rel='noopener noreferrer'>$3</a>`)"></p>
+            <h1>{{ activity.name }}</h1>
+            <p v-html="activity.description.replace(/\|\|((?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+)\|+\|(.*)\|\|/gm, `<a href='$1' target='_blank' rel='noopener noreferrer'>$3</a>`)"></p>
           </div>
         </div>
       </div>
@@ -21,7 +21,7 @@
 
 <script>
 import * as Layout from '@/components'
-import activeData from '../../static/json/active.json'
+import activityData from '../../static/json/activity.json'
 
 export default {
   components: {
@@ -29,7 +29,7 @@ export default {
   },
   data () {
     return {
-      actives: activeData
+      activities: activityData
     }
   }
 }
