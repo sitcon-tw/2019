@@ -14,7 +14,7 @@ const PrerenderPlugin = require('prerender-spa-plugin')
 
 const env = require('../config/prod.env')
 
-const staticPages = [ '/2019', '/2019/active', '/2019/agenda', '/2019/cfp', '/2019/sponsor', '/2019/location', '/2019/venue', '/2019/staff', '/2019/slido', '/2019/noslido' ]
+const staticPages = [ '/2019', '/2019/activity', '/2019/agenda', '/2019/cfp', '/2019/sponsor', '/2019/location', '/2019/venue', '/2019/staff', '/2019/slido', '/2019/noslido' ]
 const sessionData = require('../static/json/agenda.json')
 
 const webpackConfig = merge(baseWebpackConfig, {

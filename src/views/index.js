@@ -1,5 +1,5 @@
 import Home from './Home.vue'
-import Active from './Active.vue'
+import Activity from './Activity.vue'
 import Agenda from './Agenda.vue'
 import CFP from './CFP.vue'
 import Location from './Location.vue'
@@ -11,7 +11,7 @@ import Venue from './Venue.vue'
 
 export default {
   Home,
-  Active,
+  Activity,
   Agenda,
   CFP,
   Location,

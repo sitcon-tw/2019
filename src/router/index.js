@@ -37,14 +37,14 @@ const router = new Router({
       component: views.Agenda
     },
     {
-      path: '/active',
-      name: 'Active',
+      path: '/activity',
+      name: 'Activity',
       meta: {
         type: 'main',
         index: 2,
         label: '活動'
       },
-      component: views.Active
+      component: views.Activity
     },
     {
       path: '/sponsor',
