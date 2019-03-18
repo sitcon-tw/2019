@@ -117,6 +117,14 @@
     "image": "microsoft.png"
   },
   {
+    "name": "一零四資訊科技",
+    "slug": "104",
+    "url": "https://corp.104.com.tw/",
+    "description": "我們肩上，有一份社會責任，一種想安定職場的力量，從職涯延伸到銀髮與兒童，為公司發展的三大核心以 C.M.O.S. 四大概念（cloud 雲端、mobile 行動、open 開放、social 社群）步入第二代 104",
+    "level": "level-2",
+    "image": "104.png"
+  },
+  {
     "name": "社團法人臺灣校園資訊安全推廣暨駭客培育協會",
     "slug": "twchacker",
     "url": "https://blog.tdohacker.org/",
