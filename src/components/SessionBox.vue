@@ -20,7 +20,7 @@
         :key="speaker.name"
       >
         {{ speaker.zh.name }}
-        {{ data.speakers.length - 1 !== index ? ' / ' : '' }}
+        <br v-if="data.speakers.length - 1 !== index" />
       </span>
     </p>
     <p v-if="isMobile" class="room">
