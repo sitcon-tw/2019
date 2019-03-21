@@ -31,8 +31,8 @@
         :class="{ 'blank-cover': session.type === 'BREAK' }"
         :isMobile="device.isMobile"
         :style="{
-          'grid-column-start': `${session.broadcast ? 'R2' : session.room}`,
-          'grid-column-end': `${session.broadcast ? 'END' : `${rooms[rooms.indexOf(session.room) + 1]}`}`,
+          'grid-column-start': `${session.broadcast ? calcBroadcastRange(session.broadcast).start : session.room}`,
+          'grid-column-end': `${session.broadcast ? calcBroadcastRange(session.broadcast).end : `${rooms[rooms.indexOf(session.room) + 1]}`}`,
           'grid-row-start': `${timeTable.desktop.indexOf(session.start) + 2}`,
           'grid-row-end': `${timeTable.desktop.indexOf(session.end) + 2}`
         }"
@@ -92,6 +92,13 @@ export default {
         this.popupData = null
         this.togglePopUpLock(false)
         if (!this.device.isMobile && (document.body.scrollTop || document.documentElement.scrollTop > 0)) this.toggleNavbar({ opened: true })
+      }
+    },
+    calcBroadcastRange (list) {
+      const result = list.map(room => this.rooms.indexOf(room)).sort((a, b) => (a - b))
+      return {
+        start: this.rooms[result[0]],
+        end: this.rooms[result[result.length - 1]] === this.rooms[this.rooms.length - 1] ? 'END' : this.rooms[result[result.length - 1] + 1]
       }
     }
   },
