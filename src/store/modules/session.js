@@ -67,7 +67,7 @@ const util = {
       'room': 'R0',
       'broadcast': null,
       'start': '2019-03-24T12:00:00+08:00',
-      'end': '2019-03-24T12:40:00+08:00',
+      'end': '2019-03-24T12:30:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -87,7 +87,7 @@ const util = {
       'room': 'R1',
       'broadcast': null,
       'start': '2019-03-24T12:00:00+08:00',
-      'end': '2019-03-24T12:40:00+08:00',
+      'end': '2019-03-24T12:30:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -127,7 +127,7 @@ const util = {
       'room': 'R3',
       'broadcast': null,
       'start': '2019-03-24T12:00:00+08:00',
-      'end': '2019-03-24T12:40:00+08:00',
+      'end': '2019-03-24T12:30:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -185,7 +185,7 @@ const util = {
       'room': 'S',
       'broadcast': null,
       'start': '2019-03-24T12:00:00+08:00',
-      'end': '2019-03-24T12:40:00+08:00',
+      'end': '2019-03-24T12:30:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
