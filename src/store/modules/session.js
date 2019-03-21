@@ -57,7 +57,45 @@ const util = {
   filterAndJoinBlankBlock (session) {
     let result = session
     // R0
+    result.push({
+      'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
+      'zh': {
+        'title': ''
+      },
+      'summary': '',
+      'type': 'BREAK',
+      'room': 'R0',
+      'broadcast': null,
+      'start': '2019-03-24T12:00:00+08:00',
+      'end': '2019-03-24T12:40:00+08:00',
+      'sli.do': '',
+      'beginner': '',
+      'speaker': {
+        'name': '',
+        'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+        'bio': ''
+      }
+    })
     // R1
+    result.push({
+      'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
+      'zh': {
+        'title': ''
+      },
+      'summary': '',
+      'type': 'BREAK',
+      'room': 'R1',
+      'broadcast': null,
+      'start': '2019-03-24T12:00:00+08:00',
+      'end': '2019-03-24T12:40:00+08:00',
+      'sli.do': '',
+      'beginner': '',
+      'speaker': {
+        'name': '',
+        'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+        'bio': ''
+      }
+    })
     // R2
     result.push({
       'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
@@ -68,8 +106,8 @@ const util = {
       'type': 'BREAK',
       'room': 'R2',
       'broadcast': null,
-      'start': '2018-03-10T13:30:00+08:00',
-      'end': '2018-03-10T14:10:00+08:00',
+      'start': '2019-03-24T13:30:00+08:00',
+      'end': '2019-03-24T14:10:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -88,8 +126,27 @@ const util = {
       'type': 'BREAK',
       'room': 'R3',
       'broadcast': null,
-      'start': '2018-03-10T14:20:00+08:00',
-      'end': '2018-03-10T15:00:00+08:00',
+      'start': '2019-03-24T12:00:00+08:00',
+      'end': '2019-03-24T12:40:00+08:00',
+      'sli.do': '',
+      'beginner': '',
+      'speaker': {
+        'name': '',
+        'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+        'bio': ''
+      }
+    })
+    result.push({
+      'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
+      'zh': {
+        'title': ''
+      },
+      'summary': '',
+      'type': 'BREAK',
+      'room': 'R3',
+      'broadcast': null,
+      'start': '2019-03-24T14:20:00+08:00',
+      'end': '2019-03-24T15:00:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -108,8 +165,27 @@ const util = {
       'type': 'BREAK',
       'room': 'S',
       'broadcast': null,
-      'start': '2018-03-10T11:10:00+08:00',
-      'end': '2018-03-10T11:50:00+08:00',
+      'start': '2019-03-24T11:10:00+08:00',
+      'end': '2019-03-24T11:50:00+08:00',
+      'sli.do': '',
+      'beginner': '',
+      'speaker': {
+        'name': '',
+        'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+        'bio': ''
+      }
+    })
+    result.push({
+      'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
+      'zh': {
+        'title': ''
+      },
+      'summary': '',
+      'type': 'BREAK',
+      'room': 'S',
+      'broadcast': null,
+      'start': '2019-03-24T12:00:00+08:00',
+      'end': '2019-03-24T12:40:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -127,8 +203,8 @@ const util = {
       'type': 'BREAK',
       'room': 'S',
       'broadcast': null,
-      'start': '2018-03-10T12:40:00+08:00',
-      'end': '2018-03-10T14:10:00+08:00',
+      'start': '2019-03-24T12:40:00+08:00',
+      'end': '2019-03-24T14:10:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -146,8 +222,8 @@ const util = {
       'type': 'BREAK',
       'room': 'S',
       'broadcast': null,
-      'start': '2018-03-10T14:20:00+08:00',
-      'end': '2018-03-10T15:00:00+08:00',
+      'start': '2019-03-24T14:20:00+08:00',
+      'end': '2019-03-24T15:00:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -165,8 +241,8 @@ const util = {
       'type': 'BREAK',
       'room': 'S',
       'broadcast': null,
-      'start': '2018-03-10T15:40:00+08:00',
-      'end': '2018-03-10T16:20:00+08:00',
+      'start': '2019-03-24T15:40:00+08:00',
+      'end': '2019-03-24T16:20:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -184,8 +260,8 @@ const util = {
       'type': 'BREAK',
       'room': 'S',
       'broadcast': null,
-      'start': '2018-03-10T16:30:00+08:00',
-      'end': '2018-03-10T17:10:00+08:00',
+      'start': '2019-03-24T16:30:00+08:00',
+      'end': '2019-03-24T17:10:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
