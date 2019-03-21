@@ -125,12 +125,44 @@
     "image": "104.png"
   },
   {
+    "name": "Dcard 狄卡科技",
+    "slug": "dcard",
+    "url": "https://join.dcard.today/",
+    "description": "Dcard 是全台灣最大的匿名社群，我們致力於打造一個讓分享更自由、更讓每個人都能在這裡找到共鳴的平台。我們提供的社群服務，目前擁有每個月一千一百萬的不重複訪客與十五億以上的瀏覽量。",
+    "level": "level-2",
+    "image": "dcard.png"
+  },
+  {
+    "name": "Connect Job Agent",
+    "slug": "ConnectJobAgent",
+    "url": "https://job.connectiu.com/",
+    "description": "Connect Job 是來自日本東京的人力資源顧問公司，擁有日本大企業之正社員工作機會。提供日文履歷撰寫、面試技巧建議，協助赴日生活諮詢、人脈網絡建立。",
+    "level": "level-2",
+    "image": "connectjob.png"
+  },
+  {
+    "name": "KKBOX",
+    "slug": "kkbox",
+    "url": "https://www.kkbox.com/",
+    "description": "亞洲頂尖數位音樂服務品牌\n擁有四千萬首豐富音樂曲庫，還提供細緻且個人化的音樂內容。線上一起聽及獨家直播演唱會讓愛追星的你跟偶像隨時隨地零距離！立即啟動專屬你的音樂體驗，享受無窮的聽音樂樂趣！",
+    "level": "level-2",
+    "image": "kkbox.png"
+  },
+  {
     "name": "社團法人臺灣校園資訊安全推廣暨駭客培育協會",
     "slug": "twchacker",
     "url": "https://blog.tdohacker.org/",
     "description": "",
     "level": "level-3",
     "image": "TWCHACKER.png"
+  },
+  {
+    "name": "研華科技物聯網開發者大賽",
+    "slug": "advantech",
+    "url": "https://select.advantech.com/aiot-innoworks/",
+    "description": "",
+    "level": "level-3",
+    "image": "advantech.png"
   },
   {
     "name": "HackMD",
@@ -155,5 +187,13 @@
     "description": "",
     "level": "thank",
     "image": "cycarrier.png"
+  },
+  {
+    "name": "Mozilla Taiwan",
+    "slug": "mozilla",
+    "url": "https://www.mozilla.org/",
+    "description": "",
+    "level": "thank",
+    "image": "mozilla.png"
   }
 ]
