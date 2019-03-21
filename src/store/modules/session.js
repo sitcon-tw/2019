@@ -5,11 +5,7 @@ import * as types from '../mutation-types'
 const util = {
   parseSession (sessions) {
     let result = sessions.slice()
-    return _.map(result, data => ({
-      ...data,
-      start: new Date(data.start).toLocaleString('en-US', { timeZone: 'Asia/Taipei', hour12: false }),
-      end: new Date(data.end).toLocaleString('en-US', { timeZone: 'Asia/Taipei', hour12: false })
-    }))
+    return util.formateSessionTimeZone(result)
   },
   getDesktopSession (sessions) {
     let result = util.parseSession(sessions)
@@ -35,6 +31,8 @@ const util = {
   times (sessions) {
     let result = []
     let data = util.parseSession(sessions)
+    data = util.filterAndJoinBlankBlock(data)
+    data = util.formateSessionTimeZone(data)
     let start = _.map(data, 'start')
     let end = _.map(data, 'end')
     result = _.concat(result, start, end)
@@ -43,6 +41,26 @@ const util = {
   },
   timeLine (sessions) {
     let result = util.parseSession(sessions)
+    result.push({
+      'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
+      'zh': {
+        'title': '午餐'
+      },
+      'summary': '',
+      'type': 'BREAK',
+      'room': 'R0',
+      'broadcast': null,
+      'start': '2019-03-24T12:30:00+08:00',
+      'end': '2019-03-24T12:40:00+08:00',
+      'sli.do': '',
+      'beginner': '',
+      'speaker': {
+        'name': '',
+        'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+        'bio': ''
+      }
+    })
+    result = util.formateSessionTimeZone(result)
     let start = _.map(result, 'start')
     result = _.uniqBy(start.sort(), util.formatTime)
     return result.slice().sort().map(data => util.formatTime(data))
@@ -51,23 +69,30 @@ const util = {
     if (time / 10 < 1) return `0${time}`
     else return `${time}`
   },
+  formateSessionTimeZone (sessions) {
+    return _.map(sessions, data => ({
+      ...data,
+      start: new Date(data.start).toLocaleString('en-US', { timeZone: 'Asia/Taipei', hour12: false }),
+      end: new Date(data.end).toLocaleString('en-US', { timeZone: 'Asia/Taipei', hour12: false })
+    }))
+  },
   formatTime (date) {
     return `${util.timeTo2Dig(new Date(date).getHours())}:${util.timeTo2Dig(new Date(date).getMinutes())}`
   },
   filterAndJoinBlankBlock (session) {
-    let result = session
+    let result = session.filter(data => data.zh.title !== '午餐')
     // R0
     result.push({
       'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
       'zh': {
-        'title': ''
+        'title': '午餐'
       },
       'summary': '',
       'type': 'BREAK',
       'room': 'R0',
-      'broadcast': null,
-      'start': '2019-03-24T12:00:00+08:00',
-      'end': '2019-03-24T12:30:00+08:00',
+      'broadcast': ['R0', 'R1'],
+      'start': '2019-03-24T11:50:00+08:00',
+      'end': '2019-03-24T12:40:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -77,17 +102,18 @@ const util = {
       }
     })
     // R1
+    // R2
     result.push({
       'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
       'zh': {
-        'title': ''
+        'title': '午餐'
       },
       'summary': '',
       'type': 'BREAK',
-      'room': 'R1',
+      'room': 'R2',
       'broadcast': null,
-      'start': '2019-03-24T12:00:00+08:00',
-      'end': '2019-03-24T12:30:00+08:00',
+      'start': '2019-03-24T11:50:00+08:00',
+      'end': '2019-03-24T12:00:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -96,7 +122,25 @@ const util = {
         'bio': ''
       }
     })
-    // R2
+    result.push({
+      'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
+      'zh': {
+        'title': '午餐'
+      },
+      'summary': '',
+      'type': 'BREAK',
+      'room': 'R2',
+      'broadcast': null,
+      'start': '2019-03-24T12:30:00+08:00',
+      'end': '2019-03-24T12:40:00+08:00',
+      'sli.do': '',
+      'beginner': '',
+      'speaker': {
+        'name': '',
+        'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+        'bio': ''
+      }
+    })
     result.push({
       'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
       'zh': {
@@ -120,6 +164,25 @@ const util = {
     result.push({
       'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
       'zh': {
+        'title': '午餐'
+      },
+      'summary': '',
+      'type': 'BREAK',
+      'room': 'R3',
+      'broadcast': null,
+      'start': '2019-03-24T11:50:00+08:00',
+      'end': '2019-03-24T12:00:00+08:00',
+      'sli.do': '',
+      'beginner': '',
+      'speaker': {
+        'name': '',
+        'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+        'bio': ''
+      }
+    })
+    result.push({
+      'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
+      'zh': {
         'title': ''
       },
       'summary': '',
@@ -128,6 +191,25 @@ const util = {
       'broadcast': null,
       'start': '2019-03-24T12:00:00+08:00',
       'end': '2019-03-24T12:30:00+08:00',
+      'sli.do': '',
+      'beginner': '',
+      'speaker': {
+        'name': '',
+        'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+        'bio': ''
+      }
+    })
+    result.push({
+      'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
+      'zh': {
+        'title': '午餐'
+      },
+      'summary': '',
+      'type': 'BREAK',
+      'room': 'R3',
+      'broadcast': null,
+      'start': '2019-03-24T12:30:00+08:00',
+      'end': '2019-03-24T12:40:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
@@ -157,6 +239,25 @@ const util = {
     })
     // S
     result.push({
+      'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
+      'zh': {
+        'title': '午餐'
+      },
+      'summary': '',
+      'type': 'BREAK',
+      'room': 'S',
+      'broadcast': null,
+      'start': '2019-03-24T11:50:00+08:00',
+      'end': '2019-03-24T12:40:00+08:00',
+      'sli.do': '',
+      'beginner': '',
+      'speaker': {
+        'name': '',
+        'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
+        'bio': ''
+      }
+    })
+    result.push({
       'id': '97f3ae3d-100e-4f78-87eb-61795a733602',
       'zh': {
         'title': ''
@@ -167,25 +268,6 @@ const util = {
       'broadcast': null,
       'start': '2019-03-24T11:10:00+08:00',
       'end': '2019-03-24T11:50:00+08:00',
-      'sli.do': '',
-      'beginner': '',
-      'speaker': {
-        'name': '',
-        'avatar': 'http://sitcon.org/2018/static/img/staffs/stone.png',
-        'bio': ''
-      }
-    })
-    result.push({
-      'id': '97f3ae3d-100e-4f78-87eb-61795a733601',
-      'zh': {
-        'title': ''
-      },
-      'summary': '',
-      'type': 'BREAK',
-      'room': 'S',
-      'broadcast': null,
-      'start': '2019-03-24T12:00:00+08:00',
-      'end': '2019-03-24T12:30:00+08:00',
       'sli.do': '',
       'beginner': '',
       'speaker': {
