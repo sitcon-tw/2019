@@ -366,10 +366,6 @@
                 "emailHash": "0a664233fc8e1205b04839b1718e05bb"
             },
             {
-                "name": "曉彤",
-                "emailHash": "cb3996f5c4da89ebb94567cce58bc5a7"
-            },
-            {
                 "name": "阿褚",
                 "emailHash": "f28a7a0ad9d7bd2ffe5c50650ed5847f"
             },
@@ -474,16 +470,16 @@
                 "emailHash": "507c75e068f754ef3087e764b5de3bff"
             },
             {
-                "name": "弘宇",
-                "emailHash": "bb5e30fea938016d3b5710651f8ae724"
-            },
-            {
                 "name": "Erik",
                 "emailHash": "10b6197478dd564bbb09a96d094ff633"
             },
             {
                 "name": "Freeman",
                 "emailHash": "80fc5ffc0e4b578e79ef2e1e74626343"
+            },
+            {
+                "name": "Felix",
+                "emailHash": "8bc0bde997602a9948d032b4fcfe4e75"
             }
         ]
     },
@@ -514,10 +510,6 @@
             {
                 "name": "Denny Huang",
                 "emailHash": "9c08215f31eb6005a25be6521bf47b0a"
-            },
-            {
-                "name": "IU",
-                "emailHash": "e1ee302642920316eb9e8cc971e3b615"
             }
         ]
     },
