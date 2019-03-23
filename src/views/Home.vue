@@ -5,13 +5,13 @@
         <img src="@/assets/images/main-logo.png" alt="">
       </div>
       <div class="action-box-container">
-        <div class="action-box">
+        <div class="action-box" v-if="new Date() >= new Date('2019-03-24T17:10:00')">
           <img class="tape" src="@/assets/images/tape.png" alt="">
-          <h2><a class="very-bold" href="https://sitcon.kktix.cc/events/sitcon2019" target="_blank" rel="noopener noreferrer">會後調查</a></h2>
+          <h2><a class="very-bold" href="https://goo.gl/forms/4LsTeEFCootawMI32" target="_blank" rel="noopener noreferrer">會後調查</a></h2>
         </div>
-        <div class="action-box">
+        <div class="action-box" v-if="new Date() >= new Date('2019-03-24T17:10:00')">
           <img class="tape" src="@/assets/images/tape.png" alt="">
-          <h2><a class="very-bold" href="https://sitcon.kktix.cc/events/sitcon2019" target="_blank" rel="noopener noreferrer">會後心得</a></h2>
+          <h2><a class="very-bold" href="https://goo.gl/forms/IByq454kYYymj7uk2" target="_blank" rel="noopener noreferrer">會後心得</a></h2>
         </div>
         <div class="action-box">
           <img class="tape" src="@/assets/images/tape.png" alt="">
