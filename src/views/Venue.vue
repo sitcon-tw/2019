@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/scss/_color.scss';
+
 .spotlight {
   display: flex;
   flex-direction: column;
@@ -30,6 +32,7 @@ export default {
   text-align: center;
 
   img {
+    margin-left: 5%;
     max-width: 100%;
     height: auto;
   }
