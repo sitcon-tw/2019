@@ -6,11 +6,23 @@
       </div>
       <div class="action-box-container">
         <div class="action-box">
-          <img class="tape" src="@/assets/images/tape-slash.png" alt="">
-          <h2><a class="big very-bold" href="https://sitcon.kktix.cc/events/sitcon2019" target="_blank" rel="noopener noreferrer">前往報名</a></h2>
+          <img class="tape" src="@/assets/images/tape.png" alt="">
+          <h2><a class="very-bold" href="https://sitcon.kktix.cc/events/sitcon2019" target="_blank" rel="noopener noreferrer">會後調查</a></h2>
+        </div>
+        <div class="action-box">
+          <img class="tape" src="@/assets/images/tape.png" alt="">
+          <h2><a class="very-bold" href="https://sitcon.kktix.cc/events/sitcon2019" target="_blank" rel="noopener noreferrer">會後心得</a></h2>
+        </div>
+        <div class="action-box">
+          <img class="tape" src="@/assets/images/tape.png" alt="">
+          <h2><a class="very-bold" href="https://sitcon.org/2019/slido" target="_blank" rel="noopener noreferrer">議程共筆</a></h2>
+        </div>
+        <div class="action-box">
+          <img class="tape" src="@/assets/images/tape.png" alt="">
+          <h2><a class="very-bold" href="https://sitcon.kktix.cc/events/sitcon2019-individual-sponsor" target="_blank" rel="noopener noreferrer">個人贊助</a></h2>
         </div>
         <div class="action-box info">
-          <img class="tape" src="@/assets/images/tape-slash.png" alt="">
+          <img class="tape" src="@/assets/images/tape.png" alt="">
           <h2>
             <span class="big">3/24</span>
             <br />
@@ -163,41 +175,47 @@ header {
       position: relative;
 
       @media screen and (max-width: 900px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
         width: 100%;
-        height: 300px;
       }
     }
 
     background-color: $tone_box_dark;
-    padding: 2rem 3.5rem;
-    width: 300px;
+    padding: 1rem 3.5rem;
+    margin: 1rem 0;
+    width: 150px;
     position: relative;
 
-    .tape {
-      position: absolute;
-      height: 150px;
-      right: -50px;
-      top: -50px;
-
-      @media screen and (max-width: 1200px) {
-        height: 100px;
-        right: -25px;
-        top: -25px;
-      }
+    &.info {
+      padding: 1rem 2rem;
+      width: 300px;
 
       @media screen and (max-width: 900px) {
-        height: 80px;
-        right: -35px;
-        top: -35px;
+        width: calc(100% - 1rem * 2);
       }
     }
 
-    &.info .tape {
-      @media screen and (max-width: 900px) {
-        height: 80px;
-        left: -35px;
-        top: -35px;
-        transform: scale(-1, 1);
+    .tape {
+      position: absolute;
+      width: 50px;
+      right: -25px;
+      top: 10px;
+
+      @media screen and (max-width: 475px) {
+        width: 40px;
+        right: -20px;
+      }
+
+      @media screen and (max-width: 414px) {
+        width: 30px;
+        right: -15px;
+      }
+
+      @media screen and (max-width: 320px) {
+        width: 20px;
+        right: -10px;
       }
     }
 
@@ -213,15 +231,26 @@ header {
 
     @media screen and (max-width: 900px) {
       padding: 1rem 2rem;
+      width: calc((100% - 2rem * 2) / 2 - 1rem * 3);
+    }
 
-      &:last-child {
-        width: calc(100% - 2rem * 2);
-      }
+    @media screen and (max-width: 475px) {
+      padding: 1rem;
+      width: calc(100% / 2 - 1rem * 3);
+    }
+
+    @media screen and (max-width: 414px) {
+      padding: 0.5rem 1rem;
+    }
+
+    @media screen and (max-width: 320px) {
+      padding: 0.5rem;
+      width: calc(100% / 2 - 0.5rem * 3);
     }
 
     h2 {
       text-align: left;
-      font-size: 36px;
+      font-size: 30px;
       color: $tone_content;
 
       @media screen and (max-width: 1500px) {
@@ -230,6 +259,10 @@ header {
 
       @media screen and (max-width: 1200px) {
         font-size: 26px;
+      }
+
+      @media screen and (max-width: 475px) {
+        font-size: 20px;
       }
 
       a,
@@ -246,10 +279,10 @@ header {
 }
 
 .big {
-  font-size: 48px;
+  font-size: 40px;
 
   @media screen and (max-width: 1500px) {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   @media screen and (max-width: 1200px) {
@@ -257,7 +290,7 @@ header {
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
