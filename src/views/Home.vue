@@ -17,17 +17,17 @@
           <img class="tape" src="@/assets/images/tape.png" alt="">
           <h2><a class="very-bold" href="https://hackmd.io/c/SITCON2019" target="_blank" rel="noopener noreferrer">議程共筆</a></h2>
         </div>
-        <div class="action-box">
+        <div class="action-box mini">
           <img class="tape" src="@/assets/images/tape.png" alt="">
-          <h2><a class="very-bold" href="https://hackmd.io/5-Jsz7XaQga8O4K-eGqTKw" target="_blank" rel="noopener noreferrer">Soapbox 議程表</a></h2>
+          <h2><a class="very-bold mini" href="https://hackmd.io/5-Jsz7XaQga8O4K-eGqTKw" target="_blank" rel="noopener noreferrer">Soapbox 議程表</a></h2>
         </div>
         <div class="action-box">
           <img class="tape" src="@/assets/images/tape.png" alt="">
           <h2><a class="very-bold" href="https://sitcon.kktix.cc/events/sitcon2019-individual-sponsor" target="_blank" rel="noopener noreferrer">個人贊助</a></h2>
         </div>
-        <div class="action-box mini" v-if="new Date() < new Date('2019-03-24T17:10:00')">
+        <div class="action-box info" v-if="new Date() < new Date('2019-03-24T17:10:00')">
           <img class="tape" src="@/assets/images/tape.png" alt="">
-          <h2><a class="very-bold mini" href="https://sitcon.org/2019/slido" target="_blank" rel="noopener noreferrer">議程線上提問區</a></h2>
+          <h2><a class="very-bold" href="https://sitcon.org/2019/slido" target="_blank" rel="noopener noreferrer">議程線上提問區</a></h2>
         </div>
         <div class="action-box info">
           <img class="tape" src="@/assets/images/tape.png" alt="">
@@ -193,7 +193,7 @@ header {
     background-color: $tone_box_dark;
     padding: 1rem 2rem;
     margin: 1rem 0;
-    width: calc(200px + 2rem);
+    width: calc(220px + 2rem);
     position: relative;
 
     &.info {
@@ -312,18 +312,14 @@ header {
   }
 
   @media screen and (max-width: 570px) {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   @media screen and (max-width: 414px) {
-    font-size: 16px;
-  }
-
-  @media screen and (max-width: 375px) {
     font-size: 14px;
   }
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 375px) {
     font-size: 12px;
   }
 }
