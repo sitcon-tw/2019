@@ -5,7 +5,7 @@
         <img src="@/assets/images/main-logo.png" alt="">
       </div>
       <div class="action-box-container">
-        <div class="action-box" v-if="new Date() >= new Date('2019-03-24T17:10:00')">
+        <div class="action-box" v-if="new Date() >= new Date('March 24, 2019 17:10:00 GMT+8:00')">
           <img class="tape" src="@/assets/images/tape.png" alt="">
           <h2><a class="very-bold" href="https://goo.gl/forms/4LsTeEFCootawMI32" target="_blank" rel="noopener noreferrer">會後調查</a></h2>
         </div>
@@ -17,15 +17,15 @@
           <img class="tape" src="@/assets/images/tape.png" alt="">
           <h2><a class="very-bold" href="https://hackmd.io/c/SITCON2019" target="_blank" rel="noopener noreferrer">議程共筆</a></h2>
         </div>
-        <div class="action-box mini">
-          <img class="tape" src="@/assets/images/tape.png" alt="">
-          <h2><a class="very-bold mini" href="https://hackmd.io/5-Jsz7XaQga8O4K-eGqTKw" target="_blank" rel="noopener noreferrer">Soapbox 議程表</a></h2>
-        </div>
         <div class="action-box">
           <img class="tape" src="@/assets/images/tape.png" alt="">
           <h2><a class="very-bold" href="https://sitcon.kktix.cc/events/sitcon2019-individual-sponsor" target="_blank" rel="noopener noreferrer">個人贊助</a></h2>
         </div>
-        <div class="action-box info" v-if="new Date() < new Date('2019-03-24T17:10:00')">
+        <div :class="new Date() < new Date('March 24, 2019 17:10:00 GMT+8:00') ? 'mini' : 'info'" class="action-box">
+          <img class="tape" src="@/assets/images/tape.png" alt="">
+          <h2><a :class="{ 'mini': new Date() < new Date('March 24, 2019 17:10:00 GMT+8:00') }" class="very-bold" href="https://hackmd.io/5-Jsz7XaQga8O4K-eGqTKw" target="_blank" rel="noopener noreferrer">Soapbox 議程表</a></h2>
+        </div>
+        <div class="action-box info" v-if="new Date() < new Date('March 24, 2019 17:10:00 GMT+8:00')">
           <img class="tape" src="@/assets/images/tape.png" alt="">
           <h2><a class="very-bold" href="https://sitcon.org/2019/slido" target="_blank" rel="noopener noreferrer">議程線上提問區</a></h2>
         </div>
