@@ -11,6 +11,8 @@
         <div class="session-popup-content">
           <h1>{{ data.zh.title }}</h1>
           <h3 v-if="data.slide"><a :href="data.slide" target="_blank" rel="noopener noreferrer">#簡報連結</a></h3>
+          <h3 v-if="data.live"><a :href="data.live" target="_blank" rel="noopener noreferrer">#直播連結</a></h3>
+          <h3 v-if="data.record"><a :href="data.record" target="_blank" rel="noopener noreferrer">#錄影連結</a></h3>
           <p v-html="data.zh.description.replace(/(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+/gm, `<a href='$&' target='_blank' rel='noopener noreferrer'>$&</a>`)"></p>
         </div>
         <div
