@@ -1,0 +1,113 @@
+<!-- 這是舊檔案，要修改 .html 檔 QwQ -->
+
+<heml>
+  <head>
+    <subject>SITCON 2019 行前通知信</subject>
+    <preview>為始活動報到順利，請先行下載安裝「SITCON 通關」App -- 關於行前的更多詳細內容請參考 https://sitcon.org/2019/static/mail/SITCON-2019.html</preview>
+    <base href="https://sitcon.org/2019/static/mail/" />
+    <style>
+      body {
+        color: #604726;
+        background-color: #d6c2a5;
+        font-size: 14px;
+      }
+
+      h2 {
+        font-size: 14px;
+        margin: 0;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.2;
+      }
+
+      block.text {
+        padding-left: 2%;
+        padding-right: 2%;
+      }
+
+      block.content {
+        padding:0px 0px 0px 30px;
+      }
+
+      .top {
+        margin: 12px auto;
+        width: 80%;
+      }
+
+    </style>
+  </head>
+  <body>
+    <container>
+      <img class="top" src="./top.png" infer="retina" />
+      <block class="text">
+        <p>Hi *|NICKNAME|*，</p>
+        <p>若您無法順利閱讀此信件，請參閱 <a href="https://sitcon.org/2019/static/mail/SITCON-2019.html" target="_blank">線上版本</a>。</p>
+        <p>很高興能在 SITCON 2019 看到你！年會即將在本週日（3/24）揭開序幕，我們特別整理了一些實用的資訊，還請詳細閱讀：</p>
+        <h2>一、交通</h2>
+        <block class="content">
+          <p>年會地點位於<strong>中央研究院人文社會科學館</strong>（台北市南港區研究院路二段 128 號），詳細位置可以參考 <a href="https://sitcon.org/2019/location" target="_blank">SITCON 2018 官方網站</a>或中研院<a href="http://gis.sinica.edu.tw/asmap/sinica_campus_map.png"  target="_blank">院區圖</a>。</p>
+        </block>
+        <h2>二、報到</h2>
+        <block class="content">
+          <p>年會將於<strong>早上 8 點半</strong>開始報到，並於<strong> 9 點</strong>準時開始。在到達會場後，連上年會現場的 WiFi，即可用「OPass」App 進行報到，並到會場四樓領取迎賓袋。</p>
+          <p>請透過以下專屬連結下載、啟動 SITCON Pass：</p>
+          <p><a href="https://dl.opass.app/?link=https%3A%2F%2Fopass.app%2Fopen%2F%3Fevent_id%3DSITCON_2019%26token%3D*|TOKEN|*&apn=app.opass.ccip&amv=30&isi=1436417025&ibi=app.opass.ccip"  target="_blank">您的專屬連結</a></p>
+          <p>（若您無法使用 App 報到，請向報到櫃檯的工作人員出示您 KKTIX 的報到用 QR Code）</p>
+          <p>請注意：迎賓袋內有您的識別證，必須領取並且配戴後才能進入會議廳內</p>
+          <p>持有學生票的朋友，也請於抵達<strong>領取攤位前</strong>備妥學生證或相關證明，以節省您寶貴的時間。</p>
+          <p>10:00 後才完成報到，恕不提供便當。</p>
+        </block>
+        <h2>三、年會活動</h2>
+        <p>除了一整天<a href="https://sitcon.org/2019/agenda"  target="_blank">精彩的議程</a>，今年的 SITCON 也有許多有趣的活動可以參加！不論是抓緊機會表現自己，或是想在年會認識新朋友，都千萬別錯過囉。</p>
+        <block>
+          <ol>
+            <li>紀念品販售</li>
+            <p>今年會製作小石刺繡布章與神秘紙膠帶，同時也會有小石金屬徽章、SITCON 鑰匙圈、SITCON 紀念 T-shirt 與 SITCON 提袋等，歡迎大家來把小石帶回家～</p>
+            <li>SITCON 導遊團</li>
+            <p>第一次參加研討會，總覺得眼花撩亂嗎？年會當天中午，有經驗的導遊們將帶大家拜訪工作人員、講者、社群攤位，實地了解 SITCON 的運作方式以及與會的各路夥伴！</p>
+            <p>有興趣參加 SITCON 導遊團的朋友，可以在<strong>下午 2 點 20 分及 2 點 30 分</strong>到服務台現場報名，共有兩團，每次導覽約 30 分鐘。</p>
+            <li>Soapbox</li>
+            <p>相對於投稿， Soapbox 是由與會者自主發起的議程，不用事先報名，<strong>不限主題時間地點</strong>，只要向<strong>服務台</strong>領取肥皂箱，就能在專屬於你的舞台暢所欲言。</p>
+            <p>想知道哪裡是進行 Soapbox 的最佳地點嗎？SITCON 提供<strong>五個指定地點</strong>給會眾作為參考。其中交誼廳開放使用投影機，但是名額有限，須事先登記。現在就去 <a href="https://goo.gl/forms/cyFFYRPKK0zFrde42">填表單</a> 報名！</p>
+            <p>年會當天 Soapbox 開放到 Lightning Talk 前，沒有多餘限制：站上去，你的故事正開始。</p>
+            <li>Lightning Talk</li>
+            <p>Lightning Talk 中文譯為「<strong>閃電秀</strong>」，顧名思義即為「閃電一般短的演講」。有什麼想展現給全場所有人的技術、想法、甚至經驗談，都能把握這短短的<strong> 3 分鐘</strong>，在 SITCON 2019 的大舞台上讓大家看見你！</p>
+            <p>Lightning Talk 安排於年會閉幕前，於國際會議廳 (R0) 進行。當天<strong>上午 10:00 後</strong>會在 3F 白板區開放報名，<strong>名額有限、先搶先贏。</strong></p>
+            <li>真．實境矩陣</li>
+            <p>SITCON 的參與者來自各地，今年更有來自多國、身懷絕技的業界與社群夥伴共襄盛舉。除了把握時間好好與他們聊聊外，據說每個攤位都隱藏了不為人知的秘密……？別忘了在年會當天打開 OPass「<strong>真．實境矩陣</strong>」，讓不同攤位的高手和你的 QR Code 能量連結，就有機會兌換限量年會紀念品。連接你的節點，拯救我們的世界！ヽ(✿ﾟ▽ﾟ)ノ</p>
+          </ol>
+        </block>
+        <h2>四、共筆與議程線上討論區</h2>
+        <p>今年年會延續往年傳統，為各議程開設「共筆」與「議程線上討論區（Sli.do）」，共筆供聽眾一起編輯議程筆記，議程線上討論區則供講者與各位聽眾進行即時交流。各連結將公告於年會官方網站與 OPass。您可以在議程中隨時使用議程線上討論區匿名提問，講者能自由選擇時間解答及互動。籌辦團隊雖開設此平台，但並非強制所有與會者及講者必須使用，僅供各位利用參考。</p>
+        <p>網站連結：<a href="https://sitcon.org/2019/slido">https://sitcon.org/2019/slido</a></p>
+        <h2>五、食物</h2>
+        <p>為了讓大家能愉快的交流，年會為各位準備了午晚餐與各式點心。會議廳內皆，<strong>禁止飲食</strong>，只能帶有<strong>蓋水瓶</strong>進出，還請各位多多配合了 (´・ω・`)</p>
+        <block>
+          <ol>
+            <li>午餐：美味的午餐將從上午<strong> 11 點 50 分</strong>開始，於 4F 國際會議廳 (R0) 後方兩側的轉角處發放；<strong>素食</strong>則在 3F 服務台領取，請各位不要跑錯囉！</li>
+            <p>領餐時，請準備好您的 OPass App，等待工作人員指示後，按下按鈕領取午餐。（若您報到時未使用 App，請出示 KKTIX 報到用 QR Code。）</p>
+            <li>點心：下午<strong> 3 點</strong>開始，四樓兩側的社群攤位走廊上將提供精緻茶點，您可以在享用下午茶的同時，與現場的會眾以及攤位交流。</li>
+            <li>冰淇淋：今年在四樓南側會有個神祕攤位默默發放著冰淇淋哦，歡迎各位在議程間的短暫休息時，多去吃點冰淇淋補充足夠的糖分！</li>
+          </ol>
+        </block>
+        <p>如果您有環保餐具，也請別忘記隨身攜帶，為地球盡一份心力。</p>
+        <h2>六、網路</h2>
+        <block class="content">
+          <p>現場可使用年會提供的無線網路，SSID 為「 SITCON 2019」，密碼是「20190324」。</p>
+          <p>基於網路安全性與穩定性，建議您自行攜帶網路線，會議廳之座位皆有提供網路插座；並請勿於會場私自架設無線基地台 (AP)，或進行任何干擾公眾網路之行為。</p>
+          <p>若您需要使用個人 4G 行動網路熱點，請使用 USB 或藍芽方式分享網路連線。</p>
+        </block>
+        <h2>其他注意事項</h2>
+        <block class="content">
+          <p>年會當天的線上聊天室十分精彩，您可以和其他與會者抬槓、甚至找到志同道合的夥伴！除了加入 Telegram <a href="https://t.me/SITCONgeneral"  target="_blank">@SITCONgeneral</a> 群組以外，也可以透過你熟悉的軟體連上 IRC #sitcon@freenode.net；若您自己有製作名片，別忘了帶來和大家交朋友喔。</p>
+          <p>最後，也請您務必閱讀並一同遵守<a href="https://sitcon.org/code-of-conduct/"  target="_blank"> SITCON 行為準則</a>，讓大家都能開心的在 SITCON 齊聚一堂，彼此激盪、傳承、啟發。</p>
+          <p>感謝你讀完這份行前簡介，期待在 SITCON 2018 看到你囉！</p>
+        </block>
+        <p style="text-align:center">SITCON 2018 籌備團隊</p>
+      </block>
+    </container>
+  </body>
+</heml>
+
